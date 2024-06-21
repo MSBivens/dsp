@@ -1,6 +1,9 @@
 import React from "react";
+import Image from "next/image";
 
-export default function () {
+import placeholderImage from "../../../public/images/placeholder.png";
+
+export default function history() {
   const responsiveEvents = [
     { year: "2022", event: "January", description: "Started a new project" },
     { year: "2022", event: "May", description: "Launched version 1.0" },
@@ -48,6 +51,113 @@ export default function () {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* Historical Collection */}
+      <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+          <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Historical Collection
+          </h2>
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Explore our fraternity's rich history through photogrpaghs and
+            memorabilia.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+          </div>
+          <div class="grid gap-4">
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                className="h-auto max-w-full rounded-lg"
+                src={placeholderImage}
+                alt="Placeholder Image"
+              ></Image>
+            </div>
           </div>
         </div>
       </section>
