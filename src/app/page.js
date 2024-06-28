@@ -8,22 +8,22 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+            <h1 class="max-w-2xl mb-4">
               Connecting Alumni, Empowering Brotherhood, Inspiring Impact
             </h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            <p class="max-w-2xl mb-6 lg:mb-8 md:text-lg lg:text-xl ">
               Welcome to the Gamma Iota chapter of Delta Sigma Phi at the
               University of Idaho.
             </p>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            <p class="max-w-2xl mb-6  lg:mb-8 md:text-lg lg:text-xl ">
               Join us in making a difference!
             </p>
             <a
               href="#"
-              class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+              class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Donate Now
               <svg
@@ -41,7 +41,7 @@ export default function Home() {
             </a>
             <a
               href="#"
-              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center  border rounded-lg "
             >
               Volunteer
             </a>
@@ -52,66 +52,111 @@ export default function Home() {
         </div>
       </section>
       {/* Alumni Memories Gallery */}
-      <section class="bg-gray-100 dark:bg-gray-800">
+      <section>
         <div class="max-w-screen-xl px-4 py-8 mx-auto">
           <div class="text-center">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
-              Alumni Memories
-            </h2>
-            <p class="mt-2 text-gray-600 dark:text-gray-400">
+            <h2>Alumni Memories</h2>
+            <p class="mt-2 mb-2">
               Relive the moments with our alumni community.
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-4 mt-8">
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
               <Image
                 src={placeholderImage}
                 class="w-full h-auto rounded-lg"
-              ></Image>
+              ></Image>{" "}
             </div>
             <div>
               <Image
                 src={placeholderImage}
                 class="w-full h-auto rounded-lg"
-              ></Image>
+              ></Image>{" "}
             </div>
             <div>
               <Image
                 src={placeholderImage}
                 class="w-full h-auto rounded-lg"
-              ></Image>
+              ></Image>{" "}
             </div>
             <div>
               <Image
                 src={placeholderImage}
                 class="w-full h-auto rounded-lg"
-              ></Image>
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
+            </div>
+            <div>
+              <Image
+                src={placeholderImage}
+                class="w-full h-auto rounded-lg"
+              ></Image>{" "}
             </div>
           </div>
         </div>
       </section>
       {/* Connect Section */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div class="mr-auto place-self-center lg:col-span-7">
             <div class="max-w-screen-md">
-              <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                Connect with fellow alumni today
-              </h2>
-              <p class="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+              <h2 class="mb-4 ">Connect with fellow alumni today</h2>
+              <p class="mb-8 ">
                 Stay connected with your brothers at the Gamma Iota Chapter and
                 get involved
               </p>
               <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                 <a
                   href="#"
-                  class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+                  class="inline-flex items-center justify-center px-4 py-2.5 text-center rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
                 >
                   Events
                 </a>
                 <a
                   href="#"
-                  class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  class="inline-flex items-center justify-center px-4 py-2.5 text-center  border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100  dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 >
                   Gamma Eye Newsletter
                 </a>
@@ -124,23 +169,19 @@ export default function Home() {
         </div>
       </section>
       {/* Testimonials Section */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-sm">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Testimonials
-            </h2>
-            <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight f">Testimonials</h2>
+            <p class="mb-8  lg:mb-16 sm:text-xl ">
               Explore the whole collection of open-source web components and
               elements built with the utility classes from Tailwind
             </p>
           </div>
           <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
             <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  Speechless with how easy this was to integrate
-                </h3>
+              <blockquote class="mx-auto mb-8 max-w-2xl">
+                <h3>Speechless with how easy this was to integrate</h3>
                 <p class="my-4">
                   "I recently got my hands on Flowbite Pro, and holy crap, I'm
                   speechless with how easy this was to integrate within my
@@ -171,9 +212,7 @@ export default function Home() {
             </figure>
             <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
               <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  Solid foundation for any project
-                </h3>
+                <h3>Solid foundation for any project</h3>
                 <p class="my-4">
                   "FlowBite provides a robust set of design tokens and
                   components based on the popular Tailwind CSS framework. From
