@@ -8,26 +8,77 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #fffef6;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Headings */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Uni Sans", serif; /* Primary typeface for headings */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Adjust margin as needed */
+  line-height: 1.2; /* Adjust line-height as needed */
+}
+
+/* Fallback for Headings if 'Uni Sans' is unavailable */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Abula", serif;
+  font-weight: bold;
+}
+
+/* Fallback for Headings if 'Uni Sans' and 'Abula' are unavailable */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif; /* Fallback font */
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem; /* Adjust font size as needed */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+h3 {
+  font-size: 1.75rem; /* Adjust font size as needed */
+}
+
+h4 {
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+/* Paragraphs */
+
+p {
+  font-family: "Open Sans", sans-serif; /* Replace with your preferred font for body text */
+  font-size: 1rem; /* Adjust font size as needed */
+  line-height: 1.5; /* Adjust line-height as needed */
+  color: #333; /* Adjust text color as needed */
+}
+
+/* Links */
+
+a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline initially */
+  transition: all 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #0b5ed7; /* Darken link color on hover */
 }
