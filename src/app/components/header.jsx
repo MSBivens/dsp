@@ -6,32 +6,32 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-xl">Delta Sigma Phi, Gamma Iota</div>
+        <div className="text-xl">Delta Sigma Phi, Gamma Iota</div>
         <div className="hidden lg:flex space-x-4">
-          <a className="text-gray-300 hover:text-white" href="/">
+          <a className=" hover:text-white" href="/">
             Home
           </a>
-          <a className="text-gray-300 hover:text-white" href="/about">
+          <a className=" hover:text-white" href="/about">
             About Us
           </a>
-          <a className="text-gray-300 hover:text-white" href="/services">
+          <a className=" hover:text-white" href="/services">
             Alumni Chapter
           </a>
-          <a className="text-gray-300 hover:text-white" href="/contact">
+          <a className=" hover:text-white" href="/contact">
             Events
           </a>
-          <a className="text-gray-300 hover:text-white" href="/">
+          <a className=" hover:text-white" href="/">
             News
           </a>
-          <a className="text-gray-300 hover:text-white" href="/about">
+          <a className=" hover:text-white" href="/about">
             Gamma Eye
           </a>
-          <a className="text-gray-300 hover:text-white" href="/services">
+          <a className=" hover:text-white" href="/services">
             History
           </a>
-          <a className="text-gray-300 hover:text-white" href="/contact">
+          <a className=" hover:text-white" href="/contact">
             Philanthropy
           </a>
         </div>
@@ -68,34 +68,28 @@ export default function Navbar() {
       {isOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a className="block text-gray-300 hover:text-white" href="/">
+            <a className="block  hover:text-white" href="/">
               Home
             </a>
-            <a className="block text-gray-300 hover:text-white" href="/about">
+            <a className="block  hover:text-white" href="/about">
               About Us
             </a>
-            <a
-              className="block text-gray-300 hover:text-white"
-              href="/services"
-            >
+            <a className="block  hover:text-white" href="/services">
               Alumni Chapter
             </a>
-            <a className="block text-gray-300 hover:text-white" href="/contact">
+            <a className="block  hover:text-white" href="/contact">
               Events
             </a>
-            <a className="block text-gray-300 hover:text-white" href="/">
+            <a className="block  hover:text-white" href="/">
               News
             </a>
-            <a className="block text-gray-300 hover:text-white" href="/about">
+            <a className="block  hover:text-white" href="/about">
               Gamma Eye
             </a>
-            <a
-              className="block text-gray-300 hover:text-white"
-              href="/services"
-            >
+            <a className="block  hover:text-white" href="/services">
               History
             </a>
-            <a className="block text-gray-300 hover:text-white" href="/contact">
+            <a className="block  hover:text-white" href="/contact">
               Philanthropy
             </a>
           </div>

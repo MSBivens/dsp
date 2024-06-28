@@ -82,3 +82,8 @@ a:hover {
   text-decoration: underline; /* Add underline on hover */
   color: #0b5ed7; /* Darken link color on hover */
 }
+
+nav {
+  /* background: #eaaa00; */
+  background: #007a33;
+}
