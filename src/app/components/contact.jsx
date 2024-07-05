@@ -39,9 +39,15 @@ export default function contact() {
               news and updates.
             </p>
             <div className="flex space-x-4">
-              <FaInstagram size={24} />
-              <FaFacebook size={24} />
-              <FaLinkedin size={24} />
+              <a href="https://www.instagram.com/deltasig_idaho">
+                <FaInstagram size={24} />
+              </a>
+              <a href="https://www.facebook.com/deltasigvandals">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://www.linkedin.com/groups/13505181/">
+                <FaLinkedin size={24} />
+              </a>
             </div>
           </div>
           <div>
