@@ -1,9 +1,5 @@
 "use client";
 
-// import Image from "next/image";
-
-// import Logo from "../../../public/images/logo.png";
-
 import { Button, Navbar, Dropdown } from "flowbite-react";
 
 export default function Header() {

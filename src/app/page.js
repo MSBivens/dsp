@@ -22,7 +22,7 @@ export default function Home() {
               Join us in making a difference!
             </p>
             <a
-              href="#"
+              href="/donate"
               class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Donate Now
@@ -40,7 +40,7 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="#"
+              href="/volunteer"
               class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center  border rounded-lg "
             >
               Volunteer
@@ -56,8 +56,9 @@ export default function Home() {
         <div class="max-w-screen-xl px-4 py-8 mx-auto">
           <div class="text-center">
             <h2>Alumni Memories</h2>
-            <p class="mt-2 mb-2">
-              Relive the moments with our alumni community.
+            <p class="mb-8">
+              Relive the moments with our alumni community from Bike to Boise,
+              to Sailors Ball, and more!
             </p>
           </div>
 
@@ -149,13 +150,13 @@ export default function Home() {
               </p>
               <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                 <a
-                  href="#"
+                  href="/events"
                   class="inline-flex items-center justify-center px-4 py-2.5 text-center rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
                 >
                   Events
                 </a>
                 <a
-                  href="#"
+                  href="/gammaEye"
                   class="inline-flex items-center justify-center px-4 py-2.5 text-center  border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100  dark:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 >
                   Gamma Eye Newsletter
@@ -169,73 +170,73 @@ export default function Home() {
         </div>
       </section>
       {/* Testimonials Section */}
-      <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-          <div class="mx-auto max-w-screen-sm">
-            <h2 class="mb-4 text-4xl tracking-tight f">Testimonials</h2>
-            <p class="mb-8  lg:mb-16 sm:text-xl ">
-              Explore the whole collection of open-source web components and
-              elements built with the utility classes from Tailwind
-            </p>
-          </div>
-          <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
-            <figure class="flex flex-col justify-center items-center p-8 text-center bg-green-900 border-b border-amber-400 md:p-12 lg:border-r">
-              <blockquote class="mx-auto mb-8 max-w-2xl">
-                <h3>Pull Quote</h3>
-                <p class="my-4">"Text</p>
-                <p class="my-4">Text</p>
-                <p class="my-4">Text."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <div class="space-y-0.5 text-left">
-                  <div>John Doe</div>
-                  <div class="text-sm font-light ">Pledge Class XX</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure class="flex flex-col justify-center items-center p-8 text-center bg-green-900 border-b border-amber-400 md:p-12 lg:border-r">
-              <blockquote class="mx-auto mb-8 max-w-2xl">
-                <h3>Pull Quote</h3>
-                <p class="my-4">"Text</p>
-                <p class="my-4">Text</p>
-                <p class="my-4">Text."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <div class="space-y-0.5 text-left">
-                  <div>John Doe</div>
-                  <div class="text-sm font-light ">Pledge Class XX</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure class="flex flex-col justify-center items-center p-8 text-center bg-green-900 border-b border-amber-400 md:p-12 lg:border-r">
-              <blockquote class="mx-auto mb-8 max-w-2xl">
-                <h3>Pull Quote</h3>
-                <p class="my-4">"Text</p>
-                <p class="my-4">Text</p>
-                <p class="my-4">Text."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <div class="space-y-0.5 text-left">
-                  <div>John Doe</div>
-                  <div class="text-sm font-light ">Pledge Class XX</div>
-                </div>
-              </figcaption>
-            </figure>
-            <figure class="flex flex-col justify-center items-center p-8 text-center bg-green-900 border-b border-amber-400 md:p-12 lg:border-r">
-              <blockquote class="mx-auto mb-8 max-w-2xl">
-                <h3>Pull Quote</h3>
-                <p class="my-4">"Text</p>
-                <p class="my-4">Text</p>
-                <p class="my-4">Text."</p>
-              </blockquote>
-              <figcaption class="flex justify-center items-center space-x-3">
-                <div class="space-y-0.5 text-left">
-                  <div>John Doe</div>
-                  <div class="text-sm font-light ">Pledge Class XX</div>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
+      <section class="py-8 px-4 mx-auto max-w-screen-xl">
+        <div class="text-center">
+          <h2 class="text-4xl tracking-tight font-bold mb-8">Testimonials</h2>
+          <p class="text-xl mb-16 sm:text-lg">
+            Explore the positive experiences of our members!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <figure class="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
+            <blockquote class="mb-6">
+              “Joining this fraternity has been an incredible experience. I've
+              made lifelong friends, developed valuable leadership skills, and
+              discovered a strong sense of belonging. I highly recommend it to
+              anyone seeking a supportive and enriching community.”
+            </blockquote>
+            <figcaption class="flex items-center space-x-2">
+              <div class="text-left">
+                <h4 class="text-lg font-medium">John Doe</h4>
+                <p class="text-sm text-gray-500">Pledge Class XX</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
+            <blockquote class="text-xl font-light mb-6">
+              “Being a part of this fraternity has challenged me to grow both
+              personally and professionally. The brotherhood has provided me
+              with invaluable mentorship and opportunities to give back to the
+              community. It's truly a place where you can find your purpose.
+              pen_spark ”
+            </blockquote>
+            <figcaption class="flex items-center space-x-2">
+              <div class="text-left">
+                <h4 class="text-lg font-medium">Jane Doe</h4>
+                <p class="text-sm text-gray-500">Active Member</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
+            <blockquote class="text-xl font-light mb-6">
+              “The brotherhood has been a source of constant support throughout
+              my college years. From late-night study sessions to celebrating
+              milestones, these guys have always been there for me. I'm grateful
+              for the lasting friendships and memories I've made here.”
+            </blockquote>
+            <figcaption class="flex items-center space-x-2">
+              <div class="text-left">
+                <h4 class="text-lg font-medium">Jane Doe</h4>
+                <p class="text-sm text-gray-500">Active Member</p>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
+            <blockquote class="text-xl font-light mb-6">
+              “This fraternity has pushed me outside my comfort zone in the best
+              way possible. From participating in philanthropy events to taking
+              on leadership roles, I've gained valuable skills and confidence.
+              It's been a journey of self-discovery and personal growth.
+              pen_spark ”
+            </blockquote>
+            <figcaption class="flex items-center space-x-2">
+              <div class="text-left">
+                <h4 class="text-lg font-medium">Jane Doe</h4>
+                <p class="text-sm text-gray-500">Active Member</p>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
       {/* Contact Section */}
