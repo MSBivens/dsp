@@ -20,41 +20,40 @@ export default function Header() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <Navbar.Link href="/" active>
           Home
         </Navbar.Link>
         <Dropdown label="Our Brotherhood" inline>
           <Dropdown.Item>
-            <a>About Us</a>
+            <a href="/aboutUs">About Us</a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a>History</a>
+            <a href="/history">History</a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a>Philanthropy</a>
+            <a href="/philanthropy">Philanthropy</a>
           </Dropdown.Item>
         </Dropdown>
         <Dropdown label="Get Involved" inline>
           <Dropdown.Item>
-            <a>Alumni Chapter</a>
+            <a href="alumniChapter">Alumni Chapter</a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a>Volunteer</a>
+            <a href="/volunteer">Volunteer</a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a>Donate</a>
+            <a href="/donate">Donate</a>
           </Dropdown.Item>
         </Dropdown>
-
         <Dropdown label="Stay Connected" inline>
           <Dropdown.Item>
-            <a>Events</a>
+            <a href="/events">Events</a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a>News</a>
+            <a href="/news">News</a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a>Gamma Eye</a>
+            <a href="gammaEye">Gamma Eye</a>
           </Dropdown.Item>
         </Dropdown>
       </Navbar.Collapse>
