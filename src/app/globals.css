@@ -73,7 +73,7 @@ p {
 /* Links */
 
 a {
-  color: #007bff; /* Blue color for links */
+  color: #582c83; /* Blue color for links */
   text-decoration: none; /* Remove underline initially */
   transition: all 0.2s ease-in-out; /* Smooth transition on hover */
 }
@@ -85,5 +85,6 @@ a:hover {
 
 nav {
   /* background: #eaaa00; */
-  background: #007a33;
+  /* background: #007a33; */
+  font-weight: bold;
 }

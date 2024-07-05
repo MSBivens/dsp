@@ -1,108 +1,63 @@
 "use client";
 
-import { useState } from "react";
+// import Image from "next/image";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+// import Logo from "../../../public/images/logo.png";
 
+import { Button, Navbar, Dropdown } from "flowbite-react";
+
+export default function Header() {
   return (
-    <nav className="p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-xl">Delta Sigma Phi, Gamma Iota</div>
-        <div className="hidden lg:flex space-x-4">
-          <a className=" hover:text-white" href="/">
-            Home
-          </a>
-          <a className=" hover:text-white" href="/about">
-            About Us
-          </a>
-          <a className=" hover:text-white" href="/services">
-            Alumni Chapter
-          </a>
-          <a className=" hover:text-white" href="/contact">
-            Events
-          </a>
-          <a className=" hover:text-white" href="/">
-            News
-          </a>
-          <a className=" hover:text-white" href="/about">
-            Gamma Eye
-          </a>
-          <a className=" hover:text-white" href="/services">
-            History
-          </a>
-          <a className=" hover:text-white" href="/contact">
-            Philanthropy
-          </a>
-        </div>
-        <div className="hidden lg:flex space-x-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">
-            Donate
-          </button>
-          <button className="bg-green-500 text-white px-4 py-2 rounded">
-            Volunteer
-          </button>
-        </div>
-        <div className="lg:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
+    <Navbar fluid rounded>
+      <Navbar.Brand href="https://flowbite-react.com">
+        <span className="self-center whitespace-nowrap text-xl font-semibold ">
+          Gamma Iota
+        </span>
+      </Navbar.Brand>
+      <div className="flex md:order-2">
+        <Button>Donate</Button>
+        <Button>Volunteer</Button>
+        <Navbar.Toggle />
       </div>
-      {isOpen && (
-        <div className="lg:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a className="block  hover:text-white" href="/">
-              Home
-            </a>
-            <a className="block  hover:text-white" href="/about">
-              About Us
-            </a>
-            <a className="block  hover:text-white" href="/services">
-              Alumni Chapter
-            </a>
-            <a className="block  hover:text-white" href="/contact">
-              Events
-            </a>
-            <a className="block  hover:text-white" href="/">
-              News
-            </a>
-            <a className="block  hover:text-white" href="/about">
-              Gamma Eye
-            </a>
-            <a className="block  hover:text-white" href="/services">
-              History
-            </a>
-            <a className="block  hover:text-white" href="/contact">
-              Philanthropy
-            </a>
-          </div>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <button className="block w-full text-left bg-blue-500 text-white px-4 py-2 rounded mb-2">
-              Donate
-            </button>
-            <button className="block w-full text-left bg-green-500 text-white px-4 py-2 rounded">
-              Sign Up
-            </button>
-          </div>
-        </div>
-      )}
-    </nav>
+      <Navbar.Collapse>
+        <Navbar.Link href="#" active>
+          Home
+        </Navbar.Link>
+        <Dropdown label="Our Brotherhood" inline>
+          <Dropdown.Item>
+            <a>About Us</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a>History</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a>Philanthropy</a>
+          </Dropdown.Item>
+        </Dropdown>
+        <Dropdown label="Get Involved" inline>
+          <Dropdown.Item>
+            <a>Alumni Chapter</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a>Volunteer</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a>Donate</a>
+          </Dropdown.Item>
+        </Dropdown>
+
+        <Dropdown label="Stay Connected" inline>
+          <Dropdown.Item>
+            <a>Events</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a>News</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a>Gamma Eye</a>
+          </Dropdown.Item>
+        </Dropdown>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
