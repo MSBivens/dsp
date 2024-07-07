@@ -5,7 +5,12 @@ import placeholderImage from "../../../public/images/placeholder.png";
 
 export default function history() {
   const responsiveEvents = [
-    { year: "2022", event: "January", description: "Started a new project" },
+    {
+      year: "1950",
+      event: "Founded",
+      description:
+        "The Gamma Iota Chapter was founded at the University of Idaho",
+    },
     { year: "2022", event: "May", description: "Launched version 1.0" },
     { year: "2023", event: "February", description: "Reached 10,000 users" },
     { year: "2022", event: "January", description: "Started a new project" },
@@ -19,7 +24,7 @@ export default function history() {
   return (
     <main>
       {/* Hero Section */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Our Rich History
@@ -33,13 +38,10 @@ export default function history() {
       <section>
         <div className="max-w-screen-md mx-auto py-8">
           {/* Responsive timeline container */}
-          <div className="flex flex-col md:flex-col-reverse">
+          <div className="flex flex-col md:flex-col">
             {/* Timeline items */}
             {responsiveEvents.map((event, index) => (
-              <div
-                key={index}
-                className="flex items-start mb-8 md:w-1/3 md:pr-8"
-              >
+              <div key={index} className="flex items-start mb-8 md:pr-8">
                 {/* Date */}
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-semibold">{event.year}</span>
@@ -55,7 +57,7 @@ export default function history() {
         </div>
       </section>
       {/* Historical Collection */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Historical Collection
