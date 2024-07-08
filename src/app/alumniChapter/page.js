@@ -1,15 +1,13 @@
-import Image from "next/image";
-
 import UpcomingEvents from "../components/upcomingEvents.jsx";
 
-import placeholderImage from "../../../public/images/placeholder.png";
+import ACPeople from "../components/aCPeople.jsx";
 
 export default function alumniChapter() {
   return (
     <main>
       {/* Hero Section */}
-      <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+      <section>
+        <div class="pt-20 mx-auto max-w-screen-xl text-center ">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Connect with Brothers Today!
           </h1>
@@ -21,7 +19,7 @@ export default function alumniChapter() {
           <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <a
               href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
             >
               Check Out The Next Event
               <svg
@@ -56,54 +54,9 @@ export default function alumniChapter() {
         </div>
       </section>
       {/* Alumni Chapter People */}
-      <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-          <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Alumni Chapter
-            </h2>
-            <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              Striving for the betterment of the alumni experience for every
-              brother by providing opportunities for networking, support, and
-              social engagement.
-            </p>
-          </div>
-          <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <div class="text-center text-gray-500 dark:text-gray-400">
-              <Image
-                class="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
-              ></Image>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Vacant
-              </h3>
-              <p>President</p>
-            </div>
-            <div class="text-center text-gray-500 dark:text-gray-400">
-              <Image
-                class="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
-              ></Image>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Vacant
-              </h3>
-              <p>Treasurer</p>
-            </div>
-            <div class="text-center text-gray-500 dark:text-gray-400">
-              <Image
-                class="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
-              ></Image>
-              <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Vacant
-              </h3>
-              <p>Secretary</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ACPeople />
       {/* Resources */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -404,86 +357,9 @@ export default function alumniChapter() {
         </div>
       </section>
       {/* Upcoming Events */}
-      {/* <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-            <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-              Upcoming Events
-            </h2>
-          </div>
-          <div class="grid gap-8 lg:grid-cols-2">
-            <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <div class="flex justify-between items-center mb-5 text-gray-500"></div>
-              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">Homecoming | Sept. 28 to Oct. 5</a>
-              </h2>
-              <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                Reconnect with brothers and celebrate the brotherhood at this
-                years Homecoming event!
-              </p>
-              <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                BBQ, games, and more!
-              </p>
-              <div class="flex justify-between items-center">
-                <a
-                  href="#"
-                  class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-                >
-                  More Details
-                  <svg
-                    class="ml-2 w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </article>
-            <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <div class="flex justify-between items-center mb-5 text-gray-500"></div>
-              <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#">75th Anniversary | April X to X </a>
-              </h2>
-              <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                Reconnect with brothers and celebrate the brotherhood at this
-                years Homecoming event!
-              </p>
-              <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-                BBQ, games, and more!
-              </p>
-              <div class="flex justify-between items-center">
-                <a
-                  href="#"
-                  class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-                >
-                  More Details
-                  <svg
-                    class="ml-2 w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section> */}
       <UpcomingEvents />
       {/* Contact */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
             Reach Out to Us
