@@ -7,7 +7,7 @@ export default function GammaEye() {
       {/* Sign Up */}
       <GammaEyeSubscribe />
       {/* Most Recent Issue */}
-      <section class="bg-gray-100 dark:bg-gray-800">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md sm:text-center">
             <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
@@ -25,7 +25,7 @@ export default function GammaEye() {
         </div>
       </section>
       {/* Past Issues */}
-      <section class="bg-white dark:bg-gray-900 antialiased">
+      <section class="antialiased">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
@@ -39,117 +39,117 @@ export default function GammaEye() {
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white ">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
 
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Release Date
                 </p>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">
                   <a href="#" class="hover:underline">
                     Link
                   </a>
-                </h3>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* FAQ */}
-      <section class="bg-white dark:bg-gray-900">
+      {/* FAQ - ??? */}
+      {/* <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Frequently asked questions
@@ -401,7 +401,7 @@ export default function GammaEye() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Contact Info */}
       <Contact />
     </main>
