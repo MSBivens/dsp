@@ -20,8 +20,8 @@ export default function donate() {
           </p>
         </div>
       </section>
-      {/* Feature 1 */}
-      <section class="bg-white dark:bg-gray-900">
+      {/* Feature */}
+      <section>
         <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
           <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -48,7 +48,7 @@ export default function donate() {
         </div>
       </section>
       {/* Donation Options */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -147,7 +147,7 @@ export default function donate() {
               </ul>
               <a
                 href="#"
-                class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
+                class="bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
               >
                 Donate Here!
               </a>
@@ -245,7 +245,7 @@ export default function donate() {
               </ul>
               <a
                 href="#"
-                class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
+                class="bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
               >
                 Claim Your Account Today
               </a>
@@ -341,7 +341,7 @@ export default function donate() {
               </ul>
               <a
                 href="#"
-                class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
+                class="bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
               >
                 Claim Your Account Today
               </a>
@@ -352,7 +352,7 @@ export default function donate() {
       {/* Contact Section */}
       <Contact />
       {/* Testimonial */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure class="max-w-screen-md mx-auto">
             <svg
@@ -392,7 +392,7 @@ export default function donate() {
         </div>
       </section>
       {/* FAQ Section */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Frequently asked questions
@@ -458,7 +458,7 @@ export default function donate() {
         </div>
       </section>
       {/* Still Questions */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Still have questions?
@@ -469,7 +469,7 @@ export default function donate() {
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <a
               href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center  rounded-lg bg-green-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
             >
               Contact
               <svg
