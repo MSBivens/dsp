@@ -85,7 +85,7 @@ export default function volunteer() {
         </div>
       </section>
       {/* FAQ */}
-      <div class="py-4 max-w-screen-lg mx-auto bg-white">
+      <div class="py-4 max-w-screen-lg mx-auto">
         <div class="text-center mb-16">
           <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
             Frequently Asked <span class="text-indigo-600">Questions</span>
@@ -333,7 +333,7 @@ export default function volunteer() {
         </div>
       </div>
       {/* Make a Difference Today */}
-      <section class="bg-white dark:bg-gray-900">
+      <section>
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div class="mr-auto place-self-center lg:col-span-7">
             <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
