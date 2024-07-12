@@ -4,8 +4,8 @@ import { Button, Navbar, Dropdown } from "flowbite-react";
 
 export default function Header() {
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
+    <Navbar fluid rounded className="max-w-screen-xl mx-auto">
+      <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-xl font-semibold ">
           Gamma Iota
         </span>
