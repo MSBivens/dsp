@@ -365,8 +365,8 @@ export default function alumniChapter() {
             Reach Out to Us
           </h2>
           <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-            Looking to reconnect, learn more, or just say hi? We'd love to hear
-            from you!
+            Looking to reconnect, learn more, or just say hi? We&apos;d love to
+            hear from you!
           </p>
           {/* Googel Form Embed */}
         </div>

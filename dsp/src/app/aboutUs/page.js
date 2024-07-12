@@ -219,7 +219,7 @@ export default function AboutUs() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-              We're Looking for Volunteers
+              We&apos;re Looking for Volunteers
             </h2>
             <p className="mb-4 font-light">
               The organizations that make Gamma Iota possible are looking for

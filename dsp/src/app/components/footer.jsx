@@ -58,7 +58,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="/donate" className="hover:underline">
-                    Doante
+                    Donate
                   </a>
                 </li>
               </ul>

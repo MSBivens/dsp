@@ -193,10 +193,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           <figure className="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
             <blockquote className="mb-6">
-              “Joining this fraternity has been an incredible experience. I've
-              made lifelong friends, developed valuable leadership skills, and
-              discovered a strong sense of belonging. I highly recommend it to
-              anyone seeking a supportive and enriching community.”
+              “Joining this fraternity has been an incredible experience.
+              I&apos;ve made lifelong friends, developed valuable leadership
+              skills, and discovered a strong sense of belonging. I highly
+              recommend it to anyone seeking a supportive and enriching
+              community.”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
@@ -210,8 +211,8 @@ export default function Home() {
               “Being a part of this fraternity has challenged me to grow both
               personally and professionally. The brotherhood has provided me
               with invaluable mentorship and opportunities to give back to the
-              community. It's truly a place where you can find your purpose.
-              pen_spark ”
+              community. It&apos;s truly a place where you can find your
+              purpose. pen_spark ”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
@@ -224,8 +225,9 @@ export default function Home() {
             <blockquote className="text-xl font-light mb-6">
               “The brotherhood has been a source of constant support throughout
               my college years. From late-night study sessions to celebrating
-              milestones, these guys have always been there for me. I'm grateful
-              for the lasting friendships and memories I've made here.”
+              milestones, these guys have always been there for me. I&apos;m
+              grateful for the lasting friendships and memories I&apos;ve made
+              here.”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
@@ -238,9 +240,9 @@ export default function Home() {
             <blockquote className="text-xl font-light mb-6">
               “This fraternity has pushed me outside my comfort zone in the best
               way possible. From participating in philanthropy events to taking
-              on leadership roles, I've gained valuable skills and confidence.
-              It's been a journey of self-discovery and personal growth.
-              pen_spark ”
+              on leadership roles, I&apos;ve gained valuable skills and
+              confidence. It&apos;s been a journey of self-discovery and
+              personal growth. pen_spark ”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">

@@ -180,7 +180,7 @@ export default function philanthropy() {
           </div>
           <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <Image src={placeholderImage}></Image>
+              <Image src={placeholderImage} alt="image"></Image>
             </div>
           </div>
         </div>

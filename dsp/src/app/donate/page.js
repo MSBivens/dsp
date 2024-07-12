@@ -368,9 +368,9 @@ export default function donate() {
             </svg>
             <blockquote>
               <p class="text-2xl font-medium text-gray-900 dark:text-white">
-                "Flowbite is just awesome. It contains tons of predesigned
+                &quot;Flowbite is just awesome. It contains tons of predesigned
                 components and pages starting from login screen to complex
-                dashboard. Perfect choice for your next SaaS application."
+                dashboard. Perfect choice for your next SaaS application.&quot;
               </p>
             </blockquote>
             <figcaption class="flex items-center justify-center mt-6 space-x-3">
@@ -413,7 +413,7 @@ export default function donate() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What do you mean by "Figma assets"?
+                  What do you mean by &quot;Figma assets&quot;?
                 </h3>
                 <p class="text-gray-500 dark:text-gray-400">
                   You will have access to download the full Figma project
@@ -438,7 +438,7 @@ export default function donate() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does "free updates" include?
+                  What does &quot;free updates&quot; include?
                 </h3>
                 <p class="text-gray-500 dark:text-gray-400">
                   The free updates that will be provided is based on the{" "}
