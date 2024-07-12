@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://flowbite.com" className="flex items-center">
-              <Image src={logoSquare} className="w-56 h-36" />
+              <Image src={logoSquare} className="w-56 h-36" alt="Logo" />
 
               {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Flowbite
