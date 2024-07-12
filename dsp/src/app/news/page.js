@@ -47,7 +47,9 @@ export default async function news() {
         </div>
       </section>
       {/* Temp Message */}
-      <h1>This Page Is Under Construction</h1>
+      <h1 class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        This Page Is Under Construction
+      </h1>
       {/* Blog Post List */}
       {/* <div className="grid grid-cols-1  md:grid-cols-2 mt-5 gap-5">
         {data.map((post, idx) => (
