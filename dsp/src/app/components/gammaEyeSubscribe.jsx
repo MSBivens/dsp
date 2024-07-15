@@ -12,7 +12,10 @@ export default function gammaEyeSubscribe() {
           </p>
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <button className="cta-button">
-              <a href="#" className="cta-text">
+              <a
+                href="https://forms.gle/S8zq5axy76Xd7KJ87"
+                className="cta-text"
+              >
                 Update Your Information
               </a>
             </button>
