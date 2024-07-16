@@ -9,8 +9,9 @@ import {
 
 export default function contact() {
   return (
-    <section>
-      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+    <section className="max-w-screen-xl mx-auto p-4 ">
+      <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div className="max-w-screen-md mb-8 lg:mb-16">
           <h2 className="mb-4">Contact & Connect</h2>
         </div>
@@ -61,6 +62,23 @@ export default function contact() {
             <p>P.O. Box 1234</p>
             <p>Moscow, ID, 83843</p>
           </div>
+        </div>
+      </div>
+      <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div className="sm:flex sm:items-center sm:justify-between">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          © 2024 Delta Sigma Phi, Gamma Iota™. All Rights Reserved.
+        </span>
+        <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+          <a href="https://www.instagram.com/deltasig_idaho">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.facebook.com/deltasigvandals">
+            <FaFacebook size={24} />
+          </a>
+          <a href="https://www.linkedin.com/groups/13505181/">
+            <FaLinkedin size={24} />
+          </a>
         </div>
       </div>
     </section>
