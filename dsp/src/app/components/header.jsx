@@ -11,9 +11,9 @@ export default function Header() {
             <a href="https://flowbite.com" className="flex items-center">
               <Image src={logoSquare} className="w-56 h-36" alt="Logo" />
 
-              {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Flowbite
-              </span> */}
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                Gamma Iota Chapter
+              </span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
