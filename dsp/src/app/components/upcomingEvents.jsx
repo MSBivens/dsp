@@ -8,7 +8,7 @@ export default function upcomingEvents() {
           </h2>
         </div>
         <div class="grid gap-8 lg:grid-cols-2">
-          <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <article class="hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div class="flex justify-between items-center mb-5 text-gray-500"></div>
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Homecoming | Sept. 28 to Oct. 5
@@ -41,7 +41,7 @@ export default function upcomingEvents() {
               </a>
             </div>
           </article>
-          <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <article class="hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div class="flex justify-between items-center mb-5 text-gray-500"></div>
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               75th Anniversary | April 25 to 27
