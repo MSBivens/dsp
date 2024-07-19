@@ -3,8 +3,37 @@ import GammaEyeSubscribe from "../components/gammaEyeSubscribe.jsx";
 export default function newsletter() {
   return (
     <main>
-      {/* Sign Up */}
-      <GammaEyeSubscribe />
+      {/* Update Information */}
+      <section>
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Sign up to receive the Gamma Eye
+          </p>
+          <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
+            Stay Informed With Our Newsletter
+          </h2>
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Our newsletter, the Gamma Eye, has kept our community updated on
+            chapter news for decades. The triannual publication is a great way
+            to stay connected with the chapter and your brothers and provides
+            insight that is valuable for alumni, parents, volunteers, and more.
+          </p>
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+            Stay up to date with Gamma Iota news, events, and more by updating
+            your contact information today!
+          </p>
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <button className="cta-button">
+              <a
+                href="https://forms.gle/S8zq5axy76Xd7KJ87"
+                className="cta-text"
+              >
+                Update Your Information
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
       {/* Most Recent Issue */}
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">

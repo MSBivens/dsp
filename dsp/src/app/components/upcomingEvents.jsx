@@ -44,14 +44,13 @@ export default function upcomingEvents() {
           <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div class="flex justify-between items-center mb-5 text-gray-500"></div>
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              <a href="#">75th Anniversary | April X to X </a>
+              <a href="#">75th Anniversary | April 25 to 27 </a>
             </h2>
             <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-              Reconnect with brothers and celebrate the brotherhood at this
-              years Homecoming event!
-            </p>
-            <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-              BBQ, games, and more!
+              3 day event celebrating the 75th anniversary of the Gamma Iota
+              chapter of Delta Sigma Phi at the University of Idaho. Planned
+              activities include informal reception, golf tournament, campus
+              tours, and dinner.
             </p>
             <div class="flex justify-between items-center">
               <a

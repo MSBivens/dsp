@@ -1,6 +1,8 @@
 import Image from "next/image";
 import UpcomingEvents from "../components/upcomingEvents.jsx";
 import placeholderImage from "../../../public/images/placeholder.png";
+import event1 from "../../../public/images/event1.jpg";
+import event2 from "../../../public/images/event2.jpg";
 
 export default function events() {
   return (
@@ -19,17 +21,19 @@ export default function events() {
               sure to RSVP if you plan on attending.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-8">
+          <div className="">
             <Image
-              className="w-full rounded-lg"
-              src={placeholderImage}
+              className="rounded-lg"
+              src={event1}
               alt="Placeholder Image"
+              width={800}
+              height={800}
             ></Image>
-            <Image
+            {/* <Image
               className="mt-4 w-full lg:mt-10 rounded-lg"
-              src={placeholderImage}
+              src={event2}
               alt="Placeholder Image"
-            ></Image>
+            ></Image> */}
           </div>
         </div>
       </section>
@@ -44,13 +48,15 @@ export default function events() {
             <p className="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400">
               Stay updated on upcoming events and connect with fellow brothers.
             </p>
-            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
-              >
-                Update Contact Information
-              </a>
+            <div class="flex flex-col space-y-4 sm:flex-row  sm:space-y-0">
+              <button className="cta-button">
+                <a
+                  href="https://forms.gle/S8zq5axy76Xd7KJ87"
+                  className="cta-text"
+                >
+                  Update Your Information
+                </a>
+              </button>
             </div>
           </div>
         </div>
