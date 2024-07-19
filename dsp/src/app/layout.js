@@ -7,7 +7,7 @@ import Footer from "./components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "ΔΣΦ ΓΙ",
+  title: "ΔΣΦ Gamma Iota",
   description:
     "Delta Sigma Phi - Gamma Iota Chapter at the University of Idaho.",
   author: "Michael Bivens",
