@@ -14,8 +14,8 @@ export default function newsletter() {
           </h2>
           <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
             Our newsletter, the Gamma Eye, has kept our community updated on
-            chapter news for decades. The triannual publication is a great way
-            to stay connected with the chapter and your brothers and provides
+            chapter news for decades. The biannual publication is a great way to
+            stay connected with the chapter and your brothers and provides
             insight that is valuable for alumni, parents, volunteers, and more.
           </p>
           <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
@@ -42,11 +42,11 @@ export default function newsletter() {
               Most Recent Issue
             </h2>
             <div class="flex justify-center">
-              <embed
+              <iframe
                 src="../../files/GammaEyeED16.pdf"
                 type="application/pdf"
                 width="1200"
-                height="800"
+                height="1200"
               />
             </div>
           </div>
