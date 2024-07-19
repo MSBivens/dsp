@@ -29,11 +29,6 @@ export default function events() {
               width={800}
               height={800}
             ></Image>
-            {/* <Image
-              className="mt-4 w-full lg:mt-10 rounded-lg"
-              src={event2}
-              alt="Placeholder Image"
-            ></Image> */}
           </div>
         </div>
       </section>
