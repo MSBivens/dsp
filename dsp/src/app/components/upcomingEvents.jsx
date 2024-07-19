@@ -11,7 +11,7 @@ export default function upcomingEvents() {
           <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div class="flex justify-between items-center mb-5 text-gray-500"></div>
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              <a href="#">Homecoming | Sept. 28 to Oct. 5</a>
+              Homecoming | Sept. 28 to Oct. 5
             </h2>
             <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
               Reconnect with brothers and celebrate the brotherhood at this
@@ -22,7 +22,7 @@ export default function upcomingEvents() {
             </p>
             <div class="flex justify-between items-center">
               <a
-                href="#"
+                href="https://www.uidaho.edu/events/signature-events/homecoming"
                 class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
               >
                 More Details
@@ -44,7 +44,7 @@ export default function upcomingEvents() {
           <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div class="flex justify-between items-center mb-5 text-gray-500"></div>
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              <a href="#">75th Anniversary | April 25 to 27 </a>
+              75th Anniversary | April 25 to 27
             </h2>
             <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
               3 day event celebrating the 75th anniversary of the Gamma Iota
@@ -54,7 +54,7 @@ export default function upcomingEvents() {
             </p>
             <div class="flex justify-between items-center">
               <a
-                href="#"
+                href="https://www.facebook.com/events/998261511948747"
                 class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
               >
                 More Details
