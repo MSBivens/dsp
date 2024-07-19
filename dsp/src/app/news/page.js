@@ -32,7 +32,8 @@ export default async function news() {
             Under Maintenance
           </h1>
           <p class="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-            Our Enterprise administrators are performing scheduled maintenance.
+            Our web team is working to update and improve our news section.
+            Check back soon!
           </p>
         </div>
       </section>
