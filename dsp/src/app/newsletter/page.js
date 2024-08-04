@@ -34,24 +34,6 @@ export default function newsletter() {
           </div>
         </div>
       </section>
-      {/* Most Recent Issue */}
-      <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div class="mx-auto  sm:text-center">
-            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
-              Most Recent Issue
-            </h2>
-            <div class="flex justify-center">
-              <iframe
-                src="../../files/GammaEyeED16.pdf"
-                type="application/pdf"
-                width="1200"
-                height="1200"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Past Issues */}
       <section class="antialiased">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
