@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import placeholderImage from "../../../public/images/placeholder.png";
+import personPlaceholder from "../../../public/images/personPlaceholder.jpg";
 
 export default function aCPeople() {
   return (
@@ -20,7 +20,7 @@ export default function aCPeople() {
           <div className="text-center text-gray-500 dark:text-gray-400">
             <Image
               className="mx-auto mb-4 w-36 h-36 rounded-full"
-              src={placeholderImage}
+              src={personPlaceholder}
               alt="President"
             ></Image>
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -31,7 +31,7 @@ export default function aCPeople() {
           <div className="text-center text-gray-500 dark:text-gray-400">
             <Image
               className="mx-auto mb-4 w-36 h-36 rounded-full"
-              src={placeholderImage}
+              src={personPlaceholder}
               alt="Treasurer"
             ></Image>
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -42,7 +42,7 @@ export default function aCPeople() {
           <div className="text-center text-gray-500 dark:text-gray-400">
             <Image
               className="mx-auto mb-4 w-36 h-36 rounded-full"
-              src={placeholderImage}
+              src={personPlaceholder}
               alt="Secretary"
             ></Image>
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
