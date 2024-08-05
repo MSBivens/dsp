@@ -1,8 +1,52 @@
 import Image from "next/image";
 
-import placeholderImage from "../../../public/images/placeholder.png";
+import volunteerImage from "../../../public/images/volunteer.jpg";
 
 export default function volunteer() {
+  const faqData = [
+    {
+      id: 1,
+      question: "How can I volunteer?",
+      answer:
+        "To volunteer, please fill out the contact form or reach out to ACB leadership.",
+    },
+    {
+      id: 2,
+      question: "Are there short-term volunteer opportunities?",
+      answer:
+        "Yes! If you would like to volunteer for a specific event or project, please reach out to the ACB.",
+    },
+    {
+      id: 3,
+      question: "What are the time commitments?",
+      answer:
+        "Time commitments vary depending on the volunteer opportunity. Our leaderships can provide specific information about the various roles and projects.",
+    },
+    {
+      id: 4,
+      question: "What roles are available?",
+      answer:
+        "We have a variety of volunteeer roles available. Check out our About Us page to see some of these, or fill out the contact form to learn more.",
+    },
+    {
+      id: 5,
+      question: "How do I get involved?",
+      answer:
+        "To get inovlved, please fill out the contact form or reach out to leadership directly.",
+    },
+    {
+      id: 6,
+      question: "I live far away, can I still volunteer?",
+      answer:
+        "Yes! Nearly every volunteer lives and volunteers distantly from Moscow.",
+    },
+    {
+      id: 7,
+      question: "What are the time commitments?",
+      answer:
+        "Time commitments vary depending on the volunteer opportunity. Our leaderships can provide specific information about the various roles and projects.",
+    },
+  ];
   return (
     <main>
       {/* Feature */}
@@ -19,27 +63,11 @@ export default function volunteer() {
                 Discover the various volunteer opportunities available at Gamma
                 Iota and how your contribution can help us build better men.
               </p>
-              <a
-                href="#"
-                class="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 lg:justify-start hover:text-indigo-700 "
-              >
-                Volunteer Today
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
-                    stroke="#4F46E5"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </a>
+              <button className="cta-button">
+                <a href="/donate">
+                  <p className="cta-text">Volunteer Today</p>
+                </a>
+              </button>
             </div>
           </div>
           <div class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
@@ -53,7 +81,7 @@ export default function volunteer() {
                 undergraduate members.
               </p>
             </div>
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-yellow-400">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white">
                 Event Planning
               </h4>
@@ -63,7 +91,7 @@ export default function volunteer() {
                 Receptions, and our Anniversary Celebrations.
               </p>
             </div>
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-yellow-400">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white">
                 Operations
               </h4>
@@ -72,7 +100,7 @@ export default function volunteer() {
                 and legal oversight of Gamma Iota&apos;s assets and operations.
               </p>
             </div>
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-yellow-400">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white">
                 Fundraising
               </h4>
@@ -84,286 +112,65 @@ export default function volunteer() {
           </div>
         </div>
       </section>
-      {/* FAQ */}
-      <div class="py-4 max-w-screen-lg mx-auto">
-        <div class="text-center mb-16">
-          <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
-            Frequently Asked <span class="text-indigo-600">Questions</span>
-          </h3>
-        </div>
-
-        <div class="px-10 sm:px-16 sm:flex items-start mb-10">
-          <h3 class="py-3 font-bold text-lg text-gray-900 w-3/12">Volunteer</h3>
-          <div class="w-9/12">
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
+      {/* FAQ Mapped */}
+      <section>
+        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            Frequently asked questions
+          </h2>
+          <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+            {faqData.map((item) => (
+              <div key={item.id}>
+                <div className="mb-10">
+                  <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                    <svg
+                      className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span aria-labelledby={`question-${item.id}`}>
+                      {item.question}
+                    </span>
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400">
+                    {item.answer}
+                  </p>
+                </div>
               </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  How can I volunteer?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  To volunteer, please fill out the contact form or reach out to
-                  ACB leadership.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  Are there short-term volunteer opportunities?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  Yes! If you would like to volunteer for a specific event or
-                  project, please reach out to the ACB.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  What are the time commitments?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  Time commitments vary depending on the volunteer opportunity.
-                  Our leaderships can provide specific information about the
-                  various roles and projects.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  What roles are available?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  We have a variety of volunteeer roles available. Check out our
-                  About Us page to see some of these, or fill out the contact
-                  form to learn more.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  How do I get involved?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  To get inovlved, please fill out the contact form or reach out
-                  to leadership directly.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  I live far away, can I still volunteer?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  Yes! Nearly every volunteer lives and volunteers distantly
-                  from Moscow.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start mb-8">
-              <div class="hidden sm:flex items-center justify-center p-3 mr-3 rounded-full bg-indigo-500 text-white border-4 border-white text-xl font-semibold">
-                <svg
-                  width="24px"
-                  fill="white"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g data-name="Layer 2">
-                    <g data-name="menu-arrow">
-                      <rect
-                        width="24"
-                        height="24"
-                        transform="rotate(180 12 12)"
-                        opacity="0"
-                      ></rect>
-                      <path d="M17 9A5 5 0 0 0 7 9a1 1 0 0 0 2 0 3 3 0 1 1 3 3 1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-1.1A5 5 0 0 0 17 9z"></path>
-                      <circle cx="12" cy="19" r="1"></circle>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div class="text-md">
-                <h1 class="text-gray-900 font-semibold mb-2">
-                  What are the time commitments?
-                </h1>
-                <p class="text-gray-500 text-sm">
-                  Time commitments vary depending on the volunteer opportunity.
-                  Our leaderships can provide specific information about the
-                  various roles and projects.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
       {/* Make a Difference Today */}
       <section>
-        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+        <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+          <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+            {/* <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
               Make a Difference Today
-            </h1>
-            <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            </h1> */}
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+              Make a Difference Today
+            </h2>
+            <p className="mb-4">
               Join us in volunterring and make a postive impact in the lives of
               our undergraduate members and fellow alumni.
             </p>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
-            >
-              Get Started
-              <svg
-                class="w-5 h-5 ml-2 -mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
-          <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <Image src={placeholderImage} alt="Placeholder Image"></Image>{" "}
+          <div className="">
+            <Image
+              className="rounded-lg"
+              src={volunteerImage}
+              alt="Placeholder Image"
+              width={800}
+              height={800}
+            ></Image>
           </div>
         </div>
       </section>
