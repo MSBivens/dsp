@@ -64,23 +64,6 @@ export default function contact() {
           </div>
         </div>
       </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024 Delta Sigma Phi, Gamma Iota™. All Rights Reserved.
-        </span>
-        <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-          <a href="https://www.instagram.com/deltasig_idaho">
-            <FaInstagram size={24} />
-          </a>
-          <a href="https://www.facebook.com/deltasigvandals">
-            <FaFacebook size={24} />
-          </a>
-          <a href="https://www.linkedin.com/groups/13505181/">
-            <FaLinkedin size={24} />
-          </a>
-        </div>
-      </div>
     </section>
   );
 }
