@@ -1,91 +1,133 @@
-import Image from "next/image";
+"use client";
 
 import logoSquare from "../../../public/images/logoSquare.png";
+import Image from "next/image";
+import { useEffect, useState, useRef } from "react";
+
+import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 
 export default function Header() {
-  return (
-    <header className="max-w-screen-xl mx-auto p-4 ">
-      <div className="mx-auto max-w-screen-xl">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com" className="flex items-center">
-              <Image src={logoSquare} className="w-56 h-36" alt="Logo" />
+  const navigationLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/aboutUs" },
+    { label: "History", href: "/history" },
+    { label: "Philanthropy", href: "/philanthropy" },
+    { label: "Alumni Chapter", href: "/alumniChapter" },
+    { label: "Volunteer", href: "/volunteer" },
+    { label: "Donate", href: "/donate" },
+    { label: "Events", href: "/events" },
+    { label: "News", href: "/news" },
+    { label: "Newsletter", href: "/newsletter" },
+  ];
 
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Gamma Iota Chapter
-              </span>
-            </a>
-          </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Our Brotherhood
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
-                  <a href="/aboutUs" className="hover:underline">
-                    About Us
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/history" className="hover:underline">
-                    History
-                  </a>
-                </li>
-                <li>
-                  <a href="/philanthropy" className="hover:underline">
-                    Philanthropy
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Get Involved
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
-                  <a href="/alumniChapter" className="hover:underline ">
-                    Alumni Chapter
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/volunteer" className="hover:underline ">
-                    Volunteer
-                  </a>
-                </li>
-                <li>
-                  <a href="/donate" className="hover:underline">
-                    Donate
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Stay Connected
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
-                  <a href="/events" className="hover:underline">
-                    Events
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/news" className="hover:underline">
-                    News
-                  </a>
-                </li>
-                <li>
-                  <a href="/newsletter" className="hover:underline">
-                    Newsletter
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+  const socialLinks = [
+    { label: <FaFacebook size={24} />, href: "https://www.facebook.com/" },
+    { label: <FaLinkedin size={24} />, href: "https://www.linkedin.com/" },
+    { label: <FaInstagram size={24} />, href: "https://www.instagram.com/" },
+  ];
+
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <header className=" ">
+      <div className="container mx-auto flex justify-between items-center relative">
+        <div className="flex flex-wrap items-center mr-auto">
+          {/* <Image
+            src={logoSquare}
+            alt="Gamma Iota Chapter Logo"
+            width={50}
+            height={50}
+          /> */}
+          <h1 className="text-2xl font-bold">Delta Sigma Phi</h1>
+
+          {/* <h2 className="text-2xl font-medium">Gamma Iota Chapter</h2> */}
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        {/* Navigation Links */}
+        <div className="hidden lg:flex space-x-4 nav-links mr-auto">
+          {navigationLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="hover:text-gray-300"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+        {/* Social Links */}
+        <div className="hidden lg:flex space-x-4">
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="hover:text-gray-300"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+        {/* Hamburger Menu */}
+        <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <div
+          className={`absolute top-16 left-0 right-0 bg-white z-10 p-4 ${
+            isOpen ? "block" : "hidden"
+          }`}
+          ref={menuRef}
+        >
+          <ul>
+            {navigationLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="block py-2 px-4 hover:bg-gray-700 text-black"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-4">
+            {socialLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="block py-2 px-4 hover:bg-gray-700 text-black"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );
