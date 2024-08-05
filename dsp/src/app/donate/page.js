@@ -327,27 +327,7 @@ export default function donate() {
           </div>
         </div>
       </section>
-      {/* Still Questions */}
-      <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            Still have questions?
-          </h1>
-          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-            Contact volunteer leadership for further assistance.
-          </p>
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <button className="cta-button">
-              <a href="/donate">
-                <p className="cta-text">Contact Us</p>
-              </a>
-            </button>
-          </div>
-        </div>
-      </section>
-      {/* Gamma Eye Sign Up */}
-      <GammaEyeSubscribe />
-      {/* Test Section */}
+      {/* Still Questions & Subscribe*/}
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
