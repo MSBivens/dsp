@@ -17,24 +17,11 @@ export default function alumniChapter() {
             networking, support, and social engagement.
           </p>
           <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <a
-              href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
-            >
-              Check Out The Next Event
-              <svg
-                class="ml-2 -mr-1 w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
+            <button className="navigation-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+              <a href="/events">
+                <p className="cta-text">Check Out The Next Event!</p>
+              </a>
+            </button>
             {/* Bring in video, upload it to YouTube */}
             {/* <a
               href="#"
@@ -69,7 +56,7 @@ export default function alumniChapter() {
           </div>
           <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
             <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">My DeltaSig</h3>
+              <h3 class="mb-4 text-2xl font-semibold">The LAMP</h3>
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
                 A wealth of educational and professional resources for brothers.
               </p>
@@ -87,7 +74,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>Individual configuration</span>
+                  <span>Volunteer Training</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -102,7 +89,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>No setup, or hidden fees</span>
+                  <span>Personal Development</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -117,9 +104,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>
-                    Team size: <span class="font-semibold">1 developer</span>
-                  </span>
+                  <span>Professional Development</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -134,39 +119,20 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>
-                    Premium support: <span class="font-semibold">6 months</span>
-                  </span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span>
-                    Free updates: <span class="font-semibold">6 months</span>
-                  </span>
+                  <span>Foundation Information</span>
                 </li>
               </ul>
-              <a
-                href="#"
-                class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
-              >
-                Claim Your Account Today
-              </a>
+              <button className="cta-button mt-auto">
+                <a href="https://mydeltasig.org/">
+                  <p className="cta-text">Access via MyDeltaSig</p>
+                </a>
+              </button>
             </div>
             <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Benefits Page</h3>
+              <h3 class="mb-4 text-2xl font-semibold">PerkSpot</h3>
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
-                A wealth of educational and professional resources for brothers.
+                Access to discounts and exclusive offers on all kinds of goods
+                and services, free for members!
               </p>
               <ul role="list" class="mb-8 space-y-4 text-left">
                 <li class="flex items-center space-x-3">
@@ -182,7 +148,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>Individual configuration</span>
+                  <span>Travel Deals</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -197,7 +163,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>No setup, or hidden fees</span>
+                  <span>Special Insurance Rates</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -212,9 +178,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>
-                    Team size: <span class="font-semibold">1 developer</span>
-                  </span>
+                  <span>Tickets & Entertainment</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -229,9 +193,7 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>
-                    Premium support: <span class="font-semibold">6 months</span>
-                  </span>
+                  <span>Office & Business</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <svg
@@ -246,22 +208,20 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>
-                    Free updates: <span class="font-semibold">6 months</span>
-                  </span>
+                  <span>Cable and Home Services</span>
                 </li>
               </ul>
-              <a
-                href="#"
-                class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
-              >
-                Claim Your Account Today
-              </a>
+              <button className="cta-button mt-auto">
+                <a href="https://mydeltasig.org/">
+                  <p className="cta-text">Access via MyDeltaSig</p>
+                </a>
+              </button>
             </div>
             <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Something Else</h3>
+              <h3 class="mb-4 text-2xl font-semibold">Graduate Scholarships</h3>
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
-                A wealth of educational and professional resources for brothers.
+                Headquarters offers annual scholarships for Delta Sigs looking
+                to attend graduate school.
               </p>
               <ul role="list" class="mb-8 space-y-4 text-left">
                 <li class="flex items-center space-x-3">
@@ -277,81 +237,14 @@ export default function alumniChapter() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <span>Individual configuration</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span>No setup, or hidden fees</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span>
-                    Team size: <span class="font-semibold">1 developer</span>
-                  </span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span>
-                    Premium support: <span class="font-semibold">6 months</span>
-                  </span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  <span>
-                    Free updates: <span class="font-semibold">6 months</span>
-                  </span>
+                  <span>Graduate Scholarships</span>
                 </li>
               </ul>
-              <a
-                href="#"
-                class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
-              >
-                Claim Your Account Today
-              </a>
+              <button className="cta-button mt-auto">
+                <a href="https://deltasig.org/scholarships/">
+                  <p className="cta-text">Learn More</p>
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -368,7 +261,16 @@ export default function alumniChapter() {
             Looking to reconnect, learn more, or just say hi? We&apos;d love to
             hear from you!
           </p>
-          {/* Googel Form Embed */}
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <button className="cta-button">
+              <a
+                href="https://forms.gle/S8zq5axy76Xd7KJ87"
+                className="cta-text"
+              >
+                Contact Us Here
+              </a>
+            </button>
+          </div>
         </div>
       </section>
     </main>
