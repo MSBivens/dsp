@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-import placeholderImage from "../../../public/images/placeholder.png";
+import serviceImage from "../../../public/images/service.jpg";
+
+import { FaHandHoldingDollar, FaSeedling, FaHandshake } from "react-icons/fa6";
 
 export default function philanthropy() {
   return (
@@ -54,7 +56,7 @@ export default function philanthropy() {
               At Gamma Iota, we are proud to have raised a significant amount to
               support various causes and make a positive impact in our
               community. Through our philanthropic efforts, we strive to create
-              a abetter future for those in need.
+              a better future for those in need.
             </p>
           </div>
           <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
@@ -65,17 +67,13 @@ export default function philanthropy() {
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
-                  clip-rule="evenodd"
-                ></path>
+                <FaHandHoldingDollar />
               </svg>
               <h3 class="mb-2 text-2xl font-bold dark:text-white">
                 Impactful Giving
               </h3>
               <p class="font-light text-gray-500 dark:text-gray-400">
-                Every donation counts. Together, we have raised over $100,000 to
+                Every donation counts. Together, we have raised over $200,000 to
                 support other causes
               </p>
             </div>
@@ -92,7 +90,7 @@ export default function philanthropy() {
                 Community Impact
               </h3>
               <p class="font-light text-gray-500 dark:text-gray-400">
-                Our philanthropic efforts have amde a significant difference in
+                Our philanthropic efforts have made a significant difference in
                 the lives of many.
               </p>
             </div>
@@ -114,7 +112,7 @@ export default function philanthropy() {
           <div>
             <iframe
               class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
-              src="https://www.youtube.com/embed/KaLxCiilHns"
+              src="https://www.youtube.com/embed/YIPh4V6ORoM?si=Ih6gvC9uvVQxXFk0"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -145,14 +143,10 @@ export default function philanthropy() {
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
-                    clip-rule="evenodd"
-                  ></path>
+                  <FaHandshake />
                 </svg>
                 <h3 class="mb-2 text-2xl font-bold dark:text-white">
-                  Impactful Giving
+                  Intentional Giving
                 </h3>
                 <p class="font-light text-gray-500 dark:text-gray-400">
                   Our philanthhropic efforts create lasting change and improve
@@ -166,7 +160,7 @@ export default function philanthropy() {
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                  <FaSeedling />
                 </svg>
                 <h3 class="mb-2 text-2xl font-bold dark:text-white">
                   Personal Growth
@@ -180,7 +174,7 @@ export default function philanthropy() {
           </div>
           <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <Image src={placeholderImage} alt="image"></Image>
+              <Image src={serviceImage} alt="image"></Image>
             </div>
           </div>
         </div>
