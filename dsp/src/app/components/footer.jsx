@@ -5,6 +5,8 @@ import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="max-w-screen-xl mx-auto p-4 ">
+      <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+
       <div className="mx-auto max-w-screen-xl">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
