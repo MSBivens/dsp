@@ -254,7 +254,7 @@ export default function donate() {
                   Micheal Gough
                 </div>
                 <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
-                  PC'XX
+                  PC&apos;XX
                 </div>
               </div>
             </figcaption>
