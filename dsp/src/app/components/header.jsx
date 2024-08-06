@@ -43,7 +43,11 @@ export default function Header() {
   }, []);
 
   return (
-    <header className=" ">
+    <header className="mx-auto max-w-screen-xl text-center lg:py-4 ">
+      <div className="container mx-auto flex justify-between items-center relative">
+        <p>Logo and Socials on first</p>
+        <p>Chapter and Links on second</p>
+      </div>
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex flex-wrap items-center mr-auto">
           {/* <Image
