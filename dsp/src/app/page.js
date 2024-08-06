@@ -40,7 +40,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Alumni Memories Gallery */}
       <section>
         <div className="max-w-screen-xl px-4 py-8 mx-auto">
