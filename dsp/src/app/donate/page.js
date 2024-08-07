@@ -6,6 +6,56 @@ import GammaEyeSubscribe from "../components/gammaEyeSubscribe.jsx";
 import donateWork from "../../../public/images/donate-work.jpg";
 
 export default function donate() {
+  const faqData = [
+    {
+      id: 1,
+      question: "How can I make a donation?",
+      answer:
+        "You can make a donation to directly support Gamma Iota by sending a check or by use of the online donation form through PayPal.",
+    },
+    {
+      id: 2,
+      question: "Are donations tax deductible?",
+      answer:
+        "All donations to Headquarters and the University of Idaho are tax deductible. Direct donations to Gamma Iota are not tax deductible at this time. We are currently pursuing potential options.",
+    },
+    {
+      id: 3,
+      question: "How will my donations be used?",
+      answer:
+        "Donated funds will be allocated to the various funds established by the chapter, including scholarships, facility improvement, and more. You can also choose which specific fund to make your donation to",
+    },
+    {
+      id: 4,
+      question: "Is my donation secure?",
+      answer:
+        "We use PayPal to process online donations, which is a secure and trusted platform for online transactions.",
+    },
+    {
+      id: 5,
+      question: "What is the average donation amount?",
+      answer:
+        "Our average donation amount is $500, but any amount is greatly appreciated and will help us make a difference in the lives of our brothers.",
+    },
+    {
+      id: 6,
+      question: "Can I make a recurring donation?",
+      answer:
+        "We are working with PayPal to enable this option! In the meantime, you can set up a recurring donation through your bank.",
+    },
+    {
+      id: 7,
+      question: "What are the different donation levels and their benefits?",
+      answer:
+        "Stay tuned for more information on this! We are currently working on establishing different donation levels and their benefits.",
+    },
+    {
+      id: 8,
+      question: "How will my donation be recognized?",
+      answer:
+        "Donations will be recognized on our website and in our newsletter. We are also working on establishing a donor wall in the chapter house. If you would like to remain anonymous, please let us know.",
+    },
+  ];
   return (
     <main>
       {/* Hero */}
@@ -263,67 +313,37 @@ export default function donate() {
       </section>
       {/* FAQ Section */}
       <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Frequently asked questions
           </h2>
-          <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
-            <div>
-              <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                  <svg
-                    class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  What do you mean by &quot;Figma assets&quot;?
-                </h3>
-                <p class="text-gray-500 dark:text-gray-400">
-                  You will have access to download the full Figma project
-                  including all of the pages, the components, responsive pages,
-                  and also the icons, illustrations, and images included in the
-                  screens.
-                </p>
+          <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+            {faqData.map((item) => (
+              <div key={item.id}>
+                <div className="mb-10">
+                  <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                    <svg
+                      className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span aria-labelledby={`question-${item.id}`}>
+                      {item.question}
+                    </span>
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400">
+                    {item.answer}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div>
-              <div class="mb-10">
-                <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                  <svg
-                    class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  What does &quot;free updates&quot; include?
-                </h3>
-                <p class="text-gray-500 dark:text-gray-400">
-                  The free updates that will be provided is based on the{" "}
-                  <a
-                    href="#"
-                    class="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
-                  >
-                    roadmap
-                  </a>{" "}
-                  that we have laid out for this project. It is also possible
-                  that we will provide extra updates outside of the roadmap as
-                  well.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
