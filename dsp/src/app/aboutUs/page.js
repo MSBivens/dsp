@@ -2,6 +2,14 @@ import Image from "next/image";
 import placeholderImage from "../../../public/images/placeholder.png";
 import ACPeople from "../components/aCPeople.jsx";
 
+import personPlaceholder from "../../../public/images/personPlaceholder.jpg";
+import acbPresident from "../../../public/images/acbpresident.jpg";
+import acbVP from "../../../public/images/acbvp.jpg";
+import acbSecretary from "../../../public/images/acbsecretary.jpg";
+import undergradPresident from "../../../public/images/undergradPresident.jpg";
+import undergradTreasurer from "../../../public/images/undergradTreasurer.jpg";
+import acbDoD from "../../../public/images/ACBDoD.jpg";
+
 export default function AboutUs() {
   return (
     <main>
@@ -21,7 +29,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={acbPresident}
                 alt="Radley Peterson"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -32,7 +40,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={acbVP}
                 alt="Sean Foster"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -43,7 +51,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={personPlaceholder}
                 alt="Grant Lund"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -54,18 +62,18 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={acbSecretary}
                 alt="Vacant"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Vacant
+                Ted Sharpe
               </h3>
               <p>ACB Secretary</p>
             </div>
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={undergradPresident}
                 alt="Josh Rardon"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -76,7 +84,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={undergradTreasurer}
                 alt="Seth Rahe"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -87,7 +95,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={acbDoD}
                 alt="Michael Bivens"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -96,7 +104,8 @@ export default function AboutUs() {
               <p>Director of Development</p>
               <p>Webmaster</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            {/* Commented Out While Vacant */}
+            {/* <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={placeholderImage}
@@ -106,7 +115,7 @@ export default function AboutUs() {
                 Vacant
               </h3>
               <p>Director of Facilities</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -124,7 +133,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={personPlaceholder}
                 alt="Mil DeSilva"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -135,7 +144,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={personPlaceholder}
                 alt="John Schisel"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -146,7 +155,7 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={personPlaceholder}
                 alt="Stace Sievert"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -157,93 +166,49 @@ export default function AboutUs() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={personPlaceholder}
                 alt="Neil Sims"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Neil Sims
+                Jarod DeLay
               </h3>
-              <p>Vue.js Developer</p>
+              <p>Recruitment Advisor</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            {/* <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
+                src={personPlaceholder}
                 alt="Neil Sims"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Neil Sims
+                Name
               </h3>
-              <p>Vue.js Developer</p>
-            </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
-              <Image
-                className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
-                alt="Neil Sims"
-              ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Neil Sims
-              </h3>
-              <p>Vue.js Developer</p>
-            </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
-              <Image
-                className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
-                alt="Neil Sims"
-              ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Neil Sims
-              </h3>
-              <p>Vue.js Developer</p>
-            </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
-              <Image
-                className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={placeholderImage}
-                alt="Neil Sims"
-              ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Neil Sims
-              </h3>
-              <p>Vue.js Developer</p>
-            </div>
+              <p>Title</p>
+            </div> */}
           </div>
         </div>
       </section>
       {/* Alumni Chapter People */}
-      <ACPeople />
+      {/* <ACPeople /> */}
       {/* Looking For Volunteers */}
       <section>
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-              We&apos;re Looking for Volunteers
+              Become A Delta Sig Volunteer
             </h2>
             <p className="mb-4 font-light">
-              The organizations that make Gamma Iota possible are looking for
-              volunteers to join. Note, this needs to be sold more, just
-              placeholder text.
+              Want to make a difference and leave your mark on our fraternity?
+              We're seeking passionate individuals to join our team and help us
+              create unforgettable experiences. From event planning to community
+              outreach, there's a role for everyone. Discover how you can
+              contribute to our brotherhood and make a lasting impact.
             </p>
-            <a
-              href="#"
-              className="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"
-            >
-              Learn How To Get Involved
-              <svg
-                className="ml-1 w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </a>
+            <button className="cta-button">
+              <a href="/volunteer">
+                <p className="cta-text">Learn How To Get Involved</p>
+              </a>
+            </button>
           </div>
         </div>
       </section>
