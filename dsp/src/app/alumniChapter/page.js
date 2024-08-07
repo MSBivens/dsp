@@ -41,7 +41,7 @@ export default function alumniChapter() {
         </div>
       </section>
       {/* Alumni Chapter People */}
-      <ACPeople />
+      {/* <ACPeople /> */}
       {/* Resources */}
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
