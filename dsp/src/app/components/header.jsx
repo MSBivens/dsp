@@ -45,24 +45,17 @@ export default function Header() {
   return (
     <header className="mx-auto max-w-screen-xl text-center lg:py-4 ">
       <div className="container mx-auto flex justify-between items-center relative">
-        <p>Logo and Socials on first</p>
-        <p>Chapter and Links on second</p>
-      </div>
-      <div className="container mx-auto flex justify-between items-center relative">
-        <div className="flex flex-wrap items-center mr-auto">
-          {/* <Image
-            src={logoSquare}
-            alt="Gamma Iota Chapter Logo"
-            width={50}
-            height={50}
-          /> */}
-          <h1 className="text-2xl font-bold">Delta Sigma Phi</h1>
+        <Image
+          src={logoSquare}
+          alt="Gamma Iota Chapter Logo"
+          width={200}
+          height={200}
+        />
+        <h1>Gamma Iota Chapter</h1>
 
-          {/* <h2 className="text-2xl font-medium">Gamma Iota Chapter</h2> */}
-        </div>
-        {/* Navigation Links */}
-        <div className="hidden lg:flex space-x-4 nav-links mr-auto">
-          {navigationLinks.map((link) => (
+        {/* Social Links */}
+        <div className="hidden lg:flex space-x-4">
+          {socialLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -72,9 +65,12 @@ export default function Header() {
             </a>
           ))}
         </div>
-        {/* Social Links */}
-        <div className="hidden lg:flex space-x-4">
-          {socialLinks.map((link) => (
+      </div>
+      <div className="mx-auto container flex justify-between items-center relative">
+        <div className="hidden lg:flex space-x-4 nav-links mr-auto"></div>
+        {/* Navigation Links */}
+        <div className="hidden lg:flex space-x-4 nav-links mr-auto">
+          {navigationLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
