@@ -202,9 +202,9 @@ export default function Home() {
               chapter of Delta Sigma Phi near the top!
             </blockquote>
             <blockquote className="text-xl font-light mb-6">
-              While one is "in the moment" during their college years, it is not
-              until years later that you realize just how important that
-              experience played in your maturation process.
+              While one is &quot;in the moment&quot; during their college years,
+              it is not until years later that you realize just how important
+              that experience played in your maturation process.
             </blockquote>
             <blockquote className="text-xl font-light mb-6">
               The brotherly bond, building of trust, great times, challenges and
@@ -222,19 +222,19 @@ export default function Home() {
           </figure>
           <figure className="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
             <blockquote className="text-xl font-light mb-6">
-              “When it's all over you'll only be remembered by your good deeds.
-              And the people who'll be doing the most remembering... That's your
-              family and your friends.
+              “When it&apos;s all over you&apos;ll only be remembered by your
+              good deeds. And the people who&apos;ll be doing the most
+              remembering... That&apos;s your family and your friends.
             </blockquote>
             <blockquote className="text-xl font-light mb-6">
               Delta Sigma Phi crosses those boundaries. I met friends at first.
               30 years later, I mean it when I call them brothers. I run into
-              someone I haven't seen for 20 years, and it's like we talked
-              yesterday. Adventures we had, and our successes and failures since
-              the last time we met. I've had business partners from the
-              fraternity. Brothers have helped me along the way, went to my
-              wedding, supported me in harder times. When I need them in the
-              future, they'll be there.”
+              someone I haven&apos;t seen for 20 years, and it&apos;s like we
+              talked yesterday. Adventures we had, and our successes and
+              failures since the last time we met. I&apos;ve had business
+              partners from the fraternity. Brothers have helped me along the
+              way, went to my wedding, supported me in harder times. When I need
+              them in the future, they&apos;ll be there.”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">

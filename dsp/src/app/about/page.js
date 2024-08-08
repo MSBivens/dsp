@@ -199,10 +199,10 @@ export default function About() {
             </h2>
             <p className="mb-4 font-light">
               Want to make a difference and leave your mark on our fraternity?
-              We're seeking passionate individuals to join our team and help us
-              create unforgettable experiences. From event planning to community
-              outreach, there's a role for everyone. Discover how you can
-              contribute to our brotherhood and make a lasting impact.
+              We&apos;re seeking passionate individuals to join our team and
+              help us create unforgettable experiences. From event planning to
+              community outreach, there&apos;s a role for everyone. Discover how
+              you can contribute to our brotherhood and make a lasting impact.
             </p>
             <button className="navigation-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
               <a href="/volunteer">

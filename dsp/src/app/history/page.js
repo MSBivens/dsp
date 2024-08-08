@@ -136,7 +136,7 @@ export default function history() {
             Historical Collection
           </h2>
           <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-            Explore our fraternity's rich history through photographs and
+            Explore our fraternity&apos;s rich history through photographs and
             memorabilia.
           </p>
         </div>
