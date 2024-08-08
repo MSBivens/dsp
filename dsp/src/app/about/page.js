@@ -8,7 +8,7 @@ import acbVP from "../../../public/images/acbvp.jpg";
 import acbSecretary from "../../../public/images/acbsecretary.jpg";
 import undergradPresident from "../../../public/images/undergradPresident.jpg";
 import undergradTreasurer from "../../../public/images/undergradTreasurer.jpg";
-import acbDoD from "../../../public/images/ACBDoD.jpg";
+import acbDoD from "../../../public/images/acbDoD.jpg";
 
 export default function About() {
   return (
