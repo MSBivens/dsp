@@ -18,7 +18,7 @@ export default function contact() {
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <div>
             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <FaEnvelope size={24} />
+              <FaEnvelope size={36} />
             </div>
             <h3 className="mb-2">Email</h3>
             <p>
@@ -32,7 +32,7 @@ export default function contact() {
           </div>
           <div>
             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <FaGlobe size={24} />
+              <FaGlobe size={36} />
             </div>
             <h3 className="mb-2">Socials</h3>
             <p className="mb-2">
@@ -41,25 +41,25 @@ export default function contact() {
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/deltasig_idaho">
-                <FaInstagram size={24} />
+                <FaInstagram size={36} />
               </a>
               <a href="https://www.facebook.com/deltasigvandals">
-                <FaFacebook size={24} />
+                <FaFacebook size={36} />
               </a>
               <a href="https://www.linkedin.com/groups/13505181/">
-                <FaLinkedin size={24} />
+                <FaLinkedin size={36} />
               </a>
             </div>
           </div>
           <div>
             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-              <FaEnvelopeOpenText size={24} />
+              <FaEnvelopeOpenText size={36} />
             </div>
             <h3 className="mb-2">Mail</h3>
             <p>
               You can send mail and packages directly to the chapter house here;
             </p>
-            <p>P.O. Box 1234</p>
+            <p>P.O. Box 3087</p>
             <p>Moscow, ID, 83843</p>
           </div>
         </div>
