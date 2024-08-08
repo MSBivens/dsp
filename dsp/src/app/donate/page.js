@@ -222,7 +222,7 @@ export default function donate() {
                 </li>
               </ul>
               <button className="cta-button mt-auto">
-                <a href="/donate">
+                <a href="https://www.uidaho.edu/giving">
                   <p className="cta-text">Donate Today</p>
                 </a>
               </button>
@@ -266,7 +266,7 @@ export default function donate() {
                 </li>
               </ul>
               <button className="cta-button mt-auto">
-                <a href="/donate">
+                <a href="https://give.deltasig.org/">
                   <p className="cta-text">Donate Today</p>
                 </a>
               </button>
@@ -362,7 +362,7 @@ export default function donate() {
                 </p>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 ">
                   <button className="cta-button mt-auto">
-                    <a href="/donate">
+                    <a href="https://forms.gle/ppJWRxMXeTaAQxLQ7">
                       <p className="cta-text">Contact Us</p>
                     </a>
                   </button>

@@ -10,7 +10,7 @@ import undergradPresident from "../../../public/images/undergradPresident.jpg";
 import undergradTreasurer from "../../../public/images/undergradTreasurer.jpg";
 import acbDoD from "../../../public/images/ACBDoD.jpg";
 
-export default function AboutUs() {
+export default function About() {
   return (
     <main>
       {/* ACB People */}
@@ -190,7 +190,7 @@ export default function AboutUs() {
       </section>
       {/* Alumni Chapter People */}
       {/* <ACPeople /> */}
-      {/* Looking For Volunteers */}
+      {/* Become A Delta Sig Volunteer */}
       <section>
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
@@ -204,7 +204,7 @@ export default function AboutUs() {
               outreach, there's a role for everyone. Discover how you can
               contribute to our brotherhood and make a lasting impact.
             </p>
-            <button className="cta-button">
+            <button className="navigation-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
               <a href="/volunteer">
                 <p className="cta-text">Learn How To Get Involved</p>
               </a>

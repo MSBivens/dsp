@@ -64,7 +64,7 @@ export default function volunteer() {
                 Iota and how your contribution can help us build better men.
               </p>
               <button className="cta-button">
-                <a href="/donate">
+                <a href="https://forms.gle/NCbcZWUJMMtmDzoVA">
                   <p className="cta-text">Volunteer Today</p>
                 </a>
               </button>

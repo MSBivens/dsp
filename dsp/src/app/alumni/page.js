@@ -2,7 +2,7 @@ import UpcomingEvents from "../components/upcomingEvents.jsx";
 
 import ACPeople from "../components/aCPeople.jsx";
 
-export default function alumniChapter() {
+export default function alumni() {
   return (
     <main>
       {/* Hero Section */}
@@ -264,7 +264,7 @@ export default function alumniChapter() {
           <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <button className="cta-button">
               <a
-                href="https://forms.gle/S8zq5axy76Xd7KJ87"
+                href="https://forms.gle/ppJWRxMXeTaAQxLQ7"
                 className="cta-text"
               >
                 Contact Us Here

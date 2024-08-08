@@ -9,10 +9,10 @@ import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 export default function Header() {
   const navigationLinks = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/aboutUs" },
+    { label: "About", href: "/about" },
     { label: "History", href: "/history" },
     { label: "Philanthropy", href: "/philanthropy" },
-    { label: "Alumni Chapter", href: "/alumniChapter" },
+    { label: "Alumni", href: "/alumni" },
     { label: "Volunteer", href: "/volunteer" },
     { label: "Donate", href: "/donate" },
     { label: "Events", href: "/events" },

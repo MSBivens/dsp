@@ -24,8 +24,8 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="/aboutUs" className="hover:underline">
-                    About Us
+                  <a href="/about" className="hover:underline">
+                    About
                   </a>
                 </li>
                 <li className="mb-4">
@@ -46,8 +46,8 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <a href="/alumniChapter" className="hover:underline ">
-                    Alumni Chapter
+                  <a href="/alumni" className="hover:underline ">
+                    Alumni
                   </a>
                 </li>
                 <li className="mb-4">
