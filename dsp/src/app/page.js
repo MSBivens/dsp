@@ -215,7 +215,7 @@ export default function Home() {
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
-                <h4 className="font-medium">John Heffner</h4>
+                <p className="font-medium">John Heffner</p>
                 <p className="text-sm text-gray-500">Pledge Class 1981</p>
               </div>
             </figcaption>
@@ -238,7 +238,7 @@ export default function Home() {
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
-                <h4 className="font-medium">Chris Hall</h4>
+                <p className="font-medium">Chris Hall</p>
                 <p className="text-sm text-gray-500">Pledge Class 1995</p>
               </div>
             </figcaption>
@@ -253,7 +253,7 @@ export default function Home() {
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
-                <h4 className="text-lg font-medium">Jane Doe</h4>
+                <p className="text-lg font-medium">Jane Doe</p>
                 <p className="text-sm text-gray-500">Active Member</p>
               </div>
             </figcaption>
@@ -268,7 +268,7 @@ export default function Home() {
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
-                <h4 className="text-lg font-medium">Jane Doe</h4>
+                <p className="text-lg font-medium">Jane Doe</p>
                 <p className="text-sm text-gray-500">Active Member</p>
               </div>
             </figcaption>
