@@ -46,7 +46,7 @@ export default function Home() {
       imageSrc: home5,
       title: "B2B Alumni Dinner",
       description:
-        "Gathering of brohters from all years to celebrate the end of the bike trip.",
+        "Gathering of brothers from all years to celebrate the end of the bike trip.",
     },
     {
       id: 6,
