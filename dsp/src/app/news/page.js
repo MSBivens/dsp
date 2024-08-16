@@ -20,7 +20,7 @@ export default function News() {
           </p>
         </div>
       </section>
-      <div className="container mx-auto py-10">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12">
         <h2 className="text-4xl font-bold mb-5">News and Stories</h2>
         <ul>
           {allPostsData.map(({ id, title, date }) => (

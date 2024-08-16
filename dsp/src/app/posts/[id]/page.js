@@ -9,7 +9,7 @@ export default async function Post({ params }) {
   const postData = await getPostData(params.id);
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12">
       <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>
       <p className="text-gray-600 mb-4">{postData.date}</p>
       <div
