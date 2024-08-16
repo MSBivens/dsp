@@ -245,11 +245,7 @@ export default function Home() {
           </figure>
           <figure className="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
             <blockquote className="text-xl font-light mb-6">
-              “The brotherhood has been a source of constant support throughout
-              my college years. From late-night study sessions to celebrating
-              milestones, these guys have always been there for me. I&apos;m
-              grateful for the lasting friendships and memories I&apos;ve made
-              here.”
+              “Lorem Ipsum”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
@@ -260,11 +256,7 @@ export default function Home() {
           </figure>
           <figure className="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
             <blockquote className="text-xl font-light mb-6">
-              “This fraternity has pushed me outside my comfort zone in the best
-              way possible. From participating in philanthropy events to taking
-              on leadership roles, I&apos;ve gained valuable skills and
-              confidence. It&apos;s been a journey of self-discovery and
-              personal growth. pen_spark ”
+              “Lorem Ipsum”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
