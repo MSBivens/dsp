@@ -21,44 +21,26 @@ h3,
 h4 {
   font-family: "Uni Sans", serif; /* Primary typeface for headings */
   font-weight: bold;
-  margin-bottom: 1.5rem; /* Adjust margin as needed */
-  line-height: 1.2; /* Adjust line-height as needed */
-}
-
-/* Fallback for Headings if 'Uni Sans' is unavailable */
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Abula", serif;
-  font-weight: bold;
-}
-
-/* Fallback for Headings if 'Uni Sans' and 'Abula' are unavailable */
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Open Sans", sans-serif; /* Fallback font */
-  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 2.5rem; /* Adjust font size as needed */
+  color: #007a33;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem; /* Adjust font size as needed */
+  color: #007a33;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75rem; /* Adjust font size as needed */
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5rem; /* Adjust font size as needed */
+  font-size: 1.5rem;
 }
 
 /* Paragraphs */

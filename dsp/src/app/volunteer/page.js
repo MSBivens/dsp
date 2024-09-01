@@ -97,7 +97,8 @@ export default function volunteer() {
               </h4>
               <p class="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 group-hover:text-white">
                 The Alumni Corporation Board (ACB) is responsible for the fiscal
-                and legal oversight of Gamma Iota&apos;s assets and operations.
+                and operational oversight of Gamma Iota&apos;s assets and
+                operations.
               </p>
             </div>
             <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-yellow-400">

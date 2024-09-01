@@ -23,12 +23,14 @@ export default function contact() {
             <h3 className="mb-2">Email</h3>
             <p>
               Connect with our leadership for any inquiries or assistance. Use
-              our contact form{" "}
-              <a href="" className="extra-bold">
-                here
-              </a>{" "}
-              and we will get back you as soon as possible
+              our contact form below and we will get back you as soon as
+              possible
             </p>
+            <button className="cta-button mt-2">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoXOOfRoRTSZvIRiCr7ryQ3vNiRH--6dPl_0UwxYwZ1oJjUA/viewform">
+                <p className="cta-text">Contact</p>
+              </a>
+            </button>
           </div>
           <div>
             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">

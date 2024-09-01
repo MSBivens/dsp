@@ -33,16 +33,17 @@ export default function history() {
   const collectionData = [
     {
       id: 1,
+      imageSrc: history6,
+      title: "The First Dream Girl",
+      description:
+        "Rae Reid, Junior from Kappa Kappa Gamma is announced as the first Dream Girl on May 4th, 1951.",
+    },
+    {
+      id: 2,
       imageSrc: history1,
       title: "Homecoming 1961",
       description:
         "Brothers at the 1961 Homecoming Celebration at the University of Idaho. Vandals defeated San Jose State Spartans, 27 - 18.",
-    },
-    {
-      id: 2,
-      imageSrc: history2,
-      title: "Intramurals 1979-80",
-      description: "Broathers participating in intramural sports.",
     },
     {
       id: 3,
@@ -53,25 +54,26 @@ export default function history() {
     },
     {
       id: 4,
+      imageSrc: history2,
+      title: "Intramurals 1979-80",
+      description: "Brothers participating in intramural sports.",
+    },
+
+    {
+      id: 5,
       imageSrc: history4,
       title: "Military History",
       description:
         "Our chapter has a long history of military service, dating back to founding member, Robin Faisant, who served in the Navy.",
     },
     {
-      id: 5,
+      id: 6,
       imageSrc: history5,
       title: "Brothers for Life",
       description:
         "The pledge class of 1993 poses for a photo in front of the chapter house.",
     },
-    {
-      id: 6,
-      imageSrc: history6,
-      title: "The First Dream Girl",
-      description:
-        "Rae Reid, Junior from Kappa Kappa Gamma is announced as the first Dream Girl on May 4th, 1951.",
-    },
+
     {
       id: 7,
       imageSrc: history7,
@@ -99,10 +101,10 @@ export default function history() {
       {/* Hero Section */}
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          <h1 class="mb-4 font-extrabold tracking-tight leading-none ">
             Our Rich History
           </h1>
-          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+          <p class="mb-8 font-normal  sm:px-16 xl:px-48 ">
             Discover the legacy and accomplishments of the Gamma Iota Chapter.
           </p>
         </div>
@@ -129,13 +131,13 @@ export default function history() {
           </div>
         </div>
       </section>
-      {/* HIstorical Collection */}
-      <section className="mx-auto max-w-screen-xl text-center lg:py-16 ">
+      {/* Historical Collection */}
+      <section className="mx-auto max-w-screen-xl text-center ">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          <h2 className="mb-4 font-extrabold tracking-tight leading-none ">
             Historical Collection
           </h2>
-          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+          <p className="mb-4 font-normal sm:px-16 xl:px-48">
             Explore our fraternity&apos;s rich history through photographs and
             memorabilia.
           </p>

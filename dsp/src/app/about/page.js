@@ -2,9 +2,11 @@ import Image from "next/image";
 import placeholderImage from "../../../public/images/placeholder.png";
 import ACPeople from "../components/aCPeople.jsx";
 
+import crest from "../../../public/images/crest.png";
 import personPlaceholder from "../../../public/images/personPlaceholder.jpg";
 import acbPresident from "../../../public/images/acbpresident.jpg";
 import acbVP from "../../../public/images/acbvp.jpg";
+import acbtreasurer from "../../../public/images/acbtreasurer.jpg";
 import acbSecretary from "../../../public/images/acbsecretary.jpg";
 import undergradPresident from "../../../public/images/undergradPresident.jpg";
 import undergradTreasurer from "../../../public/images/undergradTreasurer.jpg";
@@ -13,16 +15,65 @@ import acbDoD from "../../../public/images/acbDoD.jpg";
 export default function About() {
   return (
     <main>
+      {/* MVV */}
+      <section>
+        <div className="gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+          <div>
+            <h1 className="mb-4 text-4xl tracking-tight font-extrabold ">
+              Mission &amp; Vision
+            </h1>
+            <p className="mb-4">
+              Our mission is to empower and encourage our members to become
+              Better Men – men of culture, men of harmony, and men of
+              friendship. Our vision is to become America&apos;s leading
+              fraternity, with an unparalleled leadership experience; recognized
+              as among the most respected and influential organizations on
+              campuses; and a culture that compels all living members to
+              actively participate.
+            </p>
+            <div className="flex justify-center">
+              <Image
+                className="rounded-lg"
+                src={crest}
+                alt="Placeholder Image"
+                width={400}
+                height={400}
+              ></Image>
+            </div>
+          </div>
+          <div>
+            <h2>Our Core Values</h2>
+            <p className="mt-4">
+              Delta Sigma Phi is a values-based membership organization that
+              seeks to enrich the lives of our members and all mankind. We
+              believe in—and built Vision 2025 around—our three historical
+              values:
+            </p>
+            <p className="mt-4">
+              <b>Culture</b> | Encourage the pursuit of knowledge and
+              intellectual development in our chapters and members.
+            </p>
+            <p className="mt-4">
+              <b>Harmony</b> | Commit to high standards of moral conduct and
+              bettering ourselves and the world around us.
+            </p>
+            <p className="mt-4">
+              <b>Friendship</b> | Form lifelong bonds based on the values of our
+              ritual and secured by honesty, integrity and care.
+            </p>
+          </div>
+        </div>
+      </section>
       {/* ACB People */}
       <section>
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center ">
           <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold">
               Alumni Corporation Board
             </h2>
-            <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              Fiscal and operational oversight of the phsycial and monetary
-              assets of Gamma Iota
+            <p>
+              Providing fiscal and operational oversight of the physical and
+              monetary assets of Gamma lota
             </p>
           </div>
           <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -51,7 +102,7 @@ export default function About() {
             <div className="text-center text-gray-500 dark:text-gray-400">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src={personPlaceholder}
+                src={acbtreasurer}
                 alt="Grant Lund"
               ></Image>
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -123,11 +174,13 @@ export default function About() {
       <section>
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
           <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold">
               Collegiate Chapter Advising Board
             </h2>
-            Advisors to the undergraduate chapter, furthering the mission of
-            personal and professional growth.
+            <p>
+              Advisors to the undergraduate chapter, furthering the mission of
+              personal and professional growth.
+            </p>
           </div>
           <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <div className="text-center text-gray-500 dark:text-gray-400">
@@ -136,7 +189,7 @@ export default function About() {
                 src={personPlaceholder}
                 alt="Mil DeSilva"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h3 className="mb-1 text-2xl font-bold tracking-tight ">
                 Mil DeSilva
               </h3>
               <p>Co-Lead Advisor</p>
@@ -193,18 +246,18 @@ export default function About() {
       {/* Become A Delta Sig Volunteer */}
       <section>
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
+          <div className="max-w-screen-lg ">
+            <h2 className="mb-4 text-4xl tracking-tight font-bold ">
               Become A Delta Sig Volunteer
             </h2>
-            <p className="mb-4 font-light">
+            <p className="mb-4 ">
               Want to make a difference and leave your mark on our fraternity?
               We&apos;re seeking passionate individuals to join our team and
               help us create unforgettable experiences. From event planning to
               community outreach, there&apos;s a role for everyone. Discover how
               you can contribute to our brotherhood and make a lasting impact.
             </p>
-            <button className="navigation-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+            <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
               <a href="/volunteer">
                 <p className="cta-text">Learn How To Get Involved</p>
               </a>
@@ -241,6 +294,11 @@ export default function About() {
                   To volunteer, please fill out the contact form or reach out to
                   ACB leadership.
                 </p>
+                <button className="cta-button mt-4">
+                  <a href="https://forms.gle/NCbcZWUJMMtmDzoVA">
+                    <p className="cta-text">Volunteer Today</p>
+                  </a>
+                </button>
               </div>
             </div>
             <div>
@@ -264,6 +322,11 @@ export default function About() {
                   See our Donate page for detailed information on how to donate
                   and where your generous donations go.
                 </p>
+                <button className="cta-button mt-4">
+                  <a href="/donate">
+                    <p className="cta-text">Donate</p>
+                  </a>
+                </button>
               </div>
             </div>
             <div>
@@ -285,7 +348,7 @@ export default function About() {
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
                   The Alumni Corporation Board (ACB) is responsible for the
-                  fiscal and operational oversight of the phsycial and monetary
+                  fiscal and operational oversight of the physical and monetary
                   assets of Gamma Iota. They are the legal owners of the chapter
                   facility.
                 </p>
