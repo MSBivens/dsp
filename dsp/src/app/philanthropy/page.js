@@ -2,7 +2,12 @@ import Image from "next/image";
 
 import serviceImage from "../../../public/images/service.jpg";
 
-import { FaHandHoldingDollar, FaSeedling, FaHandshake } from "react-icons/fa6";
+import {
+  FaPeopleGroup,
+  FaHandHoldingDollar,
+  FaSeedling,
+  FaHandshake,
+} from "react-icons/fa6";
 
 export default function philanthropy() {
   return (
@@ -23,12 +28,12 @@ export default function philanthropy() {
             <div class="pt-6 mt-6 col-span-2 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
               <div>
                 <svg
-                  class="w-10 h-10 mb-"
+                  class="w-10 h-10 mb-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <FaHandshake />
+                  <FaHandHoldingDollar />
                 </svg>
                 <h3 class="mb-2 text-2xl font-bold dark:text-white">
                   Impactful Giving
@@ -40,12 +45,12 @@ export default function philanthropy() {
               </div>
               <div>
                 <svg
-                  class="w-10 h-10 mb-2 md:w-12 md:h-12 "
+                  class="w-10 h-10 mb-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <FaSeedling />
+                  <FaPeopleGroup />
                 </svg>
                 <h3 class="mb-2 text-2xl font-bold dark:text-white">
                   Community Impact
@@ -104,16 +109,14 @@ export default function philanthropy() {
             <div class="pt-6 mt-6 col-span-2 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
               <div>
                 <svg
-                  class="w-10 h-10 mb-2 md:w-12 md:h-12 "
+                  class="w-10 h-10 mb-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <FaHandshake />
                 </svg>
-                <h3 class="mb-2 text-2xl font-bold dark:text-white">
-                  Intentional Giving
-                </h3>
+                <h3 class="mb-2 text-2xl font-bold">Intentional Giving</h3>
                 <p class="font-light text-gray-500 dark:text-gray-400">
                   Our philanthhropic efforts create lasting change and improve
                   the lives of others in need.
@@ -121,16 +124,14 @@ export default function philanthropy() {
               </div>
               <div>
                 <svg
-                  class="w-10 h-10 mb-2  md:w-12 md:h-12 "
+                  class="w-10 h-10 mb-2"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <FaSeedling />
                 </svg>
-                <h3 class="mb-2 text-2xl font-bold dark:text-white">
-                  Personal Growth
-                </h3>
+                <h3 class="mb-2 text-2xl font-bold ">Personal Growth</h3>
                 <p class="font-light text-gray-500 dark:text-gray-400">
                   Engaging in philanthropy helps our brothers develop leadership
                   skills and empathy.
@@ -147,16 +148,17 @@ export default function philanthropy() {
       </section>
       {/* B2B Video */}
       <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl ">
-          <div class="flex flex-col justify-center text-center">
-            <h2 class="mb-4 font-extrabold tracking-tight leading-none ">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center ">
+          <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+            <h2 class="mb-4 font-extrabold tracking-tight leading-none">
               Bike to Boise
             </h2>
             <p class="mb-8 font-normal">
               Please enjoy our montage of our brothers biking from Moscow to
-              Boise, a tradition over 60 years old! This event is a time honored
-              tradition that raises money to support charitable organizations
-              like Hope House and X.
+              Boise, a time-honored tradition over 60 years old! This event has
+              been the focal point of the chapter&amp;s efforts to raises money
+              to support charitable organizations like Easter Seals, March of
+              Dimes, Mountain States Tumor Institute, and Hope House.
             </p>
           </div>
           <div>
