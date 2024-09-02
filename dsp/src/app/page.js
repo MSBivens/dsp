@@ -112,8 +112,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Alumni Memories Gallery */}
-      <section className="mx-auto max-w-screen-xl text-center lg:py-16 ">
+      {/* Alumni Memories Gallery - Coming back once articles are written, likely to be moved to home page*/}
+      {/* <section className="mx-auto max-w-screen-xl text-center lg:py-16 ">
         <div className="px-4 mx-auto max-w-screen-xl text-center lg:py-8 lg:px-12">
           <h2 className="mb-4 tracking-tight leading-none ">Alumni Memories</h2>
           <p className="text-lg font-normal lg:text-xl sm:px-16 xl:px-48 ">
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       {/* Connect Section */}
       <section>
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
