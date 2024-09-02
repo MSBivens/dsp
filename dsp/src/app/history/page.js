@@ -20,15 +20,175 @@ export default function history() {
       description:
         "The Gamma Iota Chapter was founded at the University of Idaho",
     },
-    { year: "2022", event: "May", description: "Launched version 1.0" },
-    { year: "2023", event: "February", description: "Reached 10,000 users" },
-    { year: "2022", event: "January", description: "Started a new project" },
-    { year: "2022", event: "May", description: "Launched version 1.0" },
-    { year: "2023", event: "February", description: "Reached 10,000 users" },
-    { year: "2022", event: "January", description: "Started a new project" },
-    { year: "2022", event: "May", description: "Launched version 1.0" },
-    { year: "2023", event: "February", description: "Reached 10,000 users" },
-    // Add more events as needed
+    {
+      year: "1951",
+      event: "The First Dream Girl",
+      description:
+        "Gamma Iota crowns it first Dream Girl, Rae Reid of Kappa Kappa Gamma",
+    },
+    {
+      year: "1953",
+      event: "The First Gamma Eye",
+      description:
+        "The inaugural edition of our alumni newsletter, The Gamma Eye is published.",
+    },
+    {
+      year: "1954",
+      event: "Charles Bartell Recruited",
+      description:
+        "University architecture professor Charles Bartell is recruited and initiated as the lead chapter advisor. He would go on to serve our chapter for over 40 years. Our national fraternity named its Chapter Advisor Award after him in 1985. He was the first recipient.",
+    },
+    {
+      year: "1956",
+      event: "Our First Home",
+      description:
+        "The alumni board purchases the property at the corner of Deakin and College and moves out of the old photo studio.",
+    },
+    {
+      year: "1959",
+      event: "Richard Loeppky awarded Outstanding Senior",
+      description:
+        "Gamma Iota has its first member awarded as an Outstanding Senior for the university, Richard Loeppky. Dozens of our alumni have since received this award over the years with the most recent in 2019, Michael Bivens.",
+    },
+    {
+      year: "1959",
+      event: "Gamma Iota awarded Chapter Leadership Award",
+      description:
+        "Gamma Iota is presented the Chapter Leadership Award at the summer convention recognizing it as the top chapter in the nation for universities of our size.",
+    },
+    {
+      year: "1962",
+      event: "Ronald Houghtalin elected ASUI Student Body President",
+      description:
+        "Chapter President Ronald Houghtalin was elected ASUI Student Body President.",
+    },
+    {
+      year: "1963",
+      event: "Bike 2 Boise Established",
+      description:
+        "Our primary philanthropy was established and called Bike to Boise which involved riding a tandem bicycle from Moscow, ID. to the steps of the capitol in Boise and continues to this day. Over the years the undergraduate members have raised money for Easter Seals, March of Dimes, Mountain States Tumor Institute, and Hope House.",
+    },
+    {
+      year: "1967",
+      event: "Gamma Iota Pledges First African American Student on Campus",
+      description:
+        "Gamma Iota became the first fraternity on campus to pledge and initiate an African American student, Daniel Gaither He was an outstanding individual and multiple other fraternities recruited him as well during rush that fall. He went on to be elected Senior Class President of the University.",
+    },
+    {
+      year: "1969",
+      event: "503 University Ave is Purchased",
+      description:
+        "Having outgrown our chapter house, we purchased our current location from the Kappa Alpha Theta sorority. It was officially opened at Homecoming that fall.",
+    },
+    {
+      year: "1971",
+      event: "Vietnam War",
+      description:
+        "Gamma Iota loses 3 brothers who made the ultimate sacrifice in the Vietnam War. Richard Livingston, Robert Green, and Robert Willey",
+    },
+    {
+      year: "1975",
+      event: "The 25th Anniversary",
+      description:
+        "Gamma Iota celebrated its 25 anniversary with a large gathering of alumni and friends at the chapter house.",
+    },
+    {
+      year: "1977",
+      event:
+        "Doug Madsen wins the Outstanding Undergraduate Member of the Year Award",
+      description:
+        "Member and Chapter President Doug Madsen wins the Outstanding Undergraduate Member of the Year Award from National.",
+    },
+    {
+      year: "1980",
+      event: "First In Grades and Intramurals",
+      description:
+        "Gamma Iota accomplishes the rare feat of #1 in grades and intramurals for all fraternities on campus.",
+    },
+    {
+      year: "1980",
+      event: "Prichard Scholarship Established",
+      description:
+        "Gamma Iota celebrates its 30th Anniversary on campus with a weekend celebration where it received multiple awards from headquarters. The Prichard Scholarship is established going to the member with the highest GPA living in the chapter house each year.",
+    },
+    {
+      year: "1981",
+      event: "Burning of the Mortgage",
+      description:
+        "Gamma Iota celebrates its 31st anniversary and mortgage burning for the property purchased in 1969.",
+    },
+    {
+      year: "1990s",
+      event: "Largest Recruitment Classes",
+      description:
+        "Gamma Iota saw its largest membership numbers with a peak of 30 initiates in 1996. It also dominated the campus intramurals competition winning the majority of the titles during the decade.",
+    },
+    {
+      year: "1996",
+      event: "John Carpenter wins Greek Man of the Year",
+      description:
+        "Chapter President John Carpenter wins Greek Man of the Year Award and is crowned Homecoming King in the fall.",
+    },
+    {
+      year: "2007",
+      event: "Ken Schrom inducted into UofI Athletic Hall of Fame",
+      description:
+        "Alumnus Ken Schrom is inducted into the U of I Athletic Hall of Fame as a 2 sport athlete in college and a major league pitcher for 13 years.",
+    },
+    {
+      year: "2012",
+      event: "Frank Young inducted into UofI Athletic Hall of Fame",
+      description:
+        "Founding alumni board member Frank Young is inducted into the U of I Athletic Hall of fame for his long tenure as the boxing coach which garnered an NCAA Championship in 1950 and seven individual national titles.",
+    },
+    {
+      year: "2013",
+      event: "Matt Espe inducted into the UofI Alumni Association Hall of Fame",
+      description:
+        "Alumnus Matt Espe is inducted into the U of I Alumni Association Hall of Fame. He was also awarded an Honorary Doctorate in Business Administration by the university in 2017. ",
+    },
+    {
+      year: "2016",
+      event: "Ken Maren inducted into the UofI Athletic Hall of Fame",
+      description:
+        "Alumnus Ken Maren is inducted into the U of I Athletic Hall of Fame as a 3 year starter for the men's basketball team from 1959 to 1962.",
+    },
+    {
+      year: "2017",
+      event: "Brendan Boyle receive Outstanding IFC Chapter Advisor Award",
+      description:
+        "ACB President Brendan Boyle receives the Outstanding IFC Chapter Advisor Award.",
+    },
+    {
+      year: "2018",
+      event: "First in Grades",
+      description:
+        "Gamma Iota achieves the #1 GPA ranking among all fraternities, 3.32.",
+    },
+    {
+      year: "2019",
+      event:
+        "Eric Pickett receives the Charles G. Bartell Chapter Advisor Award",
+      description:
+        "Alumnus Eric Pickett receives the Charles G. Bartell Chapter Advisor award at the national convention in Kansas City, MO.",
+    },
+    {
+      year: "2020",
+      event: "Matt Espe receives the Lifetime Achievement Award",
+      description:
+        "Alumnus Matt Espe receives the Lifetime Achievement Award from our national fraternity. This is the rarest of awards given out by our headquarters. Of the 120K alumni members initiated since 1899 for all chapters, less than 30 have received this award.",
+    },
+    {
+      year: "2022",
+      event: "Dedication to Charles Bartell",
+      description:
+        "After 2 years of cancellations due to COVID, Gamma Iota holds its 70th Anniversary Celebration. It was the largest gathering ever for a chapter function with over 220 alumni, undergrads, spouses, dream girls, and honored guests attending. Our chapter dining room was formally dedicated in Charles Bartell's name during the weekend. ",
+    },
+    {
+      year: "2025",
+      event: "The 75th Anniversary",
+      description: "Gamma Iota's 75th Anniversary Celebration is set.",
+    },
   ];
   const collectionData = [
     {
@@ -118,8 +278,12 @@ export default function history() {
             {responsiveEvents.map((event, index) => (
               <div key={index} className="flex items-start mb-8 md:pr-8">
                 {/* Date */}
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold">{event.year}</span>
+                <div>
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold">
+                      {event.year}
+                    </span>
+                  </div>
                 </div>
                 {/* Event details */}
                 <div className="ml-4">
@@ -131,8 +295,8 @@ export default function history() {
           </div>
         </div>
       </section>
-      {/* Historical Collection */}
-      <section className="mx-auto max-w-screen-xl text-center ">
+      {/* Historical Collection - Coming back once articles are written*/}
+      {/* <section className="mx-auto max-w-screen-xl text-center ">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <h2 className="mb-4 font-extrabold tracking-tight leading-none ">
             Historical Collection
@@ -170,7 +334,7 @@ export default function history() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
