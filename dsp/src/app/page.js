@@ -249,13 +249,13 @@ export default function Home() {
               authenticity, and multi-generational tapestry of Delta Sigma Phi,
               where each member, regardless of era, contributes to a rich legacy
               of learning, growth, and brotherhood. My time in Moscow and beyond
-              has proven that this fraternity isn't just about college
-              years—it's about forging lifelong friendships, which still stands
-              true for me. My closest friends today are Delta Sigs. Some I went
-              to school with, while some came many years before me. Undoubtedly,
-              the quality and diversity of men within the brotherhood has turned
-              me into a Better Man, living a Better Life. And that&amp;s the
-              Delta Sig way.”
+              has proven that this fraternity isn&amp;t just about college
+              years—it&amp;s about forging lifelong friendships, which still
+              stands true for me. My closest friends today are Delta Sigs. Some
+              I went to school with, while some came many years before me.
+              Undoubtedly, the quality and diversity of men within the
+              brotherhood has turned me into a Better Man, living a Better Life.
+              And that&amp;s the Delta Sig way.”
             </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
