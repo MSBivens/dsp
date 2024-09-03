@@ -3,74 +3,44 @@ export default function upcomingEvents() {
     <section>
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-          <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Upcoming Events
-          </h2>
+          <h2 class="mb-4 tracking-tight">Upcoming Events</h2>
         </div>
         <div class="grid gap-8 lg:grid-cols-2">
           <article class="hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-5 text-gray-500"></div>
-            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight ">
               Homecoming | Sept. 28 to Oct. 5
-            </h2>
-            <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+            </h3>
+            <p class="mb-5 font-light ">
               Reconnect with brothers and celebrate the brotherhood at this
               years Homecoming event!
             </p>
-            <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-              BBQ, games, and more!
-            </p>
+            <p class="mb-5 font-light ">BBQ, games, and more!</p>
             <div class="flex justify-between items-center">
-              <a
-                href="https://www.uidaho.edu/events/signature-events/homecoming"
-                class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-              >
-                More Details
-                <svg
-                  class="ml-2 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
+              <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                <a href="https://www.uidaho.edu/events/signature-events/homecoming">
+                  <p className="cta-text">More Details</p>
+                </a>
+              </button>
             </div>
           </article>
-          <article class="hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-5 text-gray-500"></div>
-            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <article class="flex flex-col hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight ">
               75th Anniversary | April 25 to 27
-            </h2>
-            <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+            </h3>
+            <p class="mb-5 font-light ">
               3 day event celebrating the 75th anniversary of the Gamma Iota
               chapter of Delta Sigma Phi at the University of Idaho. Planned
               activities include informal reception, golf tournament, campus
               tours, and dinner.
             </p>
-            <div class="flex justify-between items-center">
-              <a
-                href="https://www.facebook.com/events/998261511948747"
-                class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-              >
-                More Details
-                <svg
-                  class="ml-2 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
+            <div>
+              <div class="flex justify-between items-center">
+                <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                  <a href="https://www.facebook.com/events/998261511948747">
+                    <p className="cta-text">More Details</p>
+                  </a>
+                </button>
+              </div>
             </div>
           </article>
         </div>

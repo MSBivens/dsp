@@ -240,20 +240,45 @@ export default function Home() {
             </figcaption>
           </figure>
           <figure className="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
-            <blockquote className="text-xl mb-6">“Lorem Ipsum”</blockquote>
+            <blockquote className="text-xl mb-6">
+              “As a third-generation Vandal, joining a fraternity was a given,
+              but choosing Delta Sigma Phi was a decision that would shape my
+              life. The legacy of my respected family members and friends who
+              were already brothers, spanning more than 45 years, showcased the
+              enduring bond of brotherhood. What drew me in was the level of
+              authenticity, and multi-generational tapestry of Delta Sigma Phi,
+              where each member, regardless of era, contributes to a rich legacy
+              of learning, growth, and brotherhood. My time in Moscow and beyond
+              has proven that this fraternity isn't just about college
+              years—it's about forging lifelong friendships, which still stands
+              true for me. My closest friends today are Delta Sigs. Some I went
+              to school with, while some came many years before me. Undoubtedly,
+              the quality and diversity of men within the brotherhood has turned
+              me into a Better Man, living a Better Life. And that&amp;s the
+              Delta Sig way.”
+            </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
-                <p className="text-lg font-medium">Jane Doe</p>
-                <p className="text-sm text-gray-500">Active Member</p>
+                <p className="font-medium">Tony Agenbroad</p>
+                <p className="text-sm text-gray-500">Pledge Class 2010</p>
               </div>
             </figcaption>
           </figure>
           <figure className="rounded-lg shadow-md bg-white p-8 flex flex-col items-center justify-center hover:shadow-lg">
-            <blockquote className="text-xl mb-6">“Lorem Ipsum”</blockquote>
+            <blockquote className="text-xl mb-6">
+              “The Delta Sigma Phi Fraternity made me a better man during my
+              time in the house and after. I learned teamwork and communication
+              skills that not only helped to solve problems and achieve goals
+              within the Fraternity, but also in my academic and professional
+              career. I was given opportunities to develop leadership skills
+              through programs provided by the national Fraternity that have
+              benefitted me in many areas of life. In addition, I made many
+              lifelong friends and memories that will last me a lifetime.”
+            </blockquote>
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
-                <p className="text-lg font-medium">Jane Doe</p>
-                <p className="text-sm text-gray-500">Active Member</p>
+                <p className="font-medium">Destin Brown</p>
+                <p className="text-sm text-gray-500">Pledge Class </p>
               </div>
             </figcaption>
           </figure>
