@@ -10,7 +10,7 @@ export default function News() {
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <h1 class="mb-4 tracking-tight leading-none">Stay Up To Date</h1>
-          <p class="mb-8 sm:px-16 ">
+          <p class=" sm:px-16 ">
             Discover the latest updates and stories from our chapter
           </p>
         </div>
