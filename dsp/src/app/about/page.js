@@ -77,81 +77,67 @@ export default function About() {
             </p>
           </div>
           <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={acbPresident}
                 alt="Radley Peterson"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Radley Peterson
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Radley Peterson</h3>
               <p>ACB President</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={acbVP}
                 alt="Sean Foster"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Sean Foster
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Sean Foster</h3>
               <p>ACB Vice President</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={acbtreasurer}
                 alt="Grant Lund"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Grant Lund
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Grant Lund</h3>
               <p>ACB Treasurer</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={acbSecretary}
                 alt="Vacant"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Ted Sharpe
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Ted Sharpe</h3>
               <p>ACB Secretary</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={undergradPresident}
                 alt="Josh Rardon"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Josh Rardon
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Josh Rardon</h3>
               <p>Undergraduate President</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={undergradTreasurer}
                 alt="Seth Rahe"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Seth Rahe
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Seth Rahe</h3>
               <p>Undergraduate President</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={acbDoD}
                 alt="Michael Bivens"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Michael Bivens
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Michael Bivens</h3>
               <p>Director of Development</p>
               <p>Webmaster</p>
             </div>
@@ -183,48 +169,40 @@ export default function About() {
             </p>
           </div>
           <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={personPlaceholder}
                 alt="Mil DeSilva"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight ">
-                Mil DeSilva
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Mil DeSilva</h3>
               <p>Co-Lead Advisor</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={personPlaceholder}
                 alt="John Schisel"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                John Schisel
-              </h3>
+              <h3 className="mb-1 tracking-tight ">John Schisel</h3>
               <p>Co-Lead Advisor</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={personPlaceholder}
                 alt="Stace Sievert"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Stace Sievert
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Stace Sievert</h3>
               <p>Financial Advisor</p>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
+            <div className="text-center ">
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={personPlaceholder}
                 alt="Neil Sims"
               ></Image>
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                Jarod DeLay
-              </h3>
+              <h3 className="mb-1 tracking-tight ">Jarod DeLay</h3>
               <p>Recruitment Advisor</p>
             </div>
             {/* <div className="text-center text-gray-500 dark:text-gray-400">
