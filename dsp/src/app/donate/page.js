@@ -74,7 +74,7 @@ export default function donate() {
       <section>
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
           <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold">
               Supporting Our Chapter: Making a Difference Through Alumni
               Donations
             </h2>
@@ -94,13 +94,61 @@ export default function donate() {
           </div>
         </div>
       </section>
+      {/* Testimonial */}
+      <section>
+        <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+          <figure class="max-w-screen-md mx-auto">
+            <svg
+              class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+              viewBox="0 0 24 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                fill="currentColor"
+              />
+            </svg>
+            <blockquote>
+              <p class="text-gray-900 dark:text-white">
+                &quot;I received a scholarship funded by alumni in my senior
+                year of college. That scholarship not only helped me pay for
+                school, but also alleviated some of the stress of paying to get
+                an education. I didn&apos;t have a lot of help paying for
+                college and tuition costs can pile up quickly and become
+                overwhelming. By having a scholarship funded by alumni, I was
+                able to focus more on my schoolwork and helping the house.
+              </p>
+              <p class="text-gray-900 dark:text-white mt-4">
+                I&apos;m extremely grateful and proud to be part of a
+                brotherhood that cares enough about its youngest members to
+                contribute their time and money to help them. This investment in
+                my future shows what a great bond Delta Sigma Phi brings to the
+                University of Idaho campus and sets a great example of how to
+                invest in young men. Thank you to all brothers who funded the
+                scholarship and invested in my future! &quot;
+              </p>
+            </blockquote>
+            <figcaption class="flex items-center justify-center mt-6 space-x-3">
+              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                <div class="pr-3 font-medium text-gray-900 dark:text-white">
+                  Ben Macomber
+                </div>
+                <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                  Pledge Class 2018
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
       {/* Donation Options */}
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h3 class="mb-4 text-4xl tracking-tight font-extrabold ">
               Donation Options
-            </h2>
+            </h3>
             <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
               There are several ways for alumni to donate, including through the
               University of Idaho, Headquarters, and direct giving. Choose the
@@ -193,7 +241,7 @@ export default function donate() {
                 </li>
               </ul>
               <button className="cta-button mt-auto">
-                <a href="/donate">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=EX2WT66DDXQRL">
                   <p className="cta-text">Donate Today</p>
                 </a>
               </button>
@@ -274,41 +322,7 @@ export default function donate() {
           </div>
         </div>
       </section>
-      {/* Contact Section */}
-      <Contact />
-      {/* Testimonial */}
-      <section>
-        <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-          <figure class="max-w-screen-md mx-auto">
-            <svg
-              class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-              viewBox="0 0 24 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                fill="currentColor"
-              />
-            </svg>
-            <blockquote>
-              <p class="text-2xl font-medium text-gray-900 dark:text-white">
-                &quot;Lorem Ipsum&quot;
-              </p>
-            </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3">
-              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div class="pr-3 font-medium text-gray-900 dark:text-white">
-                  John Doe
-                </div>
-                <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
-                  PC&apos;XX
-                </div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
+
       {/* FAQ Section */}
       <section>
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -352,7 +366,6 @@ export default function donate() {
             <div>
               <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
                 <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
-                  {" "}
                   Still have questions?
                 </h2>
                 <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
@@ -373,6 +386,8 @@ export default function donate() {
           </div>
         </div>
       </section>
+      {/* Contact Section */}
+      <Contact />
     </main>
   );
 }

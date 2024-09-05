@@ -13,7 +13,7 @@ export default function contact() {
       <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div className="max-w-screen-md mb-8 lg:mb-16">
-          <h2 className="mb-4">Contact & Connect</h2>
+          <h3 className="mb-4">Contact & Connect</h3>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
           <div>
