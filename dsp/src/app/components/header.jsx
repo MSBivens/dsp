@@ -8,7 +8,7 @@ import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 
 export default function Header() {
   const navigationLinks = [
-    { label: "Home", href: "/" },
+    // { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "History", href: "/history" },
     { label: "Philanthropy", href: "/philanthropy" },
@@ -26,101 +26,84 @@ export default function Header() {
     { label: <FaInstagram size={24} />, href: "https://www.instagram.com/" },
   ];
 
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
-    <header className="mx-auto max-w-screen-xl text-center lg:py-4 ">
-      <div className="container mx-auto flex justify-between items-center relative">
-        <Image
-          src={logoSquare}
-          alt="Gamma Iota Chapter Logo"
-          width={200}
-          height={200}
-        />
-        <h1>Gamma Iota Chapter</h1>
+    <header className="mx-auto max-w-screen-xl text-center ">
+      <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        {/* <Image
+        src={logoSquare}
+        alt="Gamma Iota Chapter Logo"
+        width={200}
+        height={200}
+      /> */}
+        <div className="flex justify-center items-center pt-4">
+          {" "}
+          <h1>
+            <a href="/" className="text-green-600">
+              ΔΣΦ Gamma Iota
+            </a>
+          </h1>
+        </div>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
 
-        {/* Social Links */}
-        <div className="hidden lg:flex space-x-4">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="hover:text-gray-300"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
-      <div className="mx-auto container flex justify-between items-center relative">
-        <div className="hidden lg:flex space-x-4 nav-links mr-auto"></div>
-        {/* Navigation Links */}
-        <div className="hidden lg:flex space-x-4 nav-links mr-auto">
-          {navigationLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="hover:text-gray-300"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-        {/* Hamburger Menu */}
-        <button className="lg:hidden block" onClick={() => setIsOpen(!isOpen)}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-        <div
-          className={`absolute top-16 left-0 right-0 bg-white z-10 p-4 ${
-            isOpen ? "block" : "hidden"
-          }`}
-          ref={menuRef}
-        >
-          <ul>
-            {navigationLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="block py-2 px-4 hover:bg-gray-700 text-black"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ul className="mt-4">
+          {/* Social Links */}
+          <div className="hidden lg:flex space-x-4">
             {socialLinks.map((link) => (
-              <li key={link.label}>
+              <a
+                key={link.label}
+                href={link.href}
+                className="hover:text-gray-300"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <button
+            data-collapse-toggle="mobile-menu-2"
+            type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mobile-menu-2"
+            aria-expanded="true"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              class="hidden w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
+          id="mobile-menu-2"
+        >
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-4 lg:mt-0">
+            {navigationLinks.map((link) => (
+              <li>
                 <a
                   href={link.href}
-                  className="block py-2 px-4 hover:bg-gray-700 text-black"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   {link.label}
                 </a>
