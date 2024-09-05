@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+// import Script from "next/script";
 
 import Header from "./components/clientHeader";
 import Footer from "./components/footer";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
       </body>
+      {/* <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js" /> */}
     </html>
   );
 }

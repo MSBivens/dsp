@@ -1,5 +1,4 @@
 "use client";
-// import Script from "next/script";
 
 import logoSquare from "../../../public/images/logoSquare.png";
 // import Image from "next/image";
@@ -95,7 +94,7 @@ export default function Header() {
           id="mobile-menu-2"
         >
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-4 lg:mt-0">
-            <li>
+            {/* <li>
               <a
                 href="/"
                 class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
@@ -103,7 +102,7 @@ export default function Header() {
               >
                 Home
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="/about"
@@ -179,7 +178,7 @@ export default function Header() {
           </ul>
         </div>
       </div>
-      <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js" />
+      <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js" async />
     </header>
   );
 }
