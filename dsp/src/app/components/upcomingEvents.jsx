@@ -8,7 +8,7 @@ export default function upcomingEvents() {
         <div class="grid gap-8 lg:grid-cols-2">
           <article class="hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <h3 class="mb-2 text-2xl font-bold tracking-tight ">
-              Homecoming | Sept. 28 to Oct. 5
+              Homecoming | Sept. 28 to Oct. 5, 2024
             </h3>
             <p class="mb-5 font-light ">
               Reconnect with brothers and celebrate the brotherhood at this
@@ -25,7 +25,7 @@ export default function upcomingEvents() {
           </article>
           <article class="flex flex-col hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <h3 class="mb-2 text-2xl font-bold tracking-tight ">
-              75th Anniversary | April 25 to 27
+              75th Anniversary | April 25 to 27, 2025
             </h3>
             <p class="mb-5 font-light ">
               3 day event celebrating the 75th anniversary of the Gamma Iota

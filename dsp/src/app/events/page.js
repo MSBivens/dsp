@@ -11,9 +11,9 @@ export default function events() {
       <section>
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
           <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h1 className="mb-4 tracking-tight">
               Don&apos;t Miss The Next Event
-            </h2>
+            </h1>
             <p className="mb-4">
               The events hosted by the undergraduate and alumni chapter are a
               great way to connect with old and new brothers and learn more
@@ -37,9 +37,9 @@ export default function events() {
       <section>
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <div className="max-w-screen-md">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h3 className="mb-4 tracking-tight">
               Connect with Gamma Iota Brothers
-            </h2>
+            </h3>
             <p className="mb-8 font-light text-gray-500 sm:text-xl dark:text-gray-400">
               Stay updated on upcoming events and connect with fellow brothers.
             </p>
