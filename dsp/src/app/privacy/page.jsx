@@ -10,9 +10,10 @@ export default function privacy() {
       </section>
       <section className="mt-8 px-4 mx-auto max-w-screen-xl lg:px-12">
         <p>
-          This Privacy Notice explains how Gamma Iota ("we," "us," or "our")
-          collects, uses, and protects the personal information of visitors to
-          our website www.deltasigvandals.org ("the Site"). We are committed to
+          This Privacy Notice explains how Gamma Iota (&quot;we,&quot;
+          &quot;us,&quot; or &quot;our&quot;) collects, uses, and protects the
+          personal information of visitors to our website
+          www.deltasigvandals.org (&quot;the Site&quot;). We are committed to
           protecting your privacy and ensuring the security of your personal
           information.
         </p>
