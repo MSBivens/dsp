@@ -1,29 +1,29 @@
 "use client";
+// import Script from "next/script";
 
 import logoSquare from "../../../public/images/logoSquare.png";
-import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+// import Image from "next/image";
+import link from "next/link";
 
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
 
 export default function Header() {
-  const navigationLinks = [
-    // { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "History", href: "/history" },
-    { label: "Philanthropy", href: "/philanthropy" },
-    { label: "Alumni", href: "/alumni" },
-    { label: "Volunteer", href: "/volunteer" },
-    { label: "Donate", href: "/donate" },
-    { label: "Events", href: "/events" },
-    { label: "News", href: "/news" },
-    { label: "Newsletter", href: "/newsletter" },
-  ];
-
   const socialLinks = [
-    { label: <FaFacebook size={24} />, href: "https://www.facebook.com/" },
-    { label: <FaLinkedin size={24} />, href: "https://www.linkedin.com/" },
-    { label: <FaInstagram size={24} />, href: "https://www.instagram.com/" },
+    {
+      id: 1,
+      label: <FaFacebook size={24} />,
+      href: "https://www.facebook.com/",
+    },
+    {
+      id: 2,
+      label: <FaLinkedin size={24} />,
+      href: "https://www.linkedin.com/",
+    },
+    {
+      id: 3,
+      label: <FaInstagram size={24} />,
+      href: "https://www.instagram.com/",
+    },
   ];
 
   return (
@@ -50,12 +50,8 @@ export default function Header() {
 
           {/* Social Links */}
           <div className="hidden lg:flex space-x-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="hover:text-gray-300"
-              >
+            {socialLinks.map((link, index) => (
+              <a key={index} href={link.href} className="hover:text-gray-300">
                 {link.label}
               </a>
             ))}
@@ -99,19 +95,91 @@ export default function Header() {
           id="mobile-menu-2"
         >
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-4 lg:mt-0">
-            {navigationLinks.map((link) => (
-              <li>
-                <a
-                  href={link.href}
-                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="/"
+                class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                aria-current="page"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="/history"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                History
+              </a>
+            </li>
+            <li>
+              <a
+                href="/philanthropy"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Philanthropy
+              </a>
+            </li>
+            <li>
+              <a
+                href="/alumni"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Alumni
+              </a>
+            </li>
+            <li>
+              <a
+                href="/volunteer"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Volunteer
+              </a>
+            </li>
+            <li>
+              <a
+                href="/donate"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Donate
+              </a>
+            </li>
+            <li>
+              <a
+                href="/events"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Events
+              </a>
+            </li>
+            <li>
+              <a
+                href="/news"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                News
+              </a>
+            </li>
+            <li>
+              <a
+                href="/newsletter"
+                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Newsletter
+              </a>
+            </li>
           </ul>
         </div>
       </div>
+      <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js" />
     </header>
   );
 }
