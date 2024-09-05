@@ -102,7 +102,7 @@ export default function Home() {
               </a>
             </button>
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <div className="lg:mt-0 lg:col-span-5 lg:flex">
             <Image
               src={homeCover}
               width={1200}
@@ -174,7 +174,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <div className="lg:mt-0 lg:col-span-5 lg:flex">
             <Image src={homeConnect} alt="Placeholder Image"></Image>
           </div>
         </div>
