@@ -46,21 +46,9 @@ export default function history() {
     },
     {
       year: "1959",
-      event: "Richard Loeppky awarded Outstanding Senior",
-      description:
-        "Gamma Iota has its first member awarded as an Outstanding Senior for the university, Richard Loeppky. Dozens of our alumni have since received this award over the years with the most recent in 2019, Michael Bivens.",
-    },
-    {
-      year: "1959",
       event: "Gamma Iota awarded Chapter Leadership Award",
       description:
         "Gamma Iota is presented the Chapter Leadership Award at the summer convention recognizing it as the top chapter in the nation for universities of our size.",
-    },
-    {
-      year: "1962",
-      event: "Ronald Houghtalin elected ASUI Student Body President",
-      description:
-        "Chapter President Ronald Houghtalin was elected ASUI Student Body President.",
     },
     {
       year: "1963",
@@ -93,13 +81,6 @@ export default function history() {
         "Gamma Iota celebrated its 25 anniversary with a large gathering of alumni and friends at the chapter house.",
     },
     {
-      year: "1977",
-      event:
-        "Doug Madsen wins the Outstanding Undergraduate Member of the Year Award",
-      description:
-        "Member and Chapter President Doug Madsen wins the Outstanding Undergraduate Member of the Year Award from National.",
-    },
-    {
       year: "1980",
       event: "First In Grades and Intramurals",
       description:
@@ -124,59 +105,10 @@ export default function history() {
         "Gamma Iota saw its largest membership numbers with a peak of 30 initiates in 1996. It also dominated the campus intramurals competition winning the majority of the titles during the decade.",
     },
     {
-      year: "1996",
-      event: "John Carpenter wins Greek Man of the Year",
-      description:
-        "Chapter President John Carpenter wins Greek Man of the Year Award and is crowned Homecoming King in the fall.",
-    },
-    {
-      year: "2007",
-      event: "Ken Schrom inducted into UofI Athletic Hall of Fame",
-      description:
-        "Alumnus Ken Schrom is inducted into the U of I Athletic Hall of Fame as a 2 sport athlete in college and a major league pitcher for 13 years.",
-    },
-    {
-      year: "2012",
-      event: "Frank Young inducted into UofI Athletic Hall of Fame",
-      description:
-        "Founding alumni board member Frank Young is inducted into the U of I Athletic Hall of fame for his long tenure as the boxing coach which garnered an NCAA Championship in 1950 and seven individual national titles.",
-    },
-    {
-      year: "2013",
-      event: "Matt Espe inducted into the UofI Alumni Association Hall of Fame",
-      description:
-        "Alumnus Matt Espe is inducted into the U of I Alumni Association Hall of Fame. He was also awarded an Honorary Doctorate in Business Administration by the university in 2017. ",
-    },
-    {
-      year: "2016",
-      event: "Ken Maren inducted into the UofI Athletic Hall of Fame",
-      description:
-        "Alumnus Ken Maren is inducted into the U of I Athletic Hall of Fame as a 3 year starter for the men's basketball team from 1959 to 1962.",
-    },
-    {
-      year: "2017",
-      event: "Brendan Boyle receive Outstanding IFC Chapter Advisor Award",
-      description:
-        "ACB President Brendan Boyle receives the Outstanding IFC Chapter Advisor Award.",
-    },
-    {
       year: "2018",
       event: "First in Grades",
       description:
         "Gamma Iota achieves the #1 GPA ranking among all fraternities, 3.32.",
-    },
-    {
-      year: "2019",
-      event:
-        "Eric Pickett receives the Charles G. Bartell Chapter Advisor Award",
-      description:
-        "Alumnus Eric Pickett receives the Charles G. Bartell Chapter Advisor award at the national convention in Kansas City, MO.",
-    },
-    {
-      year: "2020",
-      event: "Matt Espe receives the Lifetime Achievement Award",
-      description:
-        "Alumnus Matt Espe receives the Lifetime Achievement Award from our national fraternity. This is the rarest of awards given out by our headquarters. Of the 120K alumni members initiated since 1899 for all chapters, less than 30 have received this award.",
     },
     {
       year: "2022",
