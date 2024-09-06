@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import volunteerImage from "../../../public/images/volunteer.jpg";
 
-export default function volunteer() {
+export default function Volunteer() {
   const faqData = [
     {
       id: 1,
@@ -47,7 +47,7 @@ export default function volunteer() {
       <section class="py-24 ">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
-            <div class="relative w-full text-center lg:text-left lg:w-2/4">
+            <div class="w-full text-center lg:text-left lg:w-2/4">
               <h1 class="lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">
                 Volunteer Opportunities That Make a Difference
               </h1>
@@ -56,7 +56,7 @@ export default function volunteer() {
                 Iota and how your contribution can help us build better men.
               </p>
             </div>
-            <div class="relative w-full text-center  lg:text-left lg:w-2/4">
+            <div class="w-full text-center  lg:text-left lg:w-2/4">
               <div className="">
                 <Image
                   className="rounded-lg"
@@ -69,7 +69,7 @@ export default function volunteer() {
             </div>
           </div>
           <div class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4">
+            <div class="w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-44 xl:p-7 xl:w-1/4">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 ">
                 Mentorship
               </h4>
@@ -79,7 +79,7 @@ export default function volunteer() {
                 undergraduate members.
               </p>
             </div>
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4">
+            <div class="w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-44 xl:p-7 xl:w-1/4">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 ">
                 Event Planning
               </h4>
@@ -89,7 +89,7 @@ export default function volunteer() {
                 Receptions, and our Anniversary Celebrations.
               </p>
             </div>
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4">
+            <div class="w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-44 xl:p-7 xl:w-1/4">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 ">
                 Operations
               </h4>
@@ -99,7 +99,7 @@ export default function volunteer() {
                 operations.
               </p>
             </div>
-            <div class="group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4">
+            <div class="w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-44 xl:p-7 xl:w-1/4">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 ">
                 Fundraising
               </h4>
@@ -114,7 +114,7 @@ export default function volunteer() {
       {/* Ready To Get involved? */}
       <section>
         <div className="gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-          <div className="font-light ">
+          <div className="font-light mb-4">
             <h2 className="mb-4 tracking-tight font-extrabold ">
               Ready To Get Involved?
             </h2>

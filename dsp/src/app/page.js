@@ -82,7 +82,6 @@ export default function Home() {
       <section>
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
-            {/* <h1 className="max-w-2xl mb-4"> */}
             <h1>Connecting Alumni, Empowering Brotherhood, Inspiring Impact</h1>
             <p className="max-w-2xl md:text-lg lg:text-xl ">
               Welcome to the Gamma Iota chapter of Delta Sigma Phi at the
@@ -91,16 +90,18 @@ export default function Home() {
             <p className="max-w-2xl mb-2 mt-4 lg:text-xl ">
               Join us in making a difference!
             </p>
-            <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-              <a href="https://forms.gle/NCbcZWUJMMtmDzoVA">
-                <p className="cta-text">Volunteer</p>
-              </a>
-            </button>
-            <button className="cta-button">
-              <a href="/donate">
-                <p className="cta-text">Donate</p>
-              </a>
-            </button>
+            <div className="flex flex-col mb-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+              <button className="cta-button max-w-fit inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                <a href="https://forms.gle/NCbcZWUJMMtmDzoVA">
+                  <p className="cta-text">Volunteer</p>
+                </a>
+              </button>
+              <button className="cta-button max-w-fit">
+                <a href="/donate">
+                  <p className="cta-text">Donate</p>
+                </a>
+              </button>
+            </div>
           </div>
           <div className="lg:mt-0 lg:col-span-5 lg:flex">
             <Image
@@ -160,13 +161,13 @@ export default function Home() {
                 Stay connected with your brothers at the Gamma Iota Chapter and
                 get involved
               </p>
-              <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+              <div className="flex flex-col mb-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                <button className="cta-button max-w-fit inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                   <a href="/events">
                     <p className="cta-text">Events</p>
                   </a>
                 </button>
-                <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                <button className="cta-button max-w-fit inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                   <a href="/newsletter">
                     <p className="cta-text">Gamma Eye Newsletter</p>
                   </a>

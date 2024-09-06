@@ -16,8 +16,8 @@ export default function alumni() {
             alumni experience for every brother by providing opportunities for
             networking, support, and social engagement.
           </p>
-          <div class="flex flex-colspace-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 ">
+            <button className="cta-button mt-auto mx-auto">
               <a href="/events">
                 <p className="cta-text">Check Out The Next Event!</p>
               </a>
@@ -41,7 +41,7 @@ export default function alumni() {
                   love to hear from you!
                 </p>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 ">
-                  <button className="cta-button mt-auto">
+                  <button className="cta-button mt-auto mx-auto">
                     <a href="https://forms.gle/ppJWRxMXeTaAQxLQ7">
                       <p className="cta-text">Contact Us</p>
                     </a>
@@ -58,7 +58,7 @@ export default function alumni() {
                   Your time and talents can help us build the future.
                 </p>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 ">
-                  <button className="cta-button mt-auto">
+                  <button className="cta-button mt-auto mx-auto">
                     <a href="https://forms.gle/ppJWRxMXeTaAQxLQ7">
                       <p className="cta-text">Volunteer Today</p>
                     </a>

@@ -26,7 +26,7 @@ export default function philanthropy() {
               a better future for those in need.
             </p>
             <div class="pt-6 mt-6 col-span-2 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
-              <div>
+              <div className="mb-4">
                 <svg
                   class="w-10 h-10 mb-2"
                   fill="currentColor"
@@ -107,7 +107,7 @@ export default function philanthropy() {
               fraternity.
             </p>
             <div class="pt-6 mt-6 col-span-2 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
-              <div>
+              <div className="mb-4">
                 <svg
                   class="w-10 h-10 mb-2"
                   fill="currentColor"

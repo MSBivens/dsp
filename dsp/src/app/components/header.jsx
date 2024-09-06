@@ -27,55 +27,55 @@ export default function Header() {
           <ul className="hidden lg:flex lg:space-x-4 ">
             <Link
               href="/about"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>About</li>
             </Link>
             <Link
               href="/history"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>History</li>
             </Link>
             <Link
               href="/philanthropy"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>Philanthropy</li>
             </Link>
             <Link
               href="/alumni"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>Alumni</li>
             </Link>
             <Link
               href="/volunteer"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>Volunteer</li>
             </Link>
             <Link
               href="/donate"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>Donate</li>
             </Link>
             <Link
               href="/events"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>Events</li>
             </Link>
             <Link
               href="/news"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>News</li>
             </Link>
             <Link
               href="/newsletter"
-              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              className="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
               <li>Newsletter</li>
             </Link>
@@ -111,60 +111,71 @@ export default function Header() {
         </div>
         <div className="flex-col py-4">
           <ul>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/about">About</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/history">History</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/philanthropy">Philanthropy</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/alumni">Alumni</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/volunteer">Volunteer</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/donate">Donate</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/events">Events</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/news">News</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/newsletter">Newsletter</Link>
-            </li>
+            <Link href="/about">
+              About
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            <Link href="/history">
+              History
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            <Link href="/philanthropy">
+              Philanthropy
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            <Link href="/alumni">
+              Alumni
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            {/* Issue////////////////////////////////////// */}
+            <Link href="/volunteer">
+              Volunteer
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            <Link href="/donate">
+              Donate
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            {/* Issue////////////////////////////////////// */}
+            <Link href="/events">
+              Events
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            <Link href="/news">
+              News
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
+            <Link href="/newsletter">
+              Newsletter
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              ></li>
+            </Link>
           </ul>
         </div>
         <div className="flex flex-row justify-center pt-10 items-center">

@@ -18,8 +18,8 @@ export default function About() {
       {/* MVV */}
       <section>
         <div className="gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-          <div>
-            <h1 className="mb-4 text-4xl tracking-tight font-extrabold ">
+          <div className="mb-4">
+            <h1 className="mb-4 tracking-tight font-extrabold ">
               Mission &amp; Vision
             </h1>
             <p className="mb-4">

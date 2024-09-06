@@ -5,7 +5,7 @@ import GammaEyeSubscribe from "../components/gammaEyeSubscribe.jsx";
 
 import donateWork from "../../../public/images/donate-work.jpg";
 
-export default function donate() {
+export default function Donate() {
   const faqData = [
     {
       id: 1,
@@ -60,11 +60,11 @@ export default function donate() {
     <main>
       {/* Hero */}
       <section className="donation-cover-image ">
-        <div class="px-4 mx-auto max-w-screen-xl text-center py-32 ">
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+        <div className="px-4 mx-auto max-w-screen-xl text-center py-32 ">
+          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
             Support Our Mission
           </h1>
-          <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+          <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
             Your generous donations help us make a difference in the lives of a
             brother.
           </p>
@@ -73,8 +73,8 @@ export default function donate() {
       {/* Feature */}
       <section>
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-          <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold">
+          <div>
+            <h2 className="mb-4 tracking-tight ">
               Supporting Our Chapter: Making a Difference Through Alumni
               Donations
             </h2>
@@ -96,10 +96,10 @@ export default function donate() {
       </section>
       {/* Testimonial */}
       <section>
-        <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
-          <figure class="max-w-screen-md mx-auto">
+        <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+          <figure className="max-w-screen-md mx-auto">
             <svg
-              class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+              className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
               viewBox="0 0 24 27"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export default function donate() {
               />
             </svg>
             <blockquote>
-              <p class="text-gray-900 dark:text-white">
+              <p className="text-gray-900 dark:text-white">
                 &quot;I received a scholarship funded by alumni in my senior
                 year of college. That scholarship not only helped me pay for
                 school, but also alleviated some of the stress of paying to get
@@ -119,7 +119,7 @@ export default function donate() {
                 overwhelming. By having a scholarship funded by alumni, I was
                 able to focus more on my schoolwork and helping the house.
               </p>
-              <p class="text-gray-900 dark:text-white mt-4">
+              <p className="text-gray-900 dark:text-white mt-4">
                 I&apos;m extremely grateful and proud to be part of a
                 brotherhood that cares enough about its youngest members to
                 contribute their time and money to help them. This investment in
@@ -129,12 +129,12 @@ export default function donate() {
                 scholarship and invested in my future! &quot;
               </p>
             </blockquote>
-            <figcaption class="flex items-center justify-center mt-6 space-x-3">
-              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div class="pr-3 font-medium text-gray-900 dark:text-white">
+            <figcaption className="flex items-center justify-center mt-6 space-x-3">
+              <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                <div className="pr-3 font-medium text-gray-900 dark:text-white">
                   Ben Macomber
                 </div>
-                <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
+                <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
                   Pledge Class 2018
                 </div>
               </div>
@@ -144,97 +144,97 @@ export default function donate() {
       </section>
       {/* Donation Options */}
       <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <h3 class="mb-4 text-4xl tracking-tight font-extrabold ">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h3 className="mb-4 text-4xl tracking-tight font-extrabold ">
               Donation Options
             </h3>
-            <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
               There are several ways for alumni to donate, including through the
               University of Idaho, Headquarters, and direct giving. Choose the
               option that works best for you.
             </p>
           </div>
-          <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Direct Giving</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
+          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 className="mb-4 text-2xl font-semibold">Direct Giving</h3>
+              <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
                 You chose how the donation is used among the different funds
                 established, including scholarships, facility improvement, and
                 more.
               </p>
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                <li class="flex items-center space-x-3">
+              <ul role="list" className="mb-8 space-y-4 text-left">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Facility Projects</span>
                 </li>
-                <li class="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Alumni Events</span>
                 </li>
-                <li class="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Recruitment</span>
                 </li>
-                <li class="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Scholarships</span>
                 </li>
-                <li class="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Non-Restrictive Giving</span>
@@ -246,24 +246,26 @@ export default function donate() {
                 </a>
               </button>
             </div>
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">University of Idaho</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
+            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 className="mb-4 text-2xl font-semibold">
+                University of Idaho
+              </h3>
+              <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
                 The T. J. Prichard Scholarship supports the upperclassman with
                 the highest GPA in good standing within the Fraternity.
               </p>
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                <li class="flex items-center space-x-3">
+              <ul role="list" className="mb-8 space-y-4 text-left">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>T.J. Prichard Scholarship</span>
@@ -275,39 +277,39 @@ export default function donate() {
                 </a>
               </button>
             </div>
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-              <h3 class="mb-4 text-2xl font-semibold">Headquarters</h3>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
+            <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+              <h3 className="mb-4 text-2xl font-semibold">Headquarters</h3>
+              <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
                 Headquarters manages a large portfolio of alumni givings to
                 support all chatpers.
               </p>
-              <ul role="list" class="mb-8 space-y-4 text-left">
-                <li class="flex items-center space-x-3">
+              <ul role="list" className="mb-8 space-y-4 text-left">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Gamma Iota Endowment</span>
                 </li>
-                <li class="flex items-center space-x-3">
+                <li className="flex items-center space-x-3">
                   <svg
-                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                   <span>Leadership Institute</span>
@@ -341,9 +343,9 @@ export default function donate() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                     <span aria-labelledby={`question-${item.id}`}>
@@ -361,17 +363,17 @@ export default function donate() {
       </section>
       {/* Still Questions & Subscribe*/}
       <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
-              <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-                <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
+              <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+                <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
                   Still have questions?
                 </h2>
-                <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
+                <p className="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
                   Contact volunteer leadership for further assistance.
                 </p>
-                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 ">
+                <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 ">
                   <button className="cta-button mt-auto">
                     <a href="https://forms.gle/ppJWRxMXeTaAQxLQ7">
                       <p className="cta-text">Contact Us</p>
