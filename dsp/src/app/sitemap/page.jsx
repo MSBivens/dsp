@@ -38,7 +38,9 @@ export default function privacy() {
       <div className="mt-8 px-4 mx-auto max-w-screen-xl lg:px-12">
         {sitemapData.map((section) => (
           <div key={section.title}>
-            <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
+            <h2 className="text-2xl font-semibold mb-2 mt-4">
+              {section.title}
+            </h2>
             <ul>
               {section.pages.map((page) => (
                 <li key={page.title}>
