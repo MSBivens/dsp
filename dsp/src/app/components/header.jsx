@@ -1,184 +1,173 @@
 "use client";
 
-import logoSquare from "../../../public/images/logoSquare.png";
-// import Image from "next/image";
-import link from "next/link";
+import Link from "next/link";
+import { useState } from "react";
 
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Header() {
-  const socialLinks = [
-    {
-      id: 1,
-      label: <FaFacebook size={24} />,
-      href: "https://www.facebook.com/",
-    },
-    {
-      id: 2,
-      label: <FaLinkedin size={24} />,
-      href: "https://www.linkedin.com/",
-    },
-    {
-      id: 3,
-      label: <FaInstagram size={24} />,
-      href: "https://www.instagram.com/",
-    },
-  ];
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNav = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <header className="mx-auto max-w-screen-xl text-center ">
-      <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-        {/* <Image
-        src={logoSquare}
-        alt="Gamma Iota Chapter Logo"
-        width={200}
-        height={200}
-      /> */}
+    <nav className="mx-auto max-w-screen-xl text-center h-24">
+      <div className="flex items-center justify-between px-4 mx-auto h-full w-full">
         <div className="flex justify-center items-center pt-4">
-          {" "}
           <h1>
             <a href="/" className="text-green-600">
               ΔΣΦ Gamma Iota
             </a>
           </h1>
         </div>
-        <div class="flex items-center lg:order-2">
-          <div class="hidden mt-2 mr-4 sm:inline-block">
-            <span></span>
-          </div>
-
-          {/* Social Links */}
-          <div className="hidden lg:flex space-x-4">
-            {socialLinks.map((link, index) => (
-              <a key={index} href={link.href} className="hover:text-gray-300">
-                {link.label}
-              </a>
-            ))}
-          </div>
-          <button
-            data-collapse-toggle="mobile-menu-2"
-            type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="mobile-menu-2"
-            aria-expanded="true"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+        <div className="hidden lg:flex">
+          <ul className="hidden lg:flex lg:space-x-4 ">
+            <Link
+              href="/about"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            <svg
-              class="hidden w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              <li>About</li>
+            </Link>
+            <Link
+              href="/history"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
             >
-              <path
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
+              <li>History</li>
+            </Link>
+            <Link
+              href="/philanthropy"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>Philanthropy</li>
+            </Link>
+            <Link
+              href="/alumni"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>Alumni</li>
+            </Link>
+            <Link
+              href="/volunteer"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>Volunteer</li>
+            </Link>
+            <Link
+              href="/donate"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>Donate</li>
+            </Link>
+            <Link
+              href="/events"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>Events</li>
+            </Link>
+            <Link
+              href="/news"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>News</li>
+            </Link>
+            <Link
+              href="/newsletter"
+              class="block pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >
+              <li>Newsletter</li>
+            </Link>
+          </ul>
         </div>
-        <div
-          class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1"
-          id="mobile-menu-2"
-        >
-          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-4 lg:mt-0">
-            {/* <li>
-              <a
-                href="/"
-                class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li> */}
-            <li>
-              <a
-                href="/about"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                About
-              </a>
+        <div onClick={handleNav} className="lg:hidden cursor-pointer pl-24">
+          <AiOutlineMenu size={25} />
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      <div
+        className={
+          menuOpen
+            ? "fixed left-0 top-0 w-[65%] lg:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+        }
+      >
+        <div className="flex w-full items-center justify-end">
+          <div onClick={handleNav} className="cursor-pointer">
+            <AiOutlineClose size={24} />
+          </div>
+        </div>
+        <div className="flex-col py-4">
+          <ul>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/about">About</Link>
             </li>
-            <li>
-              <a
-                href="/history"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                History
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/history">History</Link>
             </li>
-            <li>
-              <a
-                href="/philanthropy"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Philanthropy
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/philanthropy">Philanthropy</Link>
             </li>
-            <li>
-              <a
-                href="/alumni"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Alumni
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/alumni">Alumni</Link>
             </li>
-            <li>
-              <a
-                href="/volunteer"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Volunteer
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/volunteer">Volunteer</Link>
             </li>
-            <li>
-              <a
-                href="/donate"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Donate
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/donate">Donate</Link>
             </li>
-            <li>
-              <a
-                href="/events"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Events
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/events">Events</Link>
             </li>
-            <li>
-              <a
-                href="/news"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                News
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/news">News</Link>
             </li>
-            <li>
-              <a
-                href="/newsletter"
-                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Newsletter
-              </a>
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              <Link href="/newsletter">Newsletter</Link>
             </li>
           </ul>
         </div>
+        <div className="flex flex-row justify-center pt-10 items-center">
+          <a href="https://www.instagram.com/" className="mr-6">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.facebook.com/">
+            <FaFacebook size={24} />
+          </a>
+          <a href="https://www.linkedin.com/" className="ml-6">
+            <FaLinkedin size={24} />
+          </a>
+        </div>
       </div>
-      <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js" async />
-    </header>
+    </nav>
   );
 }
