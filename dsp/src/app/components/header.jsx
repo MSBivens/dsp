@@ -81,6 +81,17 @@ export default function Header() {
             </Link>
           </ul>
         </div>
+        <div className="hidden lg:flex flex-row justify-center items-center">
+          <a href="https://www.instagram.com/" className="mr-4">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.facebook.com/">
+            <FaFacebook size={24} />
+          </a>
+          <a href="https://www.linkedin.com/" className="ml-4">
+            <FaLinkedin size={24} />
+          </a>
+        </div>
         <div onClick={handleNav} className="lg:hidden cursor-pointer pl-24">
           <AiOutlineMenu size={25} />
         </div>
