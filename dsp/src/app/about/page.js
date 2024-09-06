@@ -10,6 +10,7 @@ import acbtreasurer from "../../../public/images/acbtreasurer.jpg";
 import acbSecretary from "../../../public/images/acbsecretary.jpg";
 import undergradPresident from "../../../public/images/undergradPresident.jpg";
 import undergradTreasurer from "../../../public/images/undergradTreasurer.jpg";
+import acbDoC from "../../../public/images/acbDoC.jpg";
 import acbDoD from "../../../public/images/acbDoD.jpg";
 
 export default function About() {
@@ -130,6 +131,15 @@ export default function About() {
               ></Image>
               <h3 className="mb-1 tracking-tight ">Seth Rahe</h3>
               <p>Undergraduate President</p>
+            </div>
+            <div className="text-center ">
+              <Image
+                className="mx-auto mb-4 w-36 h-36 rounded-full"
+                src={acbDoC}
+                alt="Tony Agenbroad"
+              ></Image>
+              <h3 className="mb-1 tracking-tight ">Tony Agenbroad</h3>
+              <p>Director of Communication</p>
             </div>
             <div className="text-center ">
               <Image
