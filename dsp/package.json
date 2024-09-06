@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.5-canary.38",
     "@sanity/image-url": "^1.0.2",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
