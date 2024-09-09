@@ -250,8 +250,8 @@ export default function Home() {
               authenticity, and multi-generational tapestry of Delta Sigma Phi,
               where each member, regardless of era, contributes to a rich legacy
               of learning, growth, and brotherhood. My time in Moscow and beyond
-              has proven that this fraternity isn&amp;t just about college
-              years—it&amp;s about forging lifelong friendships, which still
+              has proven that this fraternity isn&apos;t just about college
+              years—it&apos;s about forging lifelong friendships, which still
               stands true for me. My closest friends today are Delta Sigs. Some
               I went to school with, while some came many years before me.
               Undoubtedly, the quality and diversity of men within the
