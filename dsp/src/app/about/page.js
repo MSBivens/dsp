@@ -210,9 +210,9 @@ export default function About() {
               <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={personPlaceholder}
-                alt="Neil Sims"
+                alt="Tyler Sims"
               ></Image>
-              <h3 className="mb-1 tracking-tight ">Jarod DeLay</h3>
+              <h3 className="mb-1 tracking-tight ">Tyler DeLay</h3>
               <p>Recruitment Advisor</p>
             </div>
             {/* <div className="text-center text-gray-500 dark:text-gray-400">
