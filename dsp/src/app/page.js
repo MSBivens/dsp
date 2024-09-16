@@ -279,7 +279,7 @@ export default function Home() {
             <figcaption className="flex items-center space-x-2">
               <div className="text-left">
                 <p className="font-medium">Destin Brown</p>
-                <p className="text-sm text-gray-500">Pledge Class </p>
+                <p className="text-sm text-gray-500">Pledge Class 2013</p>
               </div>
             </figcaption>
           </figure>
