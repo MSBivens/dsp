@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 import Header from "./components/clientHeader";
 import Footer from "./components/footer";
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-        <GoogleAnalytics gaId="G-Y5TVLG7E11" />
       </body>
     </html>
   );
