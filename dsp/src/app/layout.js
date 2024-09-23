@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+
 import Header from "./components/clientHeader";
 import Footer from "./components/footer";
 
@@ -21,6 +24,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
