@@ -281,7 +281,7 @@ export default function Donate() {
               <h3 className="mb-4 text-2xl font-semibold">Headquarters</h3>
               <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400 mb-8">
                 Headquarters manages a large portfolio of alumni givings to
-                support all chatpers.
+                support all chapters.
               </p>
               <ul role="list" className="mb-8 space-y-4 text-left">
                 <li className="flex items-center space-x-3">
