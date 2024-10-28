@@ -8,17 +8,18 @@ export default function upcomingEvents() {
         <div class="grid gap-8 lg:grid-cols-2">
           <article class="hover:shadow-lg p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <h3 class="mb-2 text-2xl font-bold tracking-tight ">
-              Homecoming | Sept. 28 to Oct. 5, 2024
+              125th Celebration | Nov. 14
             </h3>
             <p class="mb-5 font-light ">
-              Reconnect with brothers and celebrate the brotherhood at this
-              years Homecoming event!
+              Commemorate 125 years of Culture, Harmony, and Friendship,
+              we&apos;re bringing the celebration to Boise with brothers from
+              different chapters!
             </p>
-            <p class="mb-5 font-light ">BBQ, games, and more!</p>
+            {/* <p class="mb-5 font-light ">BBQ, games, and more!</p> */}
             <div class="flex justify-between items-center">
               <button className="cta-button inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center  rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                <a href="https://www.uidaho.edu/events/signature-events/homecoming">
-                  <p className="cta-text">More Details</p>
+                <a href="https://t.e2ma.net/click/tizjxj/hhmv01od/92ljpz">
+                  <p className="cta-text">RSVP Today</p>
                 </a>
               </button>
             </div>
