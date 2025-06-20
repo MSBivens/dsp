@@ -47,6 +47,32 @@ export default function newsletter() {
             <div class="-my-4 divide-y divide-gray-200 dark:divide-gray-700">
               <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
                 <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  Spring 2025
+                </p>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white ">
+                  <a
+                    href="../../files/GammaEyeED19.pdf"
+                    class="hover:underline"
+                  >
+                    Gamma Eye 19th Edition
+                  </a>
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
+                  Fall 2024
+                </p>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white ">
+                  <a
+                    href="../../files/GammaEyeED18.pdf"
+                    class="hover:underline"
+                  >
+                    Gamma Eye 18th Edition
+                  </a>
+                </p>
+              </div>
+              <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
+                <p class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0">
                   Spring 2024
                 </p>
                 <p class="text-lg font-semibold text-gray-900 dark:text-white ">
