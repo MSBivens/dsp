@@ -125,13 +125,13 @@ export default function SupportSection() {
 
               <div className="bg-[#5B2C6F]/5 rounded-xl p-6 border border-[#5B2C6F]/10">
                 <p className="text-gray-700 italic text-center">
-                  "I'm extremely grateful and proud to be part of a brotherhood
-                  that cares enough about its youngest members to contribute
-                  their time and money to help them. This investment in my
-                  future shows what a great bond Delta Sigma Phi brings to the
-                  University of Idaho campus and sets a great example of how to
-                  invest in young men. Thank you to all brothers who funded the
-                  scholarship and invested in my future! "
+                  &quot;I&apos;m extremely grateful and proud to be part of a
+                  brotherhood that cares enough about its youngest members to
+                  contribute their time and money to help them. This investment
+                  in my future shows what a great bond Delta Sigma Phi brings to
+                  the University of Idaho campus and sets a great example of how
+                  to invest in young men. Thank you to all brothers who funded
+                  the scholarship and invested in my future!&quot;
                 </p>
                 <p className="text-sm text-[#5B2C6F] font-medium text-center mt-3">
                   — Ben Macomber, Pledge Class of 2018

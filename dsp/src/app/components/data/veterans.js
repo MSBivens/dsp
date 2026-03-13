@@ -1,4 +1,4 @@
-export default [
+const veterans = [
   {
     id: "arnold-candry", // Or "1" depending on your sequence
     name: "Arnold J. Candry",
@@ -31,3 +31,4 @@ export default [
     decorations: "Awaiting Confirmation",
   },
 ];
+export default veterans;

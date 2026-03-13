@@ -1,16 +1,16 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { motion } from "motion/react";
 import { ArrowLeft, Shield, Calendar, Award, User } from "lucide-react";
 import veteransData from "@/components/data/veterans";
+import Image from "next/image";
 
-export default function VeteranDetail() {
+function VeteranDetailContent() {
   const searchParams = useSearchParams();
   const veteranId = searchParams.get("id");
 
-  // Find the veteran from your data
   const veteran =
     veteransData.find((v) => String(v.id) === String(veteranId)) || null;
 
@@ -32,8 +32,8 @@ export default function VeteranDetail() {
             Veteran Not Found
           </h2>
           <p className="text-gray-600 mb-6">
-            The veteran story you're looking for doesn't exist (ID: {veteranId}
-            ).
+            The veteran story you&apos;re looking for doesn&apos;t exist (ID:{" "}
+            {veteranId}).
           </p>
           <Link
             href="/veteran-stories"
@@ -46,17 +46,18 @@ export default function VeteranDetail() {
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative py-32 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
         {veteran.photo_url && (
           <div className="absolute inset-0 opacity-30">
-            <img
+            <Image
               src={veteran.photo_url}
               alt=""
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
         )}
@@ -121,10 +122,13 @@ export default function VeteranDetail() {
               >
                 {veteran.photo_url && (
                   <div className="rounded-2xl overflow-hidden shadow-lg">
-                    <img
+                    <Image
                       src={veteran.photo_url}
                       alt={veteran.name}
+                      width={800}
+                      height={600}
                       className="w-full h-auto"
+                      sizes="(max-width: 768px) 100vw, 800px"
                     />
                   </div>
                 )}
@@ -224,5 +228,21 @@ export default function VeteranDetail() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function VeteranDetail() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-white">
+          <div className="animate-pulse text-[#18453B] font-medium">
+            Loading Story...
+          </div>
+        </div>
+      }
+    >
+      <VeteranDetailContent />
+    </Suspense>
   );
 }

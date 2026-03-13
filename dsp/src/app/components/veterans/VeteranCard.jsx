@@ -9,6 +9,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const conflictColors = {
   "World War I": "bg-amber-100 text-amber-800",
@@ -34,12 +35,14 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
         className="block group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
       >
         {/* Image */}
-        <div className="relative h-48 bg-gray-100 overflow-hidden">
+        <div className="relative h-48 bg-gray-100 overflow-hidden group">
           {veteran.photo_url ? (
-            <img
+            <Image
               src={veteran.photo_url}
               alt={veteran.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#006D5B] to-[#005648]">

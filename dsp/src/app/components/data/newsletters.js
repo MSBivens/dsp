@@ -1,4 +1,4 @@
-export default [
+const newsletters = [
   {
     id: "1",
     title: "Gamma Eye 1st Edition",
@@ -80,3 +80,4 @@ export default [
     pdf_url: "/files/GammaEye/GammaEyeED19.pdf",
   },
 ];
+export default newsletters;

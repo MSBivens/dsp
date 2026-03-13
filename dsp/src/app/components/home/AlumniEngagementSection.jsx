@@ -67,7 +67,7 @@ export default function AlumniEngagementSection() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Your involvement matters. Whether through mentorship, financial
             support, or simply staying connected, alumni engagement is essential
-            to our chapter's continued success.
+            to our chapter&apos;s continued success.
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ export default function AlumniEngagementSection() {
           className="mt-20"
         >
           <div className="relative rounded-3xl overflow-hidden">
-            <div className="absolute inset-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80')]" />
+            <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/AlumniEngagement.jpg')]" />
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/70" />
 
             <div className="relative z-10 p-8 lg:p-16">

@@ -1,4 +1,4 @@
-export default [
+const timeline = [
   {
     id: "1",
     year: 1950,
@@ -143,3 +143,4 @@ export default [
     era: "Modern Era",
   },
 ];
+export default timeline;

@@ -10,6 +10,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Trophy, BookOpen, Users, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function UndergraduateSection() {
   const ref = useRef(null);
@@ -34,13 +35,15 @@ export default function UndergraduateSection() {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80"
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+              <Image
+                src="/images/undergrad.jpg"
                 alt="Undergraduate chapter"
-                className="w-full h-[500px] object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent pointer-events-none" />
             </div>
 
             {/* Floating Stats Card */}
@@ -78,7 +81,7 @@ export default function UndergraduateSection() {
               Undergraduate Chapter
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Today's Gamma Iota chapter continues the proud tradition of
+              Today&apos;s Gamma Iota chapter continues the proud tradition of
               excellence established by those who came before. Our
               undergraduates are campus leaders, scholars, and community
               servants who embody the values of Delta Sigma Phi every day.

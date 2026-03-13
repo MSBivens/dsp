@@ -82,7 +82,8 @@ export default function ContactSection() {
             Get in Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions or want to get involved? We'd love to hear from you.
+            Have questions or want to get involved? We&apos;d love to hear from
+            you.
           </p>
         </motion.div>
 

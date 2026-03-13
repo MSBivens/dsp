@@ -7,6 +7,7 @@
  */
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 export default function TimelineItem({ event, index }) {
   const ref = useRef(null);
@@ -52,11 +53,13 @@ export default function TimelineItem({ event, index }) {
         <p className="text-gray-600 leading-relaxed">{event.description}</p>
 
         {event.image_url && (
-          <div className="mt-6 rounded-xl overflow-hidden">
-            <img
+          <div className="mt-6 relative w-full h-48 rounded-xl overflow-hidden">
+            <Image
               src={event.image_url}
               alt={event.title}
-              className="w-full h-48 object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         )}

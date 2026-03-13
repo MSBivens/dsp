@@ -68,7 +68,7 @@ export default function LegacySection() {
               From our founding to our continued growth today, we have
               maintained an unwavering commitment to developing men of
               exceptional character. Our history is not just about the past,
-              it's the foundation upon which we build our future.
+              it&apos;s the foundation upon which we build our future.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -80,7 +80,7 @@ export default function LegacySection() {
               </Link>
               <Link
                 href="/newsletter-archive"
-                className="px-6 py-3 bg-[#006D5B] text-white rounded-lg font-medium hover:bg-white/20 transition-all duration-300 border border-white/20"
+                className="px-6 py-3 bg-[#006D5B] text-white rounded-lg font-medium hover:bg-[#12362e] transition-all duration-300 border border-white/20"
               >
                 Read The Gamma Eye
               </Link>
