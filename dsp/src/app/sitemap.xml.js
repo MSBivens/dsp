@@ -1,20 +1,33 @@
-const EXTERNAL_DATA_URL = "https://jsonplaceholder.typicode.com/posts";
+import veteransData from "@/components/data/veterans";
 
-function generateSiteMap(posts) {
+const SITE_URL = "https://www.deltasigvandals.org";
+
+function generateSiteMap(veterans) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--We manually set the two URLs we know already-->
+     {/* Static Pages */}
      <url>
-       <loc>https://jsonplaceholder.typicode.com</loc>
+       <loc>${SITE_URL}</loc>
      </url>
      <url>
-       <loc>https://jsonplaceholder.typicode.com/guide</loc>
+       <loc>${SITE_URL}/history-timeline</loc>
      </url>
-     ${posts
+     <url>
+       <loc>${SITE_URL}/veteran-stories</loc>
+     </url>
+     <url>
+       <loc>${SITE_URL}/donate</loc>
+     </url>
+     <url>
+       <loc>${SITE_URL}/newsletter-archive</loc>
+     </url>
+     
+     {/* Dynamic Veteran Pages */}
+     ${veterans
        .map(({ id }) => {
          return `
        <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${id}`}</loc>
+           <loc>${`${SITE_URL}/veteran-detail?id=${id}`}</loc>
        </url>
      `;
        })
@@ -23,20 +36,12 @@ function generateSiteMap(posts) {
  `;
 }
 
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting
-}
+export default function SiteMap() {}
 
 export async function getServerSideProps({ res }) {
-  // We make an API call to gather the URLs for our site
-  const request = await fetch(EXTERNAL_DATA_URL);
-  const posts = await request.json();
-
-  // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap(posts);
+  const sitemap = generateSiteMap(veteransData);
 
   res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
   res.write(sitemap);
   res.end();
 
@@ -44,5 +49,3 @@ export async function getServerSideProps({ res }) {
     props: {},
   };
 }
-
-export default SiteMap;
