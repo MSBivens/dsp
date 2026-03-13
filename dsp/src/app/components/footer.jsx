@@ -1,110 +1,83 @@
-import Image from "next/image";
-
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa6";
+import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
-  return (
-    <footer className="max-w-screen-xl mx-auto p-4 ">
-      <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "History", path: "/history-timeline" },
+    { name: "Veterans", path: "/veteran-stories" },
+    { name: "Donate", path: "/donate" },
+  ];
 
-      <div className="mx-auto max-w-screen-xl">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Gamma Iota Chapter
-            </span>
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-[var(--nile-green)] flex items-center justify-center">
+                <span className="text-white font-bold text-sm">ΔΣΦ</span>
+              </div>
+              <div>
+                <p className="font-semibold">Delta Sigma Phi</p>
+                <p className="text-xs text-gray-400">Gamma Iota Chapter</p>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+              Building Better Men since 1950 at the University of Idaho. Our
+              brotherhood is built on the principles of Culture, Harmony, and
+              Friendship.
+            </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Our Brotherhood
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
-                  <a href="/about" className="hover:underline">
-                    About
-                  </a>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4 text-sm tracking-wider uppercase text-gray-300">
+              Quick Links
+            </h4>
+            <ul className="space-y-3">
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    href={item.path}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
-                <li className="mb-4">
-                  <a href="/history" className="hover:underline">
-                    History
-                  </a>
-                </li>
-                <li>
-                  <a href="/philanthropy" className="hover:underline">
-                    Philanthropy
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Get Involved
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
-                  <a href="/alumni" className="hover:underline ">
-                    Alumni
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/volunteer" className="hover:underline ">
-                    Volunteer
-                  </a>
-                </li>
-                <li>
-                  <a href="/donate" className="hover:underline">
-                    Donate
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Stay Connected
-              </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
-                <li className="mb-4">
-                  <a href="/events" className="hover:underline">
-                    Events
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/news" className="hover:underline">
-                    News
-                  </a>
-                </li>
-                <li>
-                  <a href="/newsletter" className="hover:underline">
-                    Newsletter
-                  </a>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4 text-sm tracking-wider uppercase text-gray-300">
+              Contact
+            </h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>University of Idaho</li>
+              <li>Moscow, Idaho 83843</li>
+              <li className="pt-2">
+                <a
+                  href="mailto:deltasigvandalalumni@gmail.com"
+                  className="hover:text-white transition-colors"
+                >
+                  deltasigvandalalumni@gmail.com
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2024 Delta Sigma Phi, Gamma Iota™. All Rights Reserved.
-          </span>
-          <div>
-            <a href="/privacy" className="mr-4">
-              Privacy Policy
-            </a>
-            <a href="/sitemap">Sitemap</a>
-          </div>
-          <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a href="https://www.instagram.com/deltasig_idaho">
-              <FaInstagram size={24} />
-            </a>
-            <a href="https://www.facebook.com/deltasigvandals">
-              <FaFacebook size={24} />
-            </a>
-            <a href="https://www.linkedin.com/groups/13505181/">
-              <FaLinkedin size={24} />
-            </a>
-          </div>
+
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} Delta Sigma Phi - Gamma Iota Chapter.
+            All rights reserved.
+          </p>
+          <p className="text-gray-500 text-sm">ACB - 82-0515756</p>
+          <p className="text-gray-500 text-sm">Chapter - 82-0201535</p>
+          <p className="text-gray-500 text-sm">Better Men. Better Lives.</p>
         </div>
       </div>
     </footer>
