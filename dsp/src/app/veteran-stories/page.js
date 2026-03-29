@@ -26,12 +26,13 @@ export default function VeteranStories() {
     "World War II",
     "Korean War",
     "Vietnam War",
+    "Cold War Era",
     "Gulf War",
     "Global War on Terrorism",
     "Operation Iraqi Freedom",
     "Operation Enduring Freedom",
-    "Cold War Era",
     "Peacetime Service",
+    "Expeditionary & Global Operations",
   ];
 
   const filteredVeterans = useMemo(() => {
@@ -104,7 +105,7 @@ export default function VeteranStories() {
             </div>
             <div>
               <Medal className="w-8 h-8 text-white/80 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">6</div>
+              <div className="text-3xl font-bold text-white">5</div>
               <div className="text-white/70 text-sm">Military Branches</div>
             </div>
             <div>
