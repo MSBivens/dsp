@@ -7,21 +7,23 @@
  * Used in: pages/Home
  */
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { format } from "date-fns";
 import { Calendar, MapPin, Clock } from "lucide-react";
 import eventsData from "@/components/data/events";
+
+const parseDate = (dateString) => new Date(dateString.replace(/-/g, "/"));
 
 export default function EventsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const upcomingEvents = eventsData
-    .filter((e) => new Date(e.date) >= new Date())
+    .filter((e) => e.date && parseDate(e.date) >= new Date())
     .slice(0, 4);
 
   const eventTypeColors = {
     reunion: "bg-[#5B2C6F]",
-    fundraiser: "bg-[#006D5B]",
+    fundraiser: "bg-nile-green",
     social: "bg-blue-500",
     ceremony: "bg-amber-500",
     other: "bg-gray-500",
@@ -36,7 +38,7 @@ export default function EventsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#006D5B]/10 text-[#006D5B] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-nile-green/10 text-nile-green text-sm font-medium mb-4">
             Mark Your Calendar
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -62,11 +64,11 @@ export default function EventsSection() {
                   {/* Date Badge */}
                   <div className="flex-shrink-0">
                     <div className="w-20 h-20 rounded-xl bg-white shadow-sm flex flex-col items-center justify-center">
-                      <span className="text-2xl font-bold text-[#006D5B]">
-                        {format(new Date(event.date), "d")}
+                      <span className="text-2xl font-bold text-nile-green">
+                        {format(parseDate(event.date), "d")}
                       </span>
                       <span className="text-sm text-gray-500 uppercase">
-                        {format(new Date(event.date), "MMM")}
+                        {format(parseDate(event.date), "MMM")}
                       </span>
                     </div>
                   </div>
@@ -81,7 +83,7 @@ export default function EventsSection() {
                         {event.type?.replace("_", " ")}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#006D5B] transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-nile-green transition-colors">
                       {event.title}
                     </h3>
                     {event.description && (

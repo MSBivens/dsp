@@ -7,7 +7,7 @@ export default function NotFound() {
         <div className="text-center space-y-6">
           <div className="space-y-2">
             <h1 className="text-7xl font-light text-slate-300">404</h1>
-            <div className="h-0.5 w-16 bg-[var(--nile-green)] mx-auto"></div>
+            <div className="h-0.5 w-16 bg-nile-green mx-auto"></div>
           </div>
 
           <div className="space-y-3">
@@ -22,7 +22,7 @@ export default function NotFound() {
           <div className="pt-6">
             <Link
               href="/"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-[var(--nile-green)] rounded-lg hover:opacity-90 transition-all duration-200"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-nile-green rounded-lg hover:opacity-90 transition-all duration-200"
             >
               <svg
                 className="w-4 h-4 mr-2"

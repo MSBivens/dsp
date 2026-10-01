@@ -5,14 +5,14 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/flowbite-react/lib/**/*.js",
   ],
   theme: {
     extend: {
       colors: {
         // Fraternity Brand Color
-        'nile-green': 'var(--nile-green)',
-        
+        'nile-green': 'rgb(var(--nile-green) / <alpha-value>)',
+        'nile-green-dark': 'rgb(var(--nile-green-dark) / <alpha-value>)',
+
         // Shadcn/UI System (Required for Toaster/Base44 components)
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -74,7 +74,6 @@ module.exports = {
     },
   },
   plugins: [
-    require("flowbite/plugin"),
     require("tailwindcss-animate"), // Required for accordion and toast animations
   ],
 };

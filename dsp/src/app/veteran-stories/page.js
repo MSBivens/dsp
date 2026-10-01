@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -84,7 +84,7 @@ export default function VeteranStories() {
               href="/files/KnownVeterans.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#18453B] text-white rounded-lg font-medium hover:bg-[#12362e] transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 shadow-lg"
             >
               View Known Veterans (PDF)
             </Link>
@@ -93,7 +93,7 @@ export default function VeteranStories() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-[#006D5B]">
+      <section className="py-12 bg-nile-green">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>

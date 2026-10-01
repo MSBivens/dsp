@@ -139,7 +139,7 @@ const veterans = [
     name: "Jerry Agenbroad",
     // graduation_year: 19XX,
     branch: "Marines",
-    conflict: "Vietnam war",
+    conflict: "Vietnam War",
     rank: "Colonel",
     years_of_service: "1967-1995",
     photo_url: "/images/veterans/jerry-agenbroad.jpg",
