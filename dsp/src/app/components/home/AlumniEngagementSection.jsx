@@ -8,7 +8,7 @@
  */
 import React from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import {
   Calendar,
@@ -58,7 +58,7 @@ export default function AlumniEngagementSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#006D5B]/10 text-[#006D5B] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-nile-green/10 text-nile-green text-sm font-medium mb-4">
             Get Involved
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -78,10 +78,10 @@ export default function AlumniEngagementSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="group p-6 rounded-2xl bg-gray-50 hover:bg-[#006D5B] transition-all duration-300 cursor-pointer"
+              className="group p-6 rounded-2xl bg-gray-50 hover:bg-nile-green transition-all duration-300 cursor-pointer"
             >
-              <div className="w-14 h-14 rounded-xl bg-[#006D5B] group-hover:bg-white flex items-center justify-center mb-5 transition-colors duration-300">
-                <way.icon className="w-7 h-7 text-white group-hover:text-[#006D5B] transition-colors duration-300" />
+              <div className="w-14 h-14 rounded-xl bg-nile-green group-hover:bg-white flex items-center justify-center mb-5 transition-colors duration-300">
+                <way.icon className="w-7 h-7 text-white group-hover:text-nile-green transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-2 transition-colors duration-300">
                 {way.title}
@@ -125,7 +125,7 @@ export default function AlumniEngagementSection() {
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/donate"
-                    className="px-6 py-3 bg-[#006D5B] text-white rounded-lg font-medium hover:bg-[#005648] transition-all duration-300"
+                    className="px-6 py-3 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300"
                   >
                     Make a Gift
                   </Link>

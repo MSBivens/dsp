@@ -8,7 +8,7 @@
  */
 import React from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Heart, DollarSign, GraduationCap, Home } from "lucide-react";
 
@@ -35,7 +35,7 @@ export default function SupportSection() {
   ];
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-[#006D5B]">
+    <section ref={ref} className="py-24 lg:py-32 bg-nile-green">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -81,7 +81,7 @@ export default function SupportSection() {
 
             <Link
               href="/donate"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#006D5B] rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-nile-green rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
               <DollarSign className="w-5 h-5" />
               Make a Gift Today
@@ -97,8 +97,8 @@ export default function SupportSection() {
           >
             <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-2xl">
               <div className="text-center mb-8">
-                <div className="w-20 h-20 rounded-full bg-[#006D5B]/10 flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-10 h-10 text-[#006D5B]" />
+                <div className="w-20 h-20 rounded-full bg-nile-green/10 flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-10 h-10 text-nile-green" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Every Gift Matters
@@ -110,15 +110,15 @@ export default function SupportSection() {
 
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#006D5B]">200+</div>
+                  <div className="text-3xl font-bold text-nile-green">200+</div>
                   <div className="text-sm text-gray-500">Annual Donors</div>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#006D5B]">$5K</div>
+                  <div className="text-3xl font-bold text-nile-green">$5K</div>
                   <div className="text-sm text-gray-500">Raised Yearly</div>
                 </div>
                 <div className="text-center p-4 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#006D5B]">5</div>
+                  <div className="text-3xl font-bold text-nile-green">5</div>
                   <div className="text-sm text-gray-500">Scholarships</div>
                 </div>
               </div>

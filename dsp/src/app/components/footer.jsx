@@ -6,6 +6,7 @@ export default function Footer() {
     { name: "Home", path: "/" },
     { name: "History", path: "/history-timeline" },
     { name: "Veterans", path: "/veteran-stories" },
+    { name: "Newsletters", path: "/newsletter-archive" },
     { name: "Donate", path: "/donate" },
   ];
 
@@ -16,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-[var(--nile-green)] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-nile-green flex items-center justify-center">
                 <span className="text-white font-bold text-sm">ΔΣΦ</span>
               </div>
               <div>

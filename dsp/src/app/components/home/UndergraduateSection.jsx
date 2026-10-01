@@ -7,7 +7,7 @@
  * Used in: pages/Home
  */
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Trophy, BookOpen, Users, Star } from "lucide-react";
 import Image from "next/image";
@@ -56,7 +56,7 @@ export default function UndergraduateSection() {
               <div className="grid grid-cols-2 gap-4">
                 {achievements.slice(0, 2).map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <stat.icon className="w-6 h-6 text-[#006D5B] mx-auto mb-2" />
+                    <stat.icon className="w-6 h-6 text-nile-green mx-auto mb-2" />
                     <div className="text-2xl font-bold text-gray-900">
                       {stat.value}
                     </div>
@@ -99,7 +99,7 @@ export default function UndergraduateSection() {
                   key={stat.label}
                   className="bg-white rounded-xl p-4 text-center shadow-sm"
                 >
-                  <stat.icon className="w-5 h-5 text-[#006D5B] mx-auto mb-2" />
+                  <stat.icon className="w-5 h-5 text-nile-green mx-auto mb-2" />
                   <div className="text-xl font-bold text-gray-900">
                     {stat.value}
                   </div>
@@ -111,8 +111,8 @@ export default function UndergraduateSection() {
             {/* Highlights */}
             <div className="hidden md:block space-y-4">
               <div className="flex items-start gap-4">
-                {/* <div className="w-10 h-10 rounded-full bg-[#006D5B]/10 flex items-center justify-center flex-shrink-0">
-                  <Trophy className="w-5 h-5 text-[#006D5B]" />
+                {/* <div className="w-10 h-10 rounded-full bg-nile-green/10 flex items-center justify-center flex-shrink-0">
+                  <Trophy className="w-5 h-5 text-nile-green" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">
@@ -124,8 +124,8 @@ export default function UndergraduateSection() {
                 </div> */}
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#006D5B]/10 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 text-[#006D5B]" />
+                <div className="w-10 h-10 rounded-full bg-nile-green/10 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-nile-green" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">
@@ -137,8 +137,8 @@ export default function UndergraduateSection() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#006D5B]/10 flex items-center justify-center flex-shrink-0">
-                  <Star className="w-5 h-5 text-[#006D5B]" />
+                <div className="w-10 h-10 rounded-full bg-nile-green/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-5 h-5 text-nile-green" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">

@@ -7,7 +7,7 @@
  */
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -16,9 +16,13 @@ const conflictColors = {
   "World War II": "bg-red-100 text-red-800",
   "Korean War": "bg-blue-100 text-blue-800",
   "Vietnam War": "bg-green-100 text-green-800",
+  "Cold War Era": "bg-sky-100 text-sky-800",
   "Gulf War": "bg-orange-100 text-orange-800",
-  "War on Terror": "bg-purple-100 text-purple-800",
+  "Global War on Terrorism": "bg-purple-100 text-purple-800",
+  "Operation Iraqi Freedom": "bg-violet-100 text-violet-800",
+  "Operation Enduring Freedom": "bg-indigo-100 text-indigo-800",
   "Peacetime Service": "bg-gray-100 text-gray-800",
+  "Expeditionary & Global Operations": "bg-teal-100 text-teal-800",
 };
 
 export default function VeteranCard({ veteran, index, branchIcons }) {
@@ -31,7 +35,7 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <Link
-        href={`/veteran-detail?id=${veteran.id}`}
+        href={`/veterans/${veteran.id}`}
         className="block group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
       >
         {/* Image */}
@@ -45,7 +49,7 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#006D5B] to-[#005648]">
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-nile-green to-nile-green-dark">
               <span className="text-6xl">
                 {branchIcons[veteran.branch] || "🎖️"}
               </span>
@@ -62,7 +66,7 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
 
         {/* Content */}
         <div className="p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#006D5B] transition-colors">
+          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-nile-green transition-colors">
             {veteran.name}
           </h3>
 
@@ -83,7 +87,7 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
             </p>
           )}
 
-          <div className="flex items-center text-[#006D5B] font-medium text-sm group-hover:gap-3 transition-all">
+          <div className="flex items-center text-nile-green font-medium text-sm group-hover:gap-3 transition-all">
             Read Story
             <ChevronRight className="w-4 h-4 ml-1" />
           </div>

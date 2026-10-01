@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,11 +14,16 @@ export default function Header() {
     { name: "Home", path: "/" },
     { name: "History", path: "/history-timeline" },
     { name: "Veterans", path: "/veteran-stories" },
+    { name: "Newsletters", path: "/newsletter-archive" },
     { name: "Donate", path: "/donate" },
   ];
 
-  // Helper to determine if a link is active
-  const isActive = (path) => pathname === path;
+  // Helper to determine if a link is active. Veterans also covers the
+  // /veterans/[id] detail pages, not just the /veteran-stories listing.
+  const isActive = (path) =>
+    path === "/veteran-stories"
+      ? pathname === path || pathname.startsWith("/veterans/")
+      : pathname === path;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -26,7 +31,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[var(--nile-green)] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-nile-green flex items-center justify-center">
               <span className="text-white font-bold text-lg">ΔΣΦ</span>
             </div>
             <div className="hidden sm:block">
@@ -47,7 +52,7 @@ export default function Header() {
                 href={item.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(item.path)
-                    ? "bg-[var(--nile-green)] text-white"
+                    ? "bg-nile-green text-white"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
               >
@@ -87,7 +92,7 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     isActive(item.path)
-                      ? "bg-[var(--nile-green)] text-white"
+                      ? "bg-nile-green text-white"
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
                 >

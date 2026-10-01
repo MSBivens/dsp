@@ -6,7 +6,7 @@
  * Used in: pages/Donate
  */
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 
 const stats = [
   { value: "$25K+", label: "Raised Last 5 Years" },
@@ -45,7 +45,7 @@ export default function ImpactSection() {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               className="text-center p-8 rounded-2xl bg-white/5 border border-white/10"
             >
-              <div className="text-5xl font-bold text-[#006D5B] mb-2">
+              <div className="text-5xl font-bold text-nile-green mb-2">
                 {stat.value}
               </div>
               <div className="text-white/70">{stat.label}</div>

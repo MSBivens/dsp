@@ -1,51 +1,26 @@
 "use client";
-import React, { Suspense } from "react";
+/**
+ * VeteranDetailContent
+ * Full profile view for a single veteran: hero with photo/branch/conflict
+ * badges, a sidebar of service details, and the short/full story.
+ * Used in: app/veterans/[id]/page.js
+ */
+import React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { motion } from "motion/react";
 import { ArrowLeft, Shield, Calendar, Award, User } from "lucide-react";
-import veteransData from "@/components/data/veterans";
 import Image from "next/image";
 
-function VeteranDetailContent() {
-  const searchParams = useSearchParams();
-  const veteranId = searchParams.get("id");
+const branchIcons = {
+  Army: "⚔️",
+  Navy: "⚓",
+  "Air Force": "✈️",
+  Marines: "🦅",
+  "Coast Guard": "⛵",
+  "National Guard": "🛡️",
+};
 
-  const veteran =
-    veteransData.find((v) => String(v.id) === String(veteranId)) || null;
-
-  const branchIcons = {
-    Army: "⚔️",
-    Navy: "⚓",
-    "Air Force": "✈️",
-    Marines: "🦅",
-    "Coast Guard": "⛵",
-    "National Guard": "🛡️",
-  };
-
-  if (!veteran) {
-    return (
-      <div className="min-h-screen bg-white pt-20 flex items-center justify-center">
-        <div className="text-center">
-          <Shield className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Veteran Not Found
-          </h2>
-          <p className="text-gray-600 mb-6">
-            The veteran story you&apos;re looking for doesn&apos;t exist (ID:{" "}
-            {veteranId}).
-          </p>
-          <Link
-            href="/veteran-stories"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#18453B] text-white rounded-lg font-medium hover:bg-[#12362e] transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Veterans
-          </Link>
-        </div>
-      </div>
-    );
-  }
+export default function VeteranDetailContent({ veteran }) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -95,7 +70,7 @@ function VeteranDetailContent() {
               <span className="px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium">
                 {veteran.branch}
               </span>
-              <span className="px-4 py-2 rounded-full bg-[#006D5B]/80 text-white text-sm font-medium">
+              <span className="px-4 py-2 rounded-full bg-nile-green/80 text-white text-sm font-medium">
                 {veteran.conflict}
               </span>
               {veteran.graduation_year && (
@@ -137,7 +112,7 @@ function VeteranDetailContent() {
                   <h3 className="font-bold text-gray-900">Service Details</h3>
 
                   <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-[#006D5B] mt-0.5" />
+                    <Shield className="w-5 h-5 text-nile-green mt-0.5" />
                     <div>
                       <p className="text-sm text-gray-500">Branch</p>
                       <p className="font-medium text-gray-900">
@@ -148,7 +123,7 @@ function VeteranDetailContent() {
 
                   {veteran.years_of_service && (
                     <div className="flex items-start gap-3">
-                      <Calendar className="w-5 h-5 text-[#006D5B] mt-0.5" />
+                      <Calendar className="w-5 h-5 text-nile-green mt-0.5" />
                       <div>
                         <p className="text-sm text-gray-500">
                           Years of Service
@@ -162,7 +137,7 @@ function VeteranDetailContent() {
 
                   <div className="flex items-start gap-3">
                     {/* Adding a flex-shrink-0 ensures the icon never gets squeezed by long text */}
-                    <Award className="w-5 h-5 flex-shrink-0 text-[#006D5B] mt-1" />
+                    <Award className="w-5 h-5 flex-shrink-0 text-nile-green mt-1" />
                     <div>
                       <p className="text-sm text-gray-500 leading-none mb-1">
                         Decorations
@@ -175,7 +150,7 @@ function VeteranDetailContent() {
 
                   {veteran.graduation_year && (
                     <div className="flex items-start gap-3">
-                      <User className="w-5 h-5 text-[#006D5B] mt-0.5" />
+                      <User className="w-5 h-5 text-nile-green mt-0.5" />
                       <div>
                         <p className="text-sm text-gray-500">Pledge Class</p>
                         <p className="font-medium text-gray-900">
@@ -197,7 +172,7 @@ function VeteranDetailContent() {
             >
               {veteran.short_bio && (
                 <div className="mb-8">
-                  <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-[#006D5B] pl-6">
+                  <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-nile-green pl-6">
                     {veteran.short_bio}
                   </p>
                 </div>
@@ -228,21 +203,5 @@ function VeteranDetailContent() {
         </div>
       </section>
     </div>
-  );
-}
-
-export default function VeteranDetail() {
-  return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen flex items-center justify-center bg-white">
-          <div className="animate-pulse text-[#18453B] font-medium">
-            Loading Story...
-          </div>
-        </div>
-      }
-    >
-      <VeteranDetailContent />
-    </Suspense>
   );
 }

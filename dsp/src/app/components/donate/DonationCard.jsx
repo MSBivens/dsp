@@ -7,7 +7,7 @@
  * Used in: pages/Donate
  */
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { ExternalLink, CheckCircle } from "lucide-react";
 
 export default function DonationCard({
@@ -56,7 +56,7 @@ export default function DonationCard({
           <ul className="space-y-3 mb-8">
             {benefits.map((benefit, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#006D5B] flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-nile-green flex-shrink-0 mt-0.5" />
                 <span className="text-gray-700 text-sm">{benefit}</span>
               </li>
             ))}

@@ -35,7 +35,7 @@ export default function NewsletterArchive() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 rounded-xl bg-[#006D5B] flex items-center justify-center">
+              <div className="w-14 h-14 rounded-xl bg-nile-green flex items-center justify-center">
                 <FileText className="w-7 h-7 text-white" />
               </div>
               <div>
@@ -62,7 +62,7 @@ export default function NewsletterArchive() {
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-[#006D5B]" />
+                    <Calendar className="w-5 h-5 text-nile-green" />
                     {year}
                   </h2>
                   <div className="space-y-3">
@@ -75,13 +75,13 @@ export default function NewsletterArchive() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: index * 0.05 }}
-                        className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:shadow-md hover:border-[#006D5B]/20 transition-all duration-300 group"
+                        className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:shadow-md hover:border-nile-green/20 transition-all duration-300 group"
                       >
-                        <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center group-hover:bg-[#006D5B]/10 transition-colors">
-                          <FileText className="w-6 h-6 text-gray-500 group-hover:text-[#006D5B] transition-colors" />
+                        <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center group-hover:bg-nile-green/10 transition-colors">
+                          <FileText className="w-6 h-6 text-gray-500 group-hover:text-nile-green transition-colors" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-gray-900 group-hover:text-[#006D5B] transition-colors truncate">
+                          <h3 className="font-semibold text-gray-900 group-hover:text-nile-green transition-colors truncate">
                             {newsletter.title}
                           </h3>
                           <p className="text-sm text-gray-500">
@@ -96,7 +96,7 @@ export default function NewsletterArchive() {
                             </p>
                           )}
                         </div>
-                        <div className="flex items-center gap-2 text-gray-400 group-hover:text-[#006D5B] transition-colors">
+                        <div className="flex items-center gap-2 text-gray-400 group-hover:text-nile-green transition-colors">
                           <span className="text-sm font-medium hidden sm:block">
                             View PDF
                           </span>

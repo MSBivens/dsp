@@ -25,7 +25,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#006D5B]" />
+            <span className="w-2 h-2 rounded-full bg-nile-green" />
             <span className="text-white/90 text-sm font-medium tracking-wide">
               Est. 1950 • University of Idaho
             </span>
@@ -45,7 +45,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="inline-block px-6 py-2 rounded-full bg-[#18453B] mb-4" // Using Nile Green
+          className="inline-block px-6 py-2 rounded-full bg-nile-green mb-4" // Using Nile Green
         >
           <p className="text-xl sm:text-2xl text-white font-medium">
             Gamma Iota Chapter
@@ -68,8 +68,8 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href="/history"
-            className="px-8 py-4 bg-[#18453B] text-white rounded-lg font-medium hover:bg-[#12362e] transition-all duration-300 shadow-lg"
+            href="/history-timeline"
+            className="px-8 py-4 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 shadow-lg"
           >
             Explore Our Legacy
           </Link>

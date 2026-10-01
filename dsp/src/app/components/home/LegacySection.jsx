@@ -8,7 +8,7 @@
  */
 import React from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, BookOpen, Clock, Star } from "lucide-react";
 
@@ -80,7 +80,7 @@ export default function LegacySection() {
               </Link>
               <Link
                 href="/newsletter-archive"
-                className="px-6 py-3 bg-[#006D5B] text-white rounded-lg font-medium hover:bg-[#12362e] transition-all duration-300 border border-white/20"
+                className="px-6 py-3 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 border border-white/20"
               >
                 Read The Gamma Eye
               </Link>
@@ -94,7 +94,7 @@ export default function LegacySection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-[#006D5B]/20" />
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-nile-green/20" />
             <div className="space-y-8">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -104,11 +104,11 @@ export default function LegacySection() {
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   className="relative pl-16"
                 >
-                  <div className="absolute left-0 w-12 h-12 rounded-full bg-white border-4 border-[#006D5B] flex items-center justify-center shadow-lg">
-                    <Clock className="w-5 h-5 text-[#006D5B]" />
+                  <div className="absolute left-0 w-12 h-12 rounded-full bg-white border-4 border-nile-green flex items-center justify-center shadow-lg">
+                    <Clock className="w-5 h-5 text-nile-green" />
                   </div>
                   <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="text-[#006D5B] font-bold text-lg mb-1">
+                    <div className="text-nile-green font-bold text-lg mb-1">
                       {milestone.year}
                     </div>
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
