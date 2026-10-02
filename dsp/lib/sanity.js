@@ -93,6 +93,19 @@ export function getUpcomingEvents(today) {
   );
 }
 
+/** Gamma Eye editions with a PDF, newest first. */
+export function getNewsletters() {
+  return sanityFetch(
+    `*[_type == "newsletter" && defined(pdf.asset)]
+      | order(issueDate desc, edition desc) {
+        "id": _id, edition, title, "issue_date": issueDate, description,
+        "pdf_url": pdf.asset->url
+      }`,
+    {},
+    "newsletter",
+  );
+}
+
 /** The Site Settings singleton (null if it hasn't been created). */
 export function getSiteSettings() {
   return sanityFetch(
