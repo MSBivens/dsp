@@ -1,8 +1,8 @@
-import veteransData from "@/components/data/veterans";
+import { getVeteranSitemapEntries } from "@lib/sanity";
 
 const SITE_URL = "https://www.deltasigvandals.org";
 
-export default function sitemap() {
+export default async function sitemap() {
   const staticPages = [
     "",
     "/history-timeline",
@@ -14,10 +14,12 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  const veteranPages = veteransData.map(({ id }) => ({
-    url: `${SITE_URL}/veterans/${id}`,
-    lastModified: new Date(),
-  }));
+  const veteranPages = (await getVeteranSitemapEntries()).map(
+    ({ id, updated_at }) => ({
+      url: `${SITE_URL}/veterans/${id}`,
+      lastModified: new Date(updated_at),
+    }),
+  );
 
   return [...staticPages, ...veteranPages];
 }
