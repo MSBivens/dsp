@@ -1,20 +1,14 @@
 /**
  * ImpactSection
- * Dark full-width section on the Donate page displaying three giving
- * impact statistics: total raised, scholarships awarded, and fund allocation.
+ * Dark full-width section on the Donate page displaying the giving impact
+ * statistics edited in the Donate Page document in Sanity.
  * Animates into view on scroll using framer-motion.
- * Used in: pages/Donate
+ * Used in: components/donate/DonateContent
  */
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
-const stats = [
-  { value: "$25K+", label: "Raised Last 5 Years" },
-  { value: "5", label: "Scholarships Awarded" },
-  { value: "100%", label: "Goes to Brotherhood" },
-];
-
-export default function ImpactSection() {
+export default function ImpactSection({ stats }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -39,7 +33,7 @@ export default function ImpactSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <motion.div
-              key={stat.label}
+              key={stat.key}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}

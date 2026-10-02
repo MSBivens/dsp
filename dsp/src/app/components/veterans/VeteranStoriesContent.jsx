@@ -6,7 +6,6 @@
  * Used in: app/veteran-stories/page.js
  */
 import React, { useState, useMemo } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { Input } from "@/components/ui/input";
 import {
@@ -19,7 +18,11 @@ import {
 import { Search, Shield, Users, Medal } from "lucide-react";
 import VeteranCard from "@/components/veterans/VeteranCard";
 
-export default function VeteranStoriesContent({ veterans, stats }) {
+export default function VeteranStoriesContent({
+  veterans,
+  stats,
+  knownVeteransPdfUrl,
+}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [conflictFilter, setConflictFilter] = useState("all");
 
@@ -83,14 +86,16 @@ export default function VeteranStoriesContent({ veterans, stats }) {
               Celebrating the brothers of Gamma Iota who have served our nation
               with honor and distinction
             </p>
-            <Link
-              href="/files/KnownVeterans.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 shadow-lg"
-            >
-              View Known Veterans (PDF)
-            </Link>
+            {knownVeteransPdfUrl && (
+              <a
+                href={knownVeteransPdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 shadow-lg"
+              >
+                View Known Veterans (PDF)
+              </a>
+            )}
           </motion.div>
         </div>
       </section>

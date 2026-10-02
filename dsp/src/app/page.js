@@ -1,5 +1,5 @@
 import React from "react";
-import { getUpcomingEvents } from "@lib/sanity";
+import { getSiteSettings, getUpcomingEvents } from "@lib/sanity";
 import { pacificToday } from "@lib/dates";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
@@ -12,18 +12,24 @@ import ContactSection from "@/components/home/ContactSection";
 
 export default async function Home() {
   const today = pacificToday();
-  const events = await getUpcomingEvents(today);
+  const [events, settings] = await Promise.all([
+    getUpcomingEvents(today),
+    getSiteSettings(),
+  ]);
 
   return (
     <div>
       <HeroSection />
-      <AboutSection />
+      <AboutSection activeMembers={settings?.active_members} />
       <LegacySection />
       <AlumniEngagementSection />
-      <UndergraduateSection />
+      <UndergraduateSection
+        chapterGpa={settings?.chapter_gpa}
+        activeMembers={settings?.active_members}
+      />
       <EventsSection events={events} generatedOn={today} />
       <SupportSection />
-      <ContactSection />
+      <ContactSection settings={settings} />
     </div>
   );
 }

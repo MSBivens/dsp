@@ -93,6 +93,40 @@ export function getUpcomingEvents(today) {
   );
 }
 
+/** The Site Settings singleton (null if it hasn't been created). */
+export function getSiteSettings() {
+  return sanityFetch(
+    `*[_id == "siteSettings"][0] {
+      "contact_email": contactEmail,
+      "mailing_address": mailingAddress,
+      "facebook_url": facebookUrl,
+      "instagram_url": instagramUrl,
+      "linkedin_url": linkedinUrl,
+      "chapter_gpa": chapterGpa,
+      "active_members": activeMembers,
+      "known_veterans_pdf_url": knownVeteransPdf.asset->url
+    }`,
+    {},
+    "siteSettings",
+  );
+}
+
+/** The Donate Page singleton (null if it hasn't been created). */
+export function getDonatePage() {
+  return sanityFetch(
+    `*[_id == "donatePage"][0] {
+      "giving_options": givingOptions[] {
+        "key": _key, title, subtitle, description, benefits,
+        "button_text": buttonText, "button_link": buttonLink,
+        icon, color, featured
+      },
+      "impact_stats": impactStats[] { "key": _key, value, label }
+    }`,
+    {},
+    "donatePage",
+  );
+}
+
 export function getVeteranSitemapEntries() {
   return sanityFetch(
     `*[${VETERAN_FILTER}] { "id": slug.current, "updated_at": _updatedAt }`,

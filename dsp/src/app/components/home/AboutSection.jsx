@@ -12,7 +12,7 @@ import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Target, Users, Award } from "lucide-react";
 
-export default function AboutSection() {
+export default function AboutSection({ activeMembers }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -107,10 +107,12 @@ export default function AboutSection() {
                 <div className="text-4xl font-bold mb-1">1000+</div>
                 <div className="text-white/70 text-sm">Alumni</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold mb-1">30+</div>
-                <div className="text-white/70 text-sm">Active Members</div>
-              </div>
+              {activeMembers && (
+                <div>
+                  <div className="text-4xl font-bold mb-1">{activeMembers}</div>
+                  <div className="text-white/70 text-sm">Active Members</div>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getVeteran, getVeterans } from "@lib/sanity";
+import { getSiteSettings, getVeteran, getVeterans } from "@lib/sanity";
 import VeteranDetailContent from "@/components/veterans/VeteranDetailContent";
 
 // Pre-build every veteran published at build time. Veterans published later
@@ -27,11 +27,19 @@ export async function generateMetadata({ params }) {
 
 export default async function VeteranDetailPage({ params }) {
   const { id } = await params;
-  const veteran = await getVeteran(id);
+  const [veteran, settings] = await Promise.all([
+    getVeteran(id),
+    getSiteSettings(),
+  ]);
 
   if (!veteran) {
     notFound();
   }
 
-  return <VeteranDetailContent veteran={veteran} />;
+  return (
+    <VeteranDetailContent
+      veteran={veteran}
+      contactEmail={settings?.contact_email}
+    />
+  );
 }

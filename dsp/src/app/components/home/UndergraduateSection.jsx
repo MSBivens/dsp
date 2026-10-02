@@ -12,17 +12,18 @@ import { useRef } from "react";
 import { Trophy, BookOpen, Users, Star } from "lucide-react";
 import Image from "next/image";
 
-export default function UndergraduateSection() {
+export default function UndergraduateSection({ chapterGpa, activeMembers }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  // Values come from Site Settings in Sanity; blank ones are hidden.
   const achievements = [
-    { icon: Trophy, value: "2.9+", label: "Chapter GPA" },
-    { icon: Users, value: "30+", label: "Active Members" },
+    { icon: Trophy, value: chapterGpa, label: "Chapter GPA" },
+    { icon: Users, value: activeMembers, label: "Active Members" },
     // Could put philanthropy number here
     // { icon: Star, value: "15+", label: "Campus Leaders" },
     // { icon: BookOpen, value: "25+", label: "Dean's List" },
-  ];
+  ].filter((stat) => stat.value);
 
   return (
     <section ref={ref} className="py-24 lg:py-32 bg-gray-50">
@@ -47,24 +48,28 @@ export default function UndergraduateSection() {
             </div>
 
             {/* Floating Stats Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-xl p-6 hidden md:block"
-            >
-              <div className="grid grid-cols-2 gap-4">
-                {achievements.slice(0, 2).map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <stat.icon className="w-6 h-6 text-nile-green mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-gray-900">
-                      {stat.value}
+            {achievements.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="absolute -bottom-8 -right-8 bg-white rounded-2xl shadow-xl p-6 hidden md:block"
+              >
+                <div
+                  className={`grid gap-4 ${achievements.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}
+                >
+                  {achievements.slice(0, 2).map((stat) => (
+                    <div key={stat.label} className="text-center">
+                      <stat.icon className="w-6 h-6 text-nile-green mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-gray-900">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs text-gray-500">{stat.label}</div>
                     </div>
-                    <div className="text-xs text-gray-500">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Content */}

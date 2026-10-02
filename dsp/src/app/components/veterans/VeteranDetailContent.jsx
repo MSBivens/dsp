@@ -35,8 +35,6 @@ const branchIcons = {
   "National Guard": "🛡️",
 };
 
-const CONTACT_EMAIL = "deltasigvandalalumni@gmail.com";
-
 const hasValue = (value) =>
   Array.isArray(value)
     ? value.length > 0
@@ -71,7 +69,7 @@ const storyComponents = {
   },
 };
 
-export default function VeteranDetailContent({ veteran }) {
+export default function VeteranDetailContent({ veteran, contactEmail }) {
   const branches = veteran.branches ?? [];
   const conflicts = veteran.conflicts ?? [];
   const src = photoSrc(veteran.photo);
@@ -93,7 +91,7 @@ export default function VeteranDetailContent({ veteran }) {
     { label: "Pledge Class", value: veteran.pledge_class, Icon: User },
   ];
   const isIncomplete = serviceDetails.some(({ value }) => !hasValue(value));
-  const helpHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  const helpHref = `mailto:${contactEmail}?subject=${encodeURIComponent(
     `Information for ${veteran.name}`,
   )}`;
 
@@ -267,7 +265,7 @@ export default function VeteranDetailContent({ veteran }) {
             </motion.div>
           </div>
 
-          {isIncomplete && (
+          {isIncomplete && contactEmail && (
             <div className="mt-16 flex items-center justify-center gap-3 rounded-2xl bg-gray-50 px-6 py-5 text-center text-gray-600">
               <Mail className="w-5 h-5 flex-shrink-0 text-nile-green" />
               <p>
