@@ -8,7 +8,15 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowLeft, Shield, Calendar, Award, User } from "lucide-react";
+import {
+  ArrowLeft,
+  Shield,
+  Calendar,
+  Award,
+  User,
+  Star,
+  Mail,
+} from "lucide-react";
 import Image from "next/image";
 
 const branchIcons = {
@@ -20,7 +28,27 @@ const branchIcons = {
   "National Guard": "🛡️",
 };
 
+const CONTACT_EMAIL = "deltasigvandalalumni@gmail.com";
+
+const hasValue = (value) => value != null && String(value).trim() !== "";
+
 export default function VeteranDetailContent({ veteran }) {
+  const serviceDetails = [
+    { label: "Rank", value: veteran.rank, Icon: Star },
+    { label: "Branch", value: veteran.branch, Icon: Shield },
+    {
+      label: "Years of Service",
+      value: veteran.years_of_service,
+      Icon: Calendar,
+    },
+    { label: "Decorations", value: veteran.decorations, Icon: Award },
+    { label: "Pledge Class", value: veteran.pledge_class, Icon: User },
+  ];
+  const isIncomplete = serviceDetails.some(({ value }) => !hasValue(value));
+  const helpHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    `Information for ${veteran.name}`,
+  )}`;
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -32,6 +60,7 @@ export default function VeteranDetailContent({ veteran }) {
               alt=""
               fill
               className="object-cover"
+              style={{ objectPosition: veteran.photo_position || "center 25%" }}
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
@@ -60,7 +89,7 @@ export default function VeteranDetailContent({ veteran }) {
                 <h1 className="text-4xl lg:text-5xl font-bold text-white">
                   {veteran.name}
                 </h1>
-                {veteran.rank && (
+                {hasValue(veteran.rank) && (
                   <p className="text-xl text-white/80 mt-1">{veteran.rank}</p>
                 )}
               </div>
@@ -73,9 +102,9 @@ export default function VeteranDetailContent({ veteran }) {
               <span className="px-4 py-2 rounded-full bg-nile-green/80 text-white text-sm font-medium">
                 {veteran.conflict}
               </span>
-              {veteran.graduation_year && (
+              {hasValue(veteran.pledge_class) && (
                 <span className="px-4 py-2 rounded-full bg-[#5B2C6F]/80 text-white text-sm font-medium">
-                  Pledge Class {veteran.graduation_year}
+                  Pledge Class {veteran.pledge_class}
                 </span>
               )}
             </div>
@@ -111,54 +140,26 @@ export default function VeteranDetailContent({ veteran }) {
                 <div className="bg-gray-50 rounded-2xl p-6 space-y-4">
                   <h3 className="font-bold text-gray-900">Service Details</h3>
 
-                  <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-nile-green mt-0.5" />
-                    <div>
-                      <p className="text-sm text-gray-500">Branch</p>
-                      <p className="font-medium text-gray-900">
-                        {veteran.branch}
-                      </p>
-                    </div>
-                  </div>
-
-                  {veteran.years_of_service && (
-                    <div className="flex items-start gap-3">
-                      <Calendar className="w-5 h-5 text-nile-green mt-0.5" />
+                  {serviceDetails.map(({ label, value, Icon }) => (
+                    <div key={label} className="flex items-start gap-3">
+                      {/* flex-shrink-0 keeps the icon from being squeezed by long text */}
+                      <Icon className="w-5 h-5 flex-shrink-0 text-nile-green mt-1" />
                       <div>
-                        <p className="text-sm text-gray-500">
-                          Years of Service
+                        <p className="text-sm text-gray-500 leading-none mb-1">
+                          {label}
                         </p>
-                        <p className="font-medium text-gray-900">
-                          {veteran.years_of_service}
-                        </p>
+                        {hasValue(value) ? (
+                          <p className="font-medium text-gray-900 leading-tight">
+                            {value}
+                          </p>
+                        ) : (
+                          <p className="italic text-gray-400 leading-tight">
+                            Not yet documented
+                          </p>
+                        )}
                       </div>
                     </div>
-                  )}
-
-                  <div className="flex items-start gap-3">
-                    {/* Adding a flex-shrink-0 ensures the icon never gets squeezed by long text */}
-                    <Award className="w-5 h-5 flex-shrink-0 text-nile-green mt-1" />
-                    <div>
-                      <p className="text-sm text-gray-500 leading-none mb-1">
-                        Decorations
-                      </p>
-                      <p className="font-medium text-gray-900 leading-tight">
-                        {veteran.decorations}
-                      </p>
-                    </div>
-                  </div>
-
-                  {veteran.graduation_year && (
-                    <div className="flex items-start gap-3">
-                      <User className="w-5 h-5 text-nile-green mt-0.5" />
-                      <div>
-                        <p className="text-sm text-gray-500">Pledge Class</p>
-                        <p className="font-medium text-gray-900">
-                          {veteran.graduation_year}
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                  ))}
                 </div>
               </motion.div>
             </div>
@@ -170,6 +171,8 @@ export default function VeteranDetailContent({ veteran }) {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="lg:col-span-2"
             >
+              {/* Summary quote hidden for now; short_bio is still used on the
+                  Veteran Stories cards. Uncomment to show it again.
               {veteran.short_bio && (
                 <div className="mb-8">
                   <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-nile-green pl-6">
@@ -177,6 +180,7 @@ export default function VeteranDetailContent({ veteran }) {
                   </p>
                 </div>
               )}
+              */}
 
               {veteran.full_story && (
                 <div className="prose prose-lg max-w-none">
@@ -200,6 +204,21 @@ export default function VeteranDetailContent({ veteran }) {
               )}
             </motion.div>
           </div>
+
+          {isIncomplete && (
+            <div className="mt-16 flex items-center justify-center gap-3 rounded-2xl bg-gray-50 px-6 py-5 text-center text-gray-600">
+              <Mail className="w-5 h-5 flex-shrink-0 text-nile-green" />
+              <p>
+                Information about this veteran is not yet complete,{" "}
+                <a
+                  href={helpHref}
+                  className="font-medium text-nile-green underline underline-offset-2 hover:text-nile-green-dark"
+                >
+                  can you help?
+                </a>
+              </p>
+            </div>
+          )}
         </div>
       </section>
     </div>
