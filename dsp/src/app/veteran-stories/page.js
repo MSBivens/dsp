@@ -1,4 +1,4 @@
-import { getVeterans } from "@lib/sanity";
+import { getSiteSettings, getVeterans } from "@lib/sanity";
 import {
   combinedYearsOfService,
   countBranches,
@@ -13,13 +13,21 @@ export const metadata = {
 };
 
 export default async function VeteranStoriesPage() {
-  const veterans = (await getVeterans()).sort((a, b) =>
-    a.name.localeCompare(b.name),
-  );
+  const [allVeterans, settings] = await Promise.all([
+    getVeterans(),
+    getSiteSettings(),
+  ]);
+  const veterans = allVeterans.sort((a, b) => a.name.localeCompare(b.name));
   const stats = {
     branches: countBranches(veterans),
     combinedYears: roundedDownLabel(combinedYearsOfService(veterans)),
   };
 
-  return <VeteranStoriesContent veterans={veterans} stats={stats} />;
+  return (
+    <VeteranStoriesContent
+      veterans={veterans}
+      stats={stats}
+      knownVeteransPdfUrl={settings?.known_veterans_pdf_url}
+    />
+  );
 }

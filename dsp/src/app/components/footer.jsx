@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ contactEmail }) {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "History", path: "/history-timeline" },
@@ -59,14 +59,16 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               <li>University of Idaho</li>
               <li>Moscow, Idaho 83843</li>
-              <li className="pt-2">
-                <a
-                  href="mailto:deltasigvandalalumni@gmail.com"
-                  className="hover:text-white transition-colors"
-                >
-                  deltasigvandalalumni@gmail.com
-                </a>
-              </li>
+              {contactEmail && (
+                <li className="pt-2">
+                  <a
+                    href={`mailto:${contactEmail}`}
+                    className="hover:text-white transition-colors"
+                  >
+                    {contactEmail}
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>
