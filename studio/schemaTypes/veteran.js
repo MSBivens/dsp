@@ -1,4 +1,5 @@
 import { defineArrayMember, defineField, defineType } from "sanity";
+import { asOptions } from "./options";
 
 // Keep in sync with the conflict filter on the website's Veteran Stories page.
 export const CONFLICTS = [
@@ -23,10 +24,6 @@ export const BRANCHES = [
   "Coast Guard",
   "National Guard",
 ];
-
-// Plain-string lists get their labels sentence-cased by the Studio
-// ("Coast guard"); explicit titles keep the capitalization as written.
-const asOptions = (values) => values.map((value) => ({ title: value, value }));
 
 const UNKNOWN_NOTE =
   "Leave blank if unknown. Never type placeholder text: the website shows " +
