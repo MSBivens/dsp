@@ -22,6 +22,7 @@ export default defineConfig({
           .items([
             S.documentTypeListItem("veteran").title("Veterans"),
             S.documentTypeListItem("event").title("Events"),
+            S.documentTypeListItem("newsletter").title("Gamma Eye"),
             S.divider(),
             ...SINGLETONS.map(({ type, title }) =>
               S.listItem()
