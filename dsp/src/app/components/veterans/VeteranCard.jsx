@@ -1,15 +1,16 @@
 /**
  * VeteranCard
  * Clickable card representing a single veteran in the VeteranStories grid.
- * Shows a photo (or branch-icon fallback), conflict era badge, branch/rank,
+ * Shows a photo (or branch-icon fallback), conflict era badges, branches/rank,
  * and a short bio excerpt. Links to the VeteranDetail page with the veteran's ID.
- * Used in: pages/VeteranStories
+ * Used in: components/veterans/VeteranStoriesContent
  */
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { photoObjectPosition, photoSrc, sanityLoader } from "@lib/sanity-image";
 
 const conflictColors = {
   "World War I": "bg-amber-100 text-amber-800",
@@ -26,6 +27,10 @@ const conflictColors = {
 };
 
 export default function VeteranCard({ veteran, index, branchIcons }) {
+  const src = photoSrc(veteran.photo);
+  const branches = veteran.branches ?? [];
+  const conflicts = veteran.conflicts ?? [];
+
   return (
     <motion.div
       layout
@@ -40,29 +45,35 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
       >
         {/* Image */}
         <div className="relative h-48 bg-gray-100 overflow-hidden group">
-          {veteran.photo_url ? (
+          {src ? (
             <Image
-              src={veteran.photo_url}
+              loader={sanityLoader}
+              src={src}
               alt={veteran.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
-              style={{ objectPosition: veteran.photo_position || "center 25%" }}
+              style={{ objectPosition: photoObjectPosition(veteran.photo) }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-nile-green to-nile-green-dark">
               <span className="text-6xl">
-                {branchIcons[veteran.branch] || "🎖️"}
+                {branchIcons[branches[0]] || "🎖️"}
               </span>
             </div>
           )}
-          <div className="absolute top-4 left-4">
-            <span
-              className={`px-3 py-1 rounded-full text-xs font-medium ${conflictColors[veteran.conflict] || "bg-gray-100 text-gray-800"}`}
-            >
-              {veteran.conflict}
-            </span>
-          </div>
+          {conflicts.length > 0 && (
+            <div className="absolute top-4 left-4 right-4 flex flex-col items-start gap-1.5">
+              {conflicts.map((conflict) => (
+                <span
+                  key={conflict}
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${conflictColors[conflict] || "bg-gray-100 text-gray-800"}`}
+                >
+                  {conflict}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Content */}
@@ -72,8 +83,8 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
           </h3>
 
           <div className="flex items-center gap-2 text-gray-600 mb-3">
-            <span>{branchIcons[veteran.branch]}</span>
-            <span className="text-sm">{veteran.branch}</span>
+            <span>{branchIcons[branches[0]]}</span>
+            <span className="text-sm">{branches.join(" / ")}</span>
             {veteran.rank && (
               <>
                 <span className="text-gray-300">•</span>
