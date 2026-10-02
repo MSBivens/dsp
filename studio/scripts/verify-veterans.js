@@ -41,7 +41,7 @@ for (const v of veterans) {
   }
   check(v.id, "name", v.name, d.name);
   check(v.id, "pledge_class", v.pledge_class, d.pledgeClass);
-  check(v.id, "branch", v.branch, d.branch);
+  check(v.id, "branches", v.branch, d.branches?.join(", "));
   check(v.id, "rank", v.rank, d.rank);
   check(v.id, "years_of_service", v.years_of_service, d.yearsOfService);
   check(v.id, "short_bio", v.short_bio, d.shortBio);

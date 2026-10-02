@@ -5,7 +5,8 @@
  *   node scripts/migrate-veterans.js --apply   Upload photos and create/replace documents
  *
  * --apply needs SANITY_WRITE_TOKEN in studio/.env (see .env.example).
- * Safe to re-run: documents use fixed IDs (veteran-<slug>) and Sanity
+ * Re-running REPLACES each document, discarding edits made in the Studio.
+ * Documents use fixed IDs (veteran-<slug>) and Sanity
  * de-duplicates identical image uploads.
  */
 import fs from "node:fs";
@@ -85,7 +86,7 @@ const docs = veterans.map((v) => {
   };
   // Blank stays absent so the site shows "Not yet documented".
   if (!blank(v.pledge_class)) doc.pledgeClass = Number(v.pledge_class);
-  if (!blank(v.branch)) doc.branch = v.branch;
+  if (!blank(v.branch)) doc.branches = [v.branch];
   if (conflicts.length) doc.conflicts = conflicts;
   if (!blank(v.rank)) doc.rank = v.rank;
   if (!blank(v.years_of_service)) doc.yearsOfService = v.years_of_service;
@@ -98,7 +99,7 @@ const docs = veterans.map((v) => {
 
 console.log(`${apply ? "APPLY" : "DRY RUN"}: ${docs.length} veterans\n`);
 for (const { doc, photoPath, focus } of docs) {
-  const missing = ["pledgeClass", "branch", "conflicts", "rank", "yearsOfService", "decorations"].filter((f) => !(f in doc));
+  const missing = ["pledgeClass", "branches", "conflicts", "rank", "yearsOfService", "decorations"].filter((f) => !(f in doc));
   console.log(
     `${doc._id.padEnd(30)} paragraphs=${String(doc.fullStory?.length ?? 0).padEnd(3)} ` +
       `conflicts=${JSON.stringify(doc.conflicts ?? [])} photo=${photoPath ? path.basename(photoPath) : "none"} ` +

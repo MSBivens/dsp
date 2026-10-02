@@ -62,11 +62,12 @@ export default defineType({
       validation: (rule) => rule.integer().min(1900).max(2100),
     }),
     defineField({
-      name: "branch",
-      title: "Branch",
-      type: "string",
+      name: "branches",
+      title: "Branches",
+      type: "array",
+      of: [defineArrayMember({ type: "string" })],
       options: { list: asOptions(BRANCHES) },
-      description: UNKNOWN_NOTE,
+      description: `Select every branch served in. ${UNKNOWN_NOTE}`,
     }),
     defineField({
       name: "conflicts",
@@ -163,13 +164,13 @@ export default defineType({
     select: {
       title: "name",
       rank: "rank",
-      branch: "branch",
+      branches: "branches",
       media: "photo",
     },
-    prepare({ title, rank, branch, media }) {
+    prepare({ title, rank, branches, media }) {
       return {
         title,
-        subtitle: [rank, branch].filter(Boolean).join(" · "),
+        subtitle: [rank, branches?.join(" / ")].filter(Boolean).join(" · "),
         media,
       };
     },
