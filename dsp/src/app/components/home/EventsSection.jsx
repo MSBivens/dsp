@@ -1,25 +1,45 @@
 "use client";
 /**
  * EventsSection
- * Home page section that reads from components/data/events and renders
- * the next 4 upcoming events as cards with date badges, type color-coding,
- * time, and location. Falls back to an empty-state card if none are found.
- * Used in: pages/Home
+ * Home page section showing the next 4 upcoming events (from Sanity) as cards
+ * with date badges, type color-coding, time, location and an optional
+ * details/RSVP link. Falls back to an empty-state card if none are upcoming.
+ * Used in: app/page.js
  */
-import React, { useRef } from "react";
+import React, { useRef, useSyncExternalStore } from "react";
 import { motion, useInView } from "motion/react";
 import { format } from "date-fns";
-import { Calendar, MapPin, Clock } from "lucide-react";
-import eventsData from "@/components/data/events";
+import { Calendar, MapPin, Clock, ExternalLink } from "lucide-react";
+import { pacificToday, parseDate } from "@lib/dates";
 
-const parseDate = (dateString) => new Date(dateString.replace(/-/g, "/"));
+const MAX_EVENTS = 4;
 
-export default function EventsSection() {
+const noSubscribe = () => () => {};
+
+/** "Oct 17 – 19", or "Oct 30 – Nov 1" across months. */
+function formatDateRange(start, end) {
+  const s = parseDate(start);
+  const e = parseDate(end);
+  return s.getMonth() === e.getMonth()
+    ? `${format(s, "MMM d")} – ${format(e, "d")}`
+    : `${format(s, "MMM d")} – ${format(e, "MMM d")}`;
+}
+
+export default function EventsSection({ events = [], generatedOn }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const upcomingEvents = eventsData
-    .filter((e) => e.date && parseDate(e.date) >= new Date())
-    .slice(0, 4);
+  // The page is cached, so re-check "today" in the browser to drop events
+  // that ended since it was generated. The server snapshot keeps hydration
+  // consistent with the cached HTML.
+  const today = useSyncExternalStore(
+    noSubscribe,
+    pacificToday,
+    () => generatedOn ?? pacificToday(),
+  );
+  const upcomingEvents = events
+    .filter((e) => (e.end_date || e.date) >= today)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(0, MAX_EVENTS);
 
   const eventTypeColors = {
     reunion: "bg-[#5B2C6F]",
@@ -92,6 +112,14 @@ export default function EventsSection() {
                       </p>
                     )}
                     <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                      {event.end_date && event.end_date !== event.date && (
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>
+                            {formatDateRange(event.date, event.end_date)}
+                          </span>
+                        </div>
+                      )}
                       {event.time && (
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
@@ -105,6 +133,17 @@ export default function EventsSection() {
                         </div>
                       )}
                     </div>
+                    {event.link && (
+                      <a
+                        href={event.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-nile-green hover:text-nile-green-dark"
+                      >
+                        Details / RSVP
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>

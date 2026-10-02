@@ -1,17 +1,37 @@
 /**
  * DonationCard
  * Animated card representing a single giving option on the Donate page.
- * Accepts an icon, title, subtitle, color, description, benefits list,
- * and an external button link. Supports a "featured" variant with a
+ * Accepts an icon name, title, subtitle, color name, description, benefits
+ * list, and an external button link. Supports a "featured" variant with a
  * purple border and "Most Popular" banner.
- * Used in: pages/Donate
+ * Used in: components/donate/DonateContent
  */
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { ExternalLink, CheckCircle } from "lucide-react";
+import {
+  ExternalLink,
+  CheckCircle,
+  Building2,
+  GraduationCap,
+  Globe,
+  Heart,
+} from "lucide-react";
+
+// Keep in sync with the icon and color options in studio/schemaTypes/donatePage.js.
+const ICONS = {
+  building: Building2,
+  graduation: GraduationCap,
+  globe: Globe,
+  heart: Heart,
+};
+const COLORS = {
+  green: "bg-nile-green",
+  purple: "bg-[#5B2C6F]",
+  gray: "bg-gray-800",
+};
 
 export default function DonationCard({
-  icon: Icon,
+  icon,
   title,
   subtitle,
   color,
@@ -24,6 +44,8 @@ export default function DonationCard({
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const Icon = ICONS[icon] ?? Heart;
+  const colorClass = COLORS[color] ?? COLORS.green;
 
   return (
     <motion.div
@@ -44,14 +66,14 @@ export default function DonationCard({
       >
         <div className="p-8 flex-1">
           <div
-            className={`w-16 h-16 rounded-2xl ${color} flex items-center justify-center mb-6`}
+            className={`w-16 h-16 rounded-2xl ${colorClass} flex items-center justify-center mb-6`}
           >
             <Icon className="w-8 h-8 text-white" />
           </div>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-1">{title}</h3>
-          <p className="text-sm text-gray-500 mb-4">{subtitle}</p>
-          <p className="text-gray-600 mb-6">{description}</p>
+          {subtitle && <p className="text-sm text-gray-500 mb-4">{subtitle}</p>}
+          {description && <p className="text-gray-600 mb-6">{description}</p>}
 
           <ul className="space-y-3 mb-8">
             {benefits.map((benefit, i) => (

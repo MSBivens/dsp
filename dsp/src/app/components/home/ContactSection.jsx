@@ -2,16 +2,26 @@
 /**
  * ContactSection
  * Home page contact section (id="contact"). Shows chapter address, email,
- * and social links.
- * Used in: pages/Home
+ * and social links from Site Settings in Sanity; blank ones are hidden.
+ * Used in: app/page.js
  */
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
-export default function ContactSection() {
+export default function ContactSection({ settings }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const email = settings?.contact_email;
+  const addressLines = (settings?.mailing_address ?? "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const socialLinks = [
+    { href: settings?.facebook_url, Icon: Facebook, label: "Facebook" },
+    { href: settings?.instagram_url, Icon: Instagram, label: "Instagram" },
+    { href: settings?.linkedin_url, Icon: Linkedin, label: "LinkedIn" },
+  ].filter(({ href }) => href);
 
   return (
     <section ref={ref} id="contact" className="py-24 lg:py-32 bg-gray-50">
@@ -54,56 +64,55 @@ export default function ContactSection() {
                     <h4 className="font-semibold text-gray-900">
                       Gamma Iota, Delta Sigma Phi
                     </h4>
-                    <p className="text-gray-600">
-                      503 University Avenue
-                      <br />
-                      P.O. Box #3087
-                      <br />
-                      Moscow, Idaho 83843
-                    </p>
+                    {addressLines.length > 0 && (
+                      <p className="text-gray-600">
+                        {addressLines.map((line, i) => (
+                          <React.Fragment key={i}>
+                            {i > 0 && <br />}
+                            {line}
+                          </React.Fragment>
+                        ))}
+                      </p>
+                    )}
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-nile-green/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-nile-green" />
+                {email && (
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-nile-green/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-nile-green" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Email</h4>
+                      <a
+                        href={`mailto:${email}`}
+                        className="text-nile-green hover:underline"
+                      >
+                        {email}
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Email</h4>
-                    <a
-                      href="mailto:deltasigvandalalumni@gmail.com"
-                      className="text-nile-green hover:underline"
-                    >
-                      deltasigvandalalumni@gmail.com
-                    </a>
-                  </div>
-                </div>
+                )}
               </div>
 
               {/* Social Links */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
-                <div className="flex gap-3">
-                  <a
-                    href="https://www.facebook.com/deltasigvandals"
-                    className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-nile-green hover:text-white transition-all duration-300"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/deltasig_idaho"
-                    className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-nile-green hover:text-white transition-all duration-300"
-                  >
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/groups/13505181/"
-                    className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-nile-green hover:text-white transition-all duration-300"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
+              {socialLinks.length > 0 && (
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
+                  <div className="flex gap-3">
+                    {socialLinks.map(({ href, Icon, label }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        aria-label={label}
+                        className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center hover:bg-nile-green hover:text-white transition-all duration-300"
+                      >
+                        <Icon className="w-5 h-5" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </motion.div>
         </div>

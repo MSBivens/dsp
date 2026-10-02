@@ -18,6 +18,13 @@ import {
   Mail,
 } from "lucide-react";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
+import {
+  photoDimensions,
+  photoObjectPosition,
+  photoSrc,
+  sanityLoader,
+} from "@lib/sanity-image";
 
 const branchIcons = {
   Army: "⚔️",
@@ -28,14 +35,53 @@ const branchIcons = {
   "National Guard": "🛡️",
 };
 
-const CONTACT_EMAIL = "deltasigvandalalumni@gmail.com";
+const hasValue = (value) =>
+  Array.isArray(value)
+    ? value.length > 0
+    : value != null && String(value).trim() !== "";
 
-const hasValue = (value) => value != null && String(value).trim() !== "";
+// Rendering for the formatted full story edited in Sanity.
+const storyComponents = {
+  block: {
+    normal: ({ children }) => <p className="mb-5 last:mb-0">{children}</p>,
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="mb-5 list-disc space-y-1 pl-6">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="mb-5 list-decimal space-y-1 pl-6">{children}</ol>
+    ),
+  },
+  marks: {
+    link: ({ value, children }) => {
+      const external = /^https?:\/\//.test(value?.href ?? "");
+      return (
+        <a
+          href={value?.href}
+          className="text-nile-green underline underline-offset-2 hover:text-nile-green-dark"
+          {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+        >
+          {children}
+        </a>
+      );
+    },
+  },
+};
 
-export default function VeteranDetailContent({ veteran }) {
+export default function VeteranDetailContent({ veteran, contactEmail }) {
+  const branches = veteran.branches ?? [];
+  const conflicts = veteran.conflicts ?? [];
+  const src = photoSrc(veteran.photo);
+  const objectPosition = photoObjectPosition(veteran.photo);
+
   const serviceDetails = [
     { label: "Rank", value: veteran.rank, Icon: Star },
-    { label: "Branch", value: veteran.branch, Icon: Shield },
+    {
+      label: branches.length > 1 ? "Branches" : "Branch",
+      value: branches.join(" / "),
+      Icon: Shield,
+    },
     {
       label: "Years of Service",
       value: veteran.years_of_service,
@@ -45,7 +91,7 @@ export default function VeteranDetailContent({ veteran }) {
     { label: "Pledge Class", value: veteran.pledge_class, Icon: User },
   ];
   const isIncomplete = serviceDetails.some(({ value }) => !hasValue(value));
-  const helpHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  const helpHref = `mailto:${contactEmail}?subject=${encodeURIComponent(
     `Information for ${veteran.name}`,
   )}`;
 
@@ -53,14 +99,15 @@ export default function VeteranDetailContent({ veteran }) {
     <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative py-32 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
-        {veteran.photo_url && (
+        {src && (
           <div className="absolute inset-0 opacity-30">
             <Image
-              src={veteran.photo_url}
+              loader={sanityLoader}
+              src={src}
               alt=""
               fill
               className="object-cover"
-              style={{ objectPosition: veteran.photo_position || "center 25%" }}
+              style={{ objectPosition }}
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
@@ -83,7 +130,7 @@ export default function VeteranDetailContent({ veteran }) {
 
             <div className="flex items-center gap-4 mb-6">
               <span className="text-5xl">
-                {branchIcons[veteran.branch] || "🎖️"}
+                {branchIcons[branches[0]] || "🎖️"}
               </span>
               <div>
                 <h1 className="text-4xl lg:text-5xl font-bold text-white">
@@ -96,12 +143,22 @@ export default function VeteranDetailContent({ veteran }) {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <span className="px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium">
-                {veteran.branch}
-              </span>
-              <span className="px-4 py-2 rounded-full bg-nile-green/80 text-white text-sm font-medium">
-                {veteran.conflict}
-              </span>
+              {branches.map((branch) => (
+                <span
+                  key={branch}
+                  className="px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium"
+                >
+                  {branch}
+                </span>
+              ))}
+              {conflicts.map((conflict) => (
+                <span
+                  key={conflict}
+                  className="px-4 py-2 rounded-full bg-nile-green/80 text-white text-sm font-medium"
+                >
+                  {conflict}
+                </span>
+              ))}
               {hasValue(veteran.pledge_class) && (
                 <span className="px-4 py-2 rounded-full bg-[#5B2C6F]/80 text-white text-sm font-medium">
                   Pledge Class {veteran.pledge_class}
@@ -124,13 +181,13 @@ export default function VeteranDetailContent({ veteran }) {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="sticky top-28 space-y-6"
               >
-                {veteran.photo_url && (
+                {src && (
                   <div className="rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src={veteran.photo_url}
+                      loader={sanityLoader}
+                      src={src}
                       alt={veteran.name}
-                      width={800}
-                      height={600}
+                      {...photoDimensions(veteran.photo)}
                       className="w-full h-auto"
                       sizes="(max-width: 768px) 100vw, 800px"
                     />
@@ -182,18 +239,21 @@ export default function VeteranDetailContent({ veteran }) {
               )}
               */}
 
-              {veteran.full_story && (
+              {hasValue(veteran.full_story) && (
                 <div className="prose prose-lg max-w-none">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
                     Their Story
                   </h2>
-                  <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                    {veteran.full_story}
+                  <div className="text-gray-700 leading-relaxed">
+                    <PortableText
+                      value={veteran.full_story}
+                      components={storyComponents}
+                    />
                   </div>
                 </div>
               )}
 
-              {!veteran.full_story && !veteran.short_bio && (
+              {!hasValue(veteran.full_story) && !veteran.short_bio && (
                 <div className="text-center py-12 bg-gray-50 rounded-2xl">
                   <Shield className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                   <p className="text-gray-600">
@@ -205,7 +265,7 @@ export default function VeteranDetailContent({ veteran }) {
             </motion.div>
           </div>
 
-          {isIncomplete && (
+          {isIncomplete && contactEmail && (
             <div className="mt-16 flex items-center justify-center gap-3 rounded-2xl bg-gray-50 px-6 py-5 text-center text-gray-600">
               <Mail className="w-5 h-5 flex-shrink-0 text-nile-green" />
               <p>

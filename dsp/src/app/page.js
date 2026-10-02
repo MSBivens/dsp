@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  getHomeMilestones,
+  getSiteSettings,
+  getUpcomingEvents,
+} from "@lib/sanity";
+import { pacificToday } from "@lib/dates";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import LegacySection from "@/components/home/LegacySection";
@@ -8,17 +14,27 @@ import EventsSection from "@/components/home/EventsSection";
 import SupportSection from "@/components/home/SupportSection";
 import ContactSection from "@/components/home/ContactSection";
 
-export default function Home() {
+export default async function Home() {
+  const today = pacificToday();
+  const [events, settings, milestones] = await Promise.all([
+    getUpcomingEvents(today),
+    getSiteSettings(),
+    getHomeMilestones(),
+  ]);
+
   return (
     <div>
       <HeroSection />
-      <AboutSection />
-      <LegacySection />
+      <AboutSection activeMembers={settings?.active_members} />
+      <LegacySection highlights={milestones} />
       <AlumniEngagementSection />
-      <UndergraduateSection />
-      <EventsSection />
+      <UndergraduateSection
+        chapterGpa={settings?.chapter_gpa}
+        activeMembers={settings?.active_members}
+      />
+      <EventsSection events={events} generatedOn={today} />
       <SupportSection />
-      <ContactSection />
+      <ContactSection settings={settings} />
     </div>
   );
 }
