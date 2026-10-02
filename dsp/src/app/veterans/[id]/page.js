@@ -6,10 +6,9 @@ export function generateStaticParams() {
   return veteransData.map((veteran) => ({ id: veteran.id }));
 }
 
-export function generateMetadata({ params }) {
-  const veteran = veteransData.find(
-    (v) => String(v.id) === String(params.id),
-  );
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const veteran = veteransData.find((v) => String(v.id) === String(id));
 
   if (!veteran) {
     return { title: "Veteran Not Found" };
@@ -23,10 +22,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function VeteranDetailPage({ params }) {
-  const veteran = veteransData.find(
-    (v) => String(v.id) === String(params.id),
-  );
+export default async function VeteranDetailPage({ params }) {
+  const { id } = await params;
+  const veteran = veteransData.find((v) => String(v.id) === String(id));
 
   if (!veteran) {
     notFound();
