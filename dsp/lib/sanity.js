@@ -20,14 +20,22 @@ const client = createClient({
   perspective: "published",
 });
 
-// Revalidated on publish via the Sanity webhook (/api/revalidate). The hourly
-// fallback covers a missed webhook.
-export const VETERAN_TAG = "veteran";
+// Every query is cache-tagged with the Sanity document type it reads. On
+// publish, the Sanity webhook (/api/revalidate) refreshes that type's tag; the
+// hourly fallback covers a missed webhook.
+export const CONTENT_TYPES = [
+  "veteran",
+  "event",
+  "newsletter",
+  "timelineEntry",
+  "siteSettings",
+  "donatePage",
+];
 const REVALIDATE_SECONDS = 3600;
 
-function sanityFetch(query, params = {}) {
+function sanityFetch(query, params, type) {
   return client.fetch(query, params, {
-    next: { revalidate: REVALIDATE_SECONDS, tags: [VETERAN_TAG] },
+    next: { revalidate: REVALIDATE_SECONDS, tags: [type] },
   });
 }
 
@@ -57,15 +65,25 @@ const DETAIL_FIELDS = `
 const VETERAN_FILTER = `_type == "veteran" && defined(slug.current)`;
 
 export function getVeterans() {
-  return sanityFetch(`*[${VETERAN_FILTER}] | order(name asc) { ${CARD_FIELDS} }`);
+  return sanityFetch(
+    `*[${VETERAN_FILTER}] | order(name asc) { ${CARD_FIELDS} }`,
+    {},
+    "veteran",
+  );
 }
 
 export function getVeteran(id) {
-  return sanityFetch(`*[${VETERAN_FILTER} && slug.current == $id][0] { ${DETAIL_FIELDS} }`, {
-    id,
-  });
+  return sanityFetch(
+    `*[${VETERAN_FILTER} && slug.current == $id][0] { ${DETAIL_FIELDS} }`,
+    { id },
+    "veteran",
+  );
 }
 
 export function getVeteranSitemapEntries() {
-  return sanityFetch(`*[${VETERAN_FILTER}] { "id": slug.current, "updated_at": _updatedAt }`);
+  return sanityFetch(
+    `*[${VETERAN_FILTER}] { "id": slug.current, "updated_at": _updatedAt }`,
+    {},
+    "veteran",
+  );
 }
