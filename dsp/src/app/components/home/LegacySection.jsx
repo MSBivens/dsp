@@ -2,45 +2,29 @@
 /**
  * LegacySection
  * Two-column section on the Home page: narrative text on the left and
- * an animated mini-timeline of key chapter milestones on the right.
- * Links to the full HistoryTimeline page.
- * Used in: pages/Home
+ * an animated mini-timeline of key chapter milestones on the right
+ * (timeline entries marked "Show on home page" in Sanity, then a fixed
+ * "Today" item). Links to the full HistoryTimeline page.
+ * Used in: app/page.js
  */
 import React from "react";
 import Link from "next/link";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { ArrowRight, BookOpen, Clock, Star } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 
-export default function LegacySection() {
+const TODAY_MILESTONE = {
+  id: "today",
+  year: "Today",
+  title: "Continuing Legacy",
+  description: "Building tomorrow's leaders",
+};
+
+export default function LegacySection({ highlights = [] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const milestones = [
-    {
-      ear: 1950,
-      title: "Chapter Founded",
-      description:
-        "The Gamma Iota Chapter was founded at the University of Idaho.",
-    },
-    {
-      year: 1963,
-      title: "Bike 2 Boise Established",
-      description:
-        "Our primary philanthropy was established and called Bike to Boise which involved riding a tandem bicycle from Moscow, ID. to the steps of the capitol in Boise and continues to this day.",
-    },
-    {
-      year: 1981,
-      title: "Burning of the Mortgage",
-      description:
-        "Gamma Iota celebrates its 31st anniversary and mortgage burning for the property purchased in 1969.",
-    },
-    {
-      year: "Today",
-      title: "Continuing Legacy",
-      description: "Building tomorrow's leaders",
-    },
-  ];
+  const milestones = [...highlights, TODAY_MILESTONE];
 
   return (
     <section ref={ref} className="py-24 lg:py-32 bg-gray-50">
@@ -98,7 +82,7 @@ export default function LegacySection() {
             <div className="space-y-8">
               {milestones.map((milestone, index) => (
                 <motion.div
-                  key={milestone.year}
+                  key={milestone.id}
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}

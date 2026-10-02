@@ -106,6 +106,32 @@ export function getNewsletters() {
   );
 }
 
+/** All history timeline entries, oldest first. */
+export function getTimeline() {
+  return sanityFetch(
+    `*[_type == "timelineEntry"] | order(year asc, title asc) {
+      "id": _id, year, title, description, era,
+      "image": image{ asset, crop, hotspot, alt,
+        "dimensions": asset->metadata.dimensions{width, height} }
+    }`,
+    {},
+    "timelineEntry",
+  );
+}
+
+/** Timeline entries chosen for the home page "Our Legacy" section. */
+export function getHomeMilestones() {
+  return sanityFetch(
+    `*[_type == "timelineEntry" && showOnHomePage == true]
+      | order(year asc, title asc) {
+        "id": _id, year, title,
+        "description": coalesce(homeSummary, description)
+      }`,
+    {},
+    "timelineEntry",
+  );
+}
+
 /** The Site Settings singleton (null if it hasn't been created). */
 export function getSiteSettings() {
   return sanityFetch(
