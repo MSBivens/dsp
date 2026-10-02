@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -26,12 +26,13 @@ export default function VeteranStories() {
     "World War II",
     "Korean War",
     "Vietnam War",
+    "Cold War Era",
     "Gulf War",
     "Global War on Terrorism",
     "Operation Iraqi Freedom",
     "Operation Enduring Freedom",
-    "Cold War Era",
     "Peacetime Service",
+    "Expeditionary & Global Operations",
   ];
 
   const filteredVeterans = useMemo(() => {
@@ -83,7 +84,7 @@ export default function VeteranStories() {
               href="/files/KnownVeterans.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#18453B] text-white rounded-lg font-medium hover:bg-[#12362e] transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 shadow-lg"
             >
               View Known Veterans (PDF)
             </Link>
@@ -92,7 +93,7 @@ export default function VeteranStories() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-[#006D5B]">
+      <section className="py-12 bg-nile-green">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
@@ -104,7 +105,7 @@ export default function VeteranStories() {
             </div>
             <div>
               <Medal className="w-8 h-8 text-white/80 mx-auto mb-2" />
-              <div className="text-3xl font-bold text-white">6</div>
+              <div className="text-3xl font-bold text-white">5</div>
               <div className="text-white/70 text-sm">Military Branches</div>
             </div>
             <div>

@@ -96,7 +96,7 @@ const timeline = [
     era: "Growth Period",
   },
   {
-    id: "12",
+    id: "18",
     year: 1980,
     title: "Prichard Scholarship Established",
     description:

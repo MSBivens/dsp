@@ -9,7 +9,7 @@ export default function DonatePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-[#006D5B] to-[#005648] overflow-hidden">
+      <section className="relative py-32 bg-gradient-to-br from-nile-green to-nile-green-dark overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/images/donate-cover.jpg')] bg-cover bg-center" />
         </div>
@@ -51,7 +51,7 @@ export default function DonatePage() {
               icon={Building2}
               title="Direct to Chapter"
               subtitle="Internal Funds"
-              color="bg-[#006D5B]"
+              color="bg-nile-green"
               description="Support chapter operations, facility improvements, and immediate needs directly. These funds provide the flexibility to address urgent priorities and enhance the undergraduate experience."
               benefits={[
                 "Alumni Events",
@@ -118,7 +118,7 @@ export default function DonatePage() {
           </p>
           <a
             href="mailto:deltasigvandalalumni@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#006D5B] text-white rounded-lg font-medium hover:bg-[#005648] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-colors"
           >
             Contact Us
           </a>

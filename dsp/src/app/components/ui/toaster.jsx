@@ -1,9 +1,8 @@
 /**
  * Toaster (shadcn/ui)
  * Renders the global toast notification container.
- * Must be included once in App.jsx to enable toast() calls anywhere in the app.
- * Uses the Sonner library under the hood via components/ui/sonner.
- * Used in: src/App.jsx
+ * Uses the Sonner library directly.
+ * Used in: src/app/providers.jsx
  */
 import { Toaster as Sonner } from "sonner";
 

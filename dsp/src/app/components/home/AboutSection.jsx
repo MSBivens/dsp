@@ -7,8 +7,8 @@
  * Used in: pages/Home
  */
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
 import { useRef } from "react";
 import { Target, Users, Award } from "lucide-react";
 
@@ -46,7 +46,7 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[#006D5B]/10 text-[#006D5B] text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-nile-green/10 text-nile-green text-sm font-medium mb-4">
             Our Foundation
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -67,9 +67,9 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-              className="text-center p-8 rounded-2xl bg-gray-50 hover:bg-[#006D5B]/5 transition-colors duration-300"
+              className="text-center p-8 rounded-2xl bg-gray-50 hover:bg-nile-green/5 transition-colors duration-300"
             >
-              <div className="w-16 h-16 rounded-2xl bg-[#006D5B] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#006D5B]/20">
+              <div className="w-16 h-16 rounded-2xl bg-nile-green flex items-center justify-center mx-auto mb-6 shadow-lg shadow-nile-green/20">
                 <value.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -86,7 +86,7 @@ export default function AboutSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#006D5B] to-[#005648] text-white"
+          className="mt-16 p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-nile-green to-nile-green-dark text-white"
         >
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>

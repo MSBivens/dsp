@@ -37,7 +37,8 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --nile-green: #18453b;
+    --nile-green: 24 69 59;
+    --nile-green-dark: 18 54 46;
   }
 
   .dark {

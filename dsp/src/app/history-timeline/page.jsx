@@ -77,7 +77,7 @@ export default function HistoryTimeline() {
           {filteredEvents.length > 0 ? (
             <div className="relative">
               {/* Vertical Line */}
-              <div className="absolute left-12 top-0 bottom-0 w-0.5 bg-[#006D5B]/20 hidden md:block" />
+              <div className="absolute left-12 top-0 bottom-0 w-0.5 bg-nile-green/20 hidden md:block" />
 
               <div className="space-y-12">
                 {filteredEvents.map((event, index) => (

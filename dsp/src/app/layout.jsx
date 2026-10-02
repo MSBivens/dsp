@@ -12,7 +12,7 @@ export const metadata = {
   title: "ΔΣΦ Gamma Iota",
   description:
     "Delta Sigma Phi - Gamma Iota Chapter at the University of Idaho.",
-  author: "Michael Bivens",
+  authors: [{ name: "Michael Bivens" }],
   keywords:
     "Delta Sigma Phi, Gamma Iota, University of Idaho, fraternity, dsp, gi, greek life",
 };

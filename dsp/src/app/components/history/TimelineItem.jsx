@@ -6,7 +6,7 @@
  * Used in: pages/HistoryTimeline
  */
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import Image from "next/image";
 
 export default function TimelineItem({ event, index }) {
@@ -16,7 +16,7 @@ export default function TimelineItem({ event, index }) {
   const eraColors = {
     "Founding Era": "bg-amber-500",
     "Early Years": "bg-blue-500",
-    "Growth Period": "bg-[#006D5B]",
+    "Growth Period": "bg-nile-green",
     "Modern Era": "bg-[#5B2C6F]",
   };
 
@@ -31,7 +31,7 @@ export default function TimelineItem({ event, index }) {
       {/* Year Badge */}
       <div className="relative z-10 flex-shrink-0">
         <div className="w-24 h-24 rounded-2xl bg-white shadow-lg border flex flex-col items-center justify-center">
-          <span className="text-3xl font-bold text-[#006D5B]">
+          <span className="text-3xl font-bold text-nile-green">
             {event.year}
           </span>
           {event.era && (
@@ -45,7 +45,7 @@ export default function TimelineItem({ event, index }) {
       {/* Content */}
       <div className="flex-1 bg-gray-50 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-shadow duration-300">
         {event.era && (
-          <span className="inline-block px-3 py-1 rounded-full bg-[#006D5B]/10 text-[#006D5B] text-xs font-medium mb-3">
+          <span className="inline-block px-3 py-1 rounded-full bg-nile-green/10 text-nile-green text-xs font-medium mb-3">
             {event.era}
           </span>
         )}
