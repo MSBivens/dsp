@@ -24,6 +24,10 @@ export const BRANCHES = [
   "National Guard",
 ];
 
+// Plain-string lists get their labels sentence-cased by the Studio
+// ("Coast guard"); explicit titles keep the capitalization as written.
+const asOptions = (values) => values.map((value) => ({ title: value, value }));
+
 const UNKNOWN_NOTE =
   "Leave blank if unknown. Never type placeholder text: the website shows " +
   '"Not yet documented" and asks visitors for help.';
@@ -61,7 +65,7 @@ export default defineType({
       name: "branch",
       title: "Branch",
       type: "string",
-      options: { list: BRANCHES },
+      options: { list: asOptions(BRANCHES) },
       description: UNKNOWN_NOTE,
     }),
     defineField({
@@ -69,7 +73,7 @@ export default defineType({
       title: "Conflicts / eras",
       type: "array",
       of: [defineArrayMember({ type: "string" })],
-      options: { list: CONFLICTS },
+      options: { list: asOptions(CONFLICTS) },
       description: `Select every conflict or era that applies. ${UNKNOWN_NOTE}`,
     }),
     defineField({
