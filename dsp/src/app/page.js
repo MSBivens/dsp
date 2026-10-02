@@ -1,5 +1,9 @@
 import React from "react";
-import { getSiteSettings, getUpcomingEvents } from "@lib/sanity";
+import {
+  getHomeMilestones,
+  getSiteSettings,
+  getUpcomingEvents,
+} from "@lib/sanity";
 import { pacificToday } from "@lib/dates";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
@@ -12,16 +16,17 @@ import ContactSection from "@/components/home/ContactSection";
 
 export default async function Home() {
   const today = pacificToday();
-  const [events, settings] = await Promise.all([
+  const [events, settings, milestones] = await Promise.all([
     getUpcomingEvents(today),
     getSiteSettings(),
+    getHomeMilestones(),
   ]);
 
   return (
     <div>
       <HeroSection />
       <AboutSection activeMembers={settings?.active_members} />
-      <LegacySection />
+      <LegacySection highlights={milestones} />
       <AlumniEngagementSection />
       <UndergraduateSection
         chapterGpa={settings?.chapter_gpa}

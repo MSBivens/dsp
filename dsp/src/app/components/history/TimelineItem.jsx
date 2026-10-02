@@ -2,16 +2,18 @@
  * TimelineItem
  * Single animated card in the chapter history timeline. Displays a year
  * badge with era color indicator, the event title, description, and an
- * optional image. Animates into view on scroll using framer-motion.
- * Used in: pages/HistoryTimeline
+ * optional photo from Sanity. Animates into view on scroll using framer-motion.
+ * Used in: components/history/HistoryTimelineContent
  */
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
+import { photoObjectPosition, photoSrc, sanityLoader } from "@lib/sanity-image";
 
 export default function TimelineItem({ event, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const imageSrc = photoSrc(event.image);
 
   const eraColors = {
     "Founding Era": "bg-amber-500",
@@ -52,13 +54,15 @@ export default function TimelineItem({ event, index }) {
         <h3 className="text-2xl font-bold text-gray-900 mb-3">{event.title}</h3>
         <p className="text-gray-600 leading-relaxed">{event.description}</p>
 
-        {event.image_url && (
+        {imageSrc && (
           <div className="mt-6 relative w-full h-48 rounded-xl overflow-hidden">
             <Image
-              src={event.image_url}
-              alt={event.title}
+              loader={sanityLoader}
+              src={imageSrc}
+              alt={event.image.alt || event.title}
               fill
               className="object-cover"
+              style={{ objectPosition: photoObjectPosition(event.image) }}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
