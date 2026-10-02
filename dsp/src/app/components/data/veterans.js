@@ -1,11 +1,15 @@
-/* 
-Graduation year was coded too far in to change, but it's actually pledge class year
+/*
 The following gives a paragraph break: \n\n
+Leave unknown fields out (or commented out). Never use placeholder text such as
+"Awaiting Confirmation"; the page shows "Not yet documented" for missing fields.
+photo_position is optional: the crop focus for the photo on cards and the page
+header, as a CSS object-position (default "center 25%"; use a lower % for
+full-length photos where the face is near the top).
 Use the following format for the data entry:
 {
     id: "X",
     name: "RX",
-    graduation_year: 19XX,
+    pledge_class: 19XX,
     branch: "X",
     conflict: "X",
     rank: "X",
@@ -20,7 +24,7 @@ const veterans = [
   {
     id: "arnold-candry", // Or "1" but keeping it with the current format changes the url to match
     name: "Arnold J. Candry",
-    graduation_year: 1957,
+    pledge_class: 1957,
     branch: "Air Force",
     conflict: "Vietnam War",
     rank: "Lieutenant Colonel",
@@ -33,12 +37,13 @@ const veterans = [
   {
     id: "robert-winn",
     name: "Robert Winn",
-    graduation_year: 1963,
+    pledge_class: 1963,
     branch: "Marines",
     conflict: "Vietnam War",
     rank: "Captain",
     years_of_service: "1967-1970",
     photo_url: "/images/veterans/robert-winn.jpg",
+    photo_position: "center 0%",
     short_bio: `A Marine officer who led troops during the Siege of Khe Sanh and later served with the 5th Force Recon Company at Camp Pendleton.`,
     full_story: `My father was a career Marine enlisting in 1941 after Pearl Harbor, commissioned in 1944 as an, Infantry 2 nd Lieutenant, and retiring as a Lt. Col. in 1966, just 6 months before I was commissioned as a 2 nd Lt. from the NROTC unit at the University of Idaho. I inherited his sword, most of his uniforms, and most of his accouterments. Upon arriving at TBS in June 1967, some of the officers (Capt. J. D. Jones) loved that I had “old Corps” stuff, and some, particularly our Company Commander Major Angus gave me grief at every inspection but couldn't deny they were regulation. \n\n Upon graduation from TBS as an 0302 (my requested MOS) I had orders to Vietnam, departing Travis Air Force base at 1800, Dec. 31 st 1967. Jan 4 th, I landed in Da Nang and was assigned to Golf. Co. 2 nd platoon, 2 nd Bn, 26 th Marines stationed in Phu Bai. On Jan 20 th we were loaded on C130's and told we were going to Con Thien but after takeoff, I was told we were headed to Khe Sanh. I didn't know where either of them was at that point so it didn't make any difference until we landed at Khe Sanh and the whole picture changed. I remember thinking “this isn't good.” I was wounded on April 8 as Golf Co. was the first Company to leave the wire from hill 558 after being kept inside the perimeter for 2 ½ months. The objective was hill 700, from which we had been receiving fire for the entire time we were on the hill, to search for and destroy the enemy. We found them. \n\n When I rejoined the unit, the 2 nd Bn was at Camp Carroll, then Con Thien, and in June became the 3 rd Marine Divisions Battalion Landing team always working along the DMZ (not good duty.) I was later transferred to Hotel Co, as the XO, and as the Company Commander. I left Vietnam in late Jan. 1969 with orders to Camp Pendleton (my home for about 6 years growing up as a dependent.) Since I'd initially requested Recon at Basic School, I finally got my wish and spent the bulk of my time at Pendleton in the 5th Force Recon Co, until they were disbanded in 1970 and finished my commitment with an Infantry regiment. I left the Marine Corps in late 1970. I always thought I would make a career of the Corps since that was all I'd known for the first 25 yrs. of my life but that changed. \n\n I married my high school sweetheart 10 days after returning from Vietnam and 10 months later she was pregnant with our first child. I was due to return to Vietnam in 1970 and decided, based on my first experience, "it was a war we weren't going to win, and I wasn't prepared to leave my ife a widow and baby without a father" so put in my papers to exit the Corps. \n\n I spent the next 40 years on the Company side of the Property Casualty Insurance industry retiring in Monterey, Ca. in 2010. My wife (Sue) and I have been married since Feb. 1969, have 2 grown daughters and 5 grandchildren. We've lived in Carmel Valley, Ca. since 1994.`,
     decorations: `Purple Heart`,
@@ -46,7 +51,7 @@ const veterans = [
   {
     id: "richard-livingston",
     name: "Richard Livingston",
-    graduation_year: 1962,
+    pledge_class: 1962,
     branch: "Navy",
     conflict: "Vietnam War",
     rank: "Lieutenant",
@@ -59,7 +64,7 @@ const veterans = [
   {
     id: "robert-green",
     name: "Robert Carrell Green",
-    graduation_year: 1962,
+    pledge_class: 1962,
     branch: "Army",
     conflict: "Vietnam War",
     rank: "Captain",
@@ -72,12 +77,13 @@ const veterans = [
   {
     id: "robert-willey",
     name: "Robert Leon Willey",
-    graduation_year: 1965,
+    pledge_class: 1965,
     branch: "Army",
     conflict: "Vietnam War",
     rank: "Specialist Five",
     years_of_service: "1966-1969",
     photo_url: "/images/veterans/robert-willey.jpg",
+    photo_position: "center 45%",
     short_bio: `An Army surveyor from Grangeville who answered the call to service in 1966, Rob is honored as one of the three Idaho Delta Sigs who gave their lives in the Vietnam War.`,
     full_story: `Robert Leon Willey was born 19Jul1947 in Grangeville, ID. During his childhood years in Grangeville and throughout high school, he was known as Robin. Robin graduated from Grangeville High School in 1965. That fall he entered college at the University of Idaho and pledged Delta Sigma Phi - Gamma Iota fraternity.\n\n Robin, now known as Rob, went home on Christmas break with the intent of returning to the U of I for the winter semester. Unfortunately, by 1966 the Vietnam War was in full swing with approximately 350,000 soldiers already in-country and the US Army looking for even more to either enlist or be drafted. Rob decided he would answer the call by joining the US Army and put college on hold until his enlistment was complete.\n\nRob received training in the Army as a surveyor and was assigned to various engineering battalions before being sent to Vietnam. On 26Apr1968, Rob's unit was sent to Vietnam for a 12 month overseas tour which would end on 26Apr1969. The unit's mission was to do preliminary survey work on highway QL 1 near Qui Nhon, Vietnam.\n\nOn the morning of 26Mar1969, Rob and 3 others made their way to the small village of Song Cau to continue surveying the QL 1 highway. The day before, the area had been cleared of mines by US Army engineers, but unbeknownst to the survey crew, the Viet Cong had re-mined the area during the night with anti-personnel mines known as "Bouncing Betties".\n\nA mine was tripped by one of the members of the survey crew. That individual was killed instantly. Two other members received nonlife-threatening wounds, and Rob received serious wounds. Rob was transported to a hospital in Japan.\n\nRob's parents in Grangeville were informed of the incident and they flew to Japan to be with their son. Rob had been in serious condition for 6 weeks, however, the doctors thought he was stable enough such that his parents could take a short break and see some of the local sights. Unfortunately, before they could return, Rob died on 10 May1969. He was 21 years old. He is buried at Prairie View Cemetery in Grangeville, ID.\n\nBrother Wiley enlisted prior to being initiated in 1966. Our National office posthumously initiated him in March of 2020.\n\nYITBOS\n\nVaughn Wasem PC 70`,
     decorations: `Bronze Star (merit), Purple Heart, National Defense, Vietnam Service, and Vietnam Campaign medals`,
@@ -85,7 +91,7 @@ const veterans = [
   {
     id: "allyn-woerman",
     name: "Allyn L. Woerman",
-    graduation_year: 1965,
+    pledge_class: 1965,
     branch: "Army",
     conflict: "Cold War Era",
     rank: "Lieutenant Colonel",
@@ -98,12 +104,13 @@ const veterans = [
   {
     id: "robin-faisant",
     name: "Robin Faisant",
-    graduation_year: 1950,
+    pledge_class: 1950,
     branch: "Navy",
     conflict: "Korean War",
     rank: "Lieutenant JG",
     years_of_service: "1951-1954",
     photo_url: "/images/veterans/robin-faisant.jpg",
+    photo_position: "center 5%",
     short_bio: `A founding member of the Gamma Iota Chapter and Korean War veteran who served aboard the heavy cruiser USS Bremerton before a distinguished career as a Naval Legal Officer and Stanford-educated attorney.`,
     full_story: `Upon graduation from the University of Idaho, Rob was commissioned in the Navy and served 18 months in the Korean War aboard the U.S.S. Bremerton (CA-130), a heavy cruiser that fought on the east coast of Korea. He was responsible for the gun batteries. At the conclusion of the war, he served another 18 months as a Naval Legal Officer achieving the rank Lieutenant JG. He graduated from the Naval Justice School in 1953. After completion of his military service he went on to Stanford Law School, graduating in 1958. Brother Faisant passed away in early 2026 at the age of 94.`,
     // decorations: `X`,
@@ -111,7 +118,7 @@ const veterans = [
   {
     id: "dwaine-griffith",
     name: "Dwaine O. Griffith",
-    // graduation_year: 19XX,
+    pledge_class: 1953,
     branch: "Navy",
     conflict: "Cold War Era",
     rank: "Rear Admiral",
@@ -124,7 +131,7 @@ const veterans = [
   {
     id: "ken-agenbroad",
     name: "Ken Agenbroad",
-    graduation_year: 1965,
+    pledge_class: 1965,
     branch: "Navy",
     conflict: "Vietnam War",
     rank: "Lieutenant",
@@ -137,7 +144,7 @@ const veterans = [
   {
     id: "jerry-agenbroad",
     name: "Jerry Agenbroad",
-    // graduation_year: 19XX,
+    pledge_class: 1962,
     branch: "Marines",
     conflict: "Vietnam War",
     rank: "Colonel",
@@ -150,7 +157,7 @@ const veterans = [
   {
     id: "joel-peterson",
     name: "Joel Peterson",
-    graduation_year: 1979,
+    pledge_class: 1979,
     branch: "Air Force",
     conflict: "Operation Iraqi Freedom",
     conflict: "Operation Enduring Freedom",
@@ -164,7 +171,7 @@ const veterans = [
   {
     id: "william-peterson",
     name: "William L. Peterson",
-    graduation_year: 1988,
+    pledge_class: 1988,
     branch: "Navy",
     conflict: "Expeditionary & Global Operations",
     rank: "Lieutenant",
@@ -177,12 +184,13 @@ const veterans = [
   {
     id: "richard-jennings",
     name: "Richard Jennings",
-    graduation_year: 1961,
+    pledge_class: 1961,
     branch: "Army",
     conflict: "Cold War Era",
     // rank: "X",
-    years_of_service: "8",
+    // years_of_service: Original entry said "8" (years); exact dates not yet documented
     photo_url: "/images/veterans/richard-jennings.jpg",
+    photo_position: "center 0%",
     short_bio: `A specialized Medical Service Corps officer and PhD psychologist who led critical research at the Walter Reed Army Institute of Research into stress, caffeine, and cognition.`,
     full_story: `I went through 4 years of ROTC at Idaho with the attendant summer came in Tacoma and was commissioned as a 2nd Lieutenant in the artillery upon graduation. I was, however, granted an educational delay. Hence, I went to graduate school rather than serving as a forward observer in Nam. Upon the conferral of my PhD in psychology, I received training for the medical service corps at Fort Sam Houston in San Antonio, Texas. I was then transferred to the medical service corps and assigned to the Walter Reed Army Institute of Research. I served there for 8 years pursuing my interests in cardiac and blood pressure reaction to stress, caffeine and cognition but also the Army's interest in long term performance and sleep deprivation. I received a medal for marksmanship. As a college professor then, I didn't take the opportunity to continue in the reserves.`,
     decorations: `Marksmanship Qualification Medal`,
@@ -190,7 +198,7 @@ const veterans = [
   {
     id: "harry-brizee",
     name: "Harry Brizee",
-    graduation_year: 1950,
+    pledge_class: 1950,
     branch: "Army",
     conflict: "Vietnam War",
     rank: "Lieutenant Colonel",
@@ -203,7 +211,7 @@ const veterans = [
   {
     id: "donald-shannon",
     name: "Donald Shannon",
-    graduation_year: 1953,
+    pledge_class: 1953,
     branch: "Air Force",
     conflict: "Cold War Era",
     rank: "Lieutenant Colonel",
@@ -216,7 +224,7 @@ const veterans = [
   {
     id: "anthony-dombrowski",
     name: "Anthony Dombrowski",
-    // graduation_year: 19XX,
+    pledge_class: 1950,
     branch: "Army",
     conflict: "Cold War Era",
     rank: "Lieutenant Colonel",
@@ -233,7 +241,7 @@ export default veterans;
 {
     id: "X",
     name: "X",
-    graduation_year: 19XX,
+    pledge_class: 19XX,
     branch: "X",
     conflict: "X",
     rank: "X",

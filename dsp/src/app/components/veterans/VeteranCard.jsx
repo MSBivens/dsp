@@ -46,6 +46,7 @@ export default function VeteranCard({ veteran, index, branchIcons }) {
               alt={veteran.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
+              style={{ objectPosition: veteran.photo_position || "center 25%" }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
