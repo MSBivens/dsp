@@ -80,6 +80,19 @@ export function getVeteran(id) {
   );
 }
 
+/** Events that haven't ended as of `today` ("YYYY-MM-DD"), soonest first. */
+export function getUpcomingEvents(today) {
+  return sanityFetch(
+    `*[_type == "event" && defined(date) && coalesce(endDate, date) >= $today]
+      | order(date asc, title asc) {
+        "id": _id, title, date, "end_date": endDate, time, location,
+        description, type, link
+      }`,
+    { today },
+    "event",
+  );
+}
+
 export function getVeteranSitemapEntries() {
   return sanityFetch(
     `*[${VETERAN_FILTER}] { "id": slug.current, "updated_at": _updatedAt }`,
