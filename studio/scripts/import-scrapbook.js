@@ -10,12 +10,21 @@
  * Options:
  *   --years "1965–1972"   --description "..."   --display-order 1
  *   --slug <slug>         Page address (default: generated from the title)
- *   --order auto|name|modified
- *                         auto (default) sorts by file name when every name
- *                         contains a number (scan2 before scan10), otherwise
- *                         by file modified time.
+ *   --order auto|name|year|modified
+ *       name      File name, numbers compared as numbers (Scan 2 before Scan 10).
+ *       year      Cover, intro and title pages first, then by the year in each file
+ *                 name ("1954 DG …", "87-88 Composite", "PC 98 …"), then
+ *                 undated pages grouped by name, with "Missing …" pages last.
+ *       modified  File modified time (not useful for unzipped downloads,
+ *                 which all get the time they were unzipped).
+ *       auto      (default) name for numbered sequences from a scanner or
+ *                 camera (every name the same apart from its number),
+ *                 otherwise year.
  *   --max-edge 4000       Shrink scans larger than this many pixels on their
  *                         long edge before upload (JPEG, quality 90).
+ *
+ * HEIC photos (iPhone) are converted to JPEG, since browsers other than
+ * Safari can't show them.
  *
  * The document uses a fixed ID (scrapbook-<slug>). If it already exists the
  * script stops, so re-running never overwrites reordering or captions done in
@@ -24,10 +33,13 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import convertHeic from "heic-convert";
 import sharp from "sharp";
 import { getCliClient } from "sanity/cli";
 
-const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".tif", ".tiff"]);
+const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".tif", ".tiff", ".heic", ".heif"]);
+const HEIC_EXTENSIONS = new Set([".heic", ".heif"]);
+const ORDERS = ["auto", "name", "year", "modified"];
 const UPLOAD_CONCURRENCY = 4;
 const UPLOAD_ATTEMPTS = 3;
 
@@ -58,6 +70,8 @@ const slugify = (s) =>
     .slice(0, 96);
 
 const mb = (bytes) => `${(bytes / 1e6).toFixed(1)} MB`;
+const sha1 = (buffer) => crypto.createHash("sha1").update(buffer).digest("hex");
+const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
 
 // Ends by setting the exit code rather than calling process.exit(): exiting
 // while sharp's worker threads are shutting down crashes Node on Windows.
@@ -68,7 +82,7 @@ async function main() {
     !dir && "--dir is required",
     dir && !fs.existsSync(dir) && `folder not found: ${dir}`,
     !title && "--title is required",
-    !["auto", "name", "modified"].includes(order) && "--order must be auto, name or modified",
+    !ORDERS.includes(order) && `--order must be one of ${ORDERS.join(", ")}`,
     maxEdge !== undefined && !(maxEdge >= 1000) && "--max-edge must be a number of pixels, at least 1000",
     displayOrder !== undefined &&
       !(Number.isInteger(displayOrder) && displayOrder >= 1) &&
@@ -99,17 +113,21 @@ async function main() {
     ...files.filter((f) => f.error).map((f) => `${f.name}: unreadable image (${f.error})`),
   ].filter(Boolean);
 
+  const sortLabels = { name: "file name", year: "year in file name", modified: "file modified time" };
   console.log(`${apply ? "APPLY" : "DRY RUN"}: "${title}" → ${docId} (/history/scrapbooks/${slug})`);
-  console.log(`Order: by ${sortBy === "name" ? "file name" : "file modified time"}${order === "auto" ? " (auto)" : ""}\n`);
+  console.log(`Order: by ${sortLabels[sortBy]}${order === "auto" ? " (auto)" : ""}\n`);
   for (const [i, f] of files.entries()) {
     const dims = f.width ? `${f.width}×${f.height}` : "?";
-    const shrink = maxEdge && Math.max(f.width ?? 0, f.height ?? 0) > maxEdge ? `  → shrink to ${maxEdge}px` : "";
-    console.log(`  ${String(i + 1).padStart(3)}  ${f.name.padEnd(36)} ${dims.padStart(11)}  ${mb(f.size).padStart(8)}${shrink}`);
+    const year = sortBy === "year" ? `${f.orderKey.label.padEnd(7)} ` : "";
+    const notes = [
+      f.converted && "HEIC → JPEG",
+      maxEdge && Math.max(f.width ?? 0, f.height ?? 0) > maxEdge && `shrink to ${maxEdge}px`,
+    ].filter(Boolean);
+    console.log(
+      `  ${String(i + 1).padStart(3)}  ${year}${f.name.padEnd(60)} ${dims.padStart(11)}  ${mb(f.size).padStart(8)}${notes.length ? `  (${notes.join(", ")})` : ""}`,
+    );
   }
   console.log(`\n${files.length} pages, ${mb(files.reduce((n, f) => n + f.size, 0))} in total.`);
-  if (order === "auto" && sortBy === "modified") {
-    console.log("Note: not every file name has a number, so pages are in file modified-time order. Check it against the album.");
-  }
   if (skipped.length) console.log(`Skipped (not images): ${skipped.join(", ")}`);
   if (duplicates.length) console.log(`Warning, duplicate files (both will be imported):\n  ${duplicates.join("\n  ")}`);
   if (problems.length) {
@@ -132,15 +150,15 @@ async function main() {
   async function upload(f) {
     const tooBig = maxEdge && Math.max(f.width, f.height) > maxEdge;
     const body = tooBig
-      ? await sharp(f.filePath)
+      ? await sharp(f.converted ?? f.filePath)
           .rotate()
           .resize({ width: maxEdge, height: maxEdge, fit: "inside", withoutEnlargement: true })
           .jpeg({ quality: 90, mozjpeg: true })
           .toBuffer()
-      : fs.readFileSync(f.filePath);
+      : (f.converted ?? fs.readFileSync(f.filePath));
     for (let attempt = 1; ; attempt++) {
       try {
-        return await client.assets.upload("image", body, { filename: f.name });
+        return await client.assets.upload("image", body, { filename: f.uploadName });
       } catch (err) {
         if (attempt >= UPLOAD_ATTEMPTS) throw new Error(`${f.name}: ${err.message}`);
         await new Promise((r) => setTimeout(r, 2000 * attempt));
@@ -187,30 +205,92 @@ async function collectPages() {
   const entries = fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isFile() && !e.name.startsWith("."));
   const isImage = (e) => IMAGE_EXTENSIONS.has(path.extname(e.name).toLowerCase());
   const skipped = entries.filter((e) => !isImage(e)).map((e) => e.name);
-  const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
 
   const files = entries.filter(isImage).map((e) => {
     const filePath = path.join(dir, e.name);
     const stat = fs.statSync(filePath);
-    return { name: e.name, filePath, size: stat.size, modified: stat.mtimeMs };
+    return { name: e.name, uploadName: e.name, filePath, size: stat.size, modified: stat.mtimeMs, orderKey: orderKey(e.name) };
   });
+  // Without a page named "Cover", the shortest title page ("Dream Girl
+  // Scrapbook" rather than "Dream Girl History Scrapbook") is the cover.
+  if (!files.some((f) => f.orderKey.group === 0)) {
+    const [cover] = files.filter((f) => f.orderKey.group === 2).sort((a, b) => a.name.length - b.name.length);
+    if (cover) Object.assign(cover.orderKey, { group: 0, label: "cover" });
+  }
 
-  const allNumbered = files.length > 0 && files.every((f) => /\d/.test(f.name));
-  const sortBy = order === "auto" ? (allNumbered ? "name" : "modified") : order;
-  files.sort((a, b) =>
-    sortBy === "name" ? collator.compare(a.name, b.name) : a.modified - b.modified || collator.compare(a.name, b.name),
-  );
+  // Numbered sequences ("Scan 1", "IMG_0042") sort by name; descriptive
+  // names sort by the year they mention.
+  const sequence = files.length > 0 && new Set(files.map((f) => f.name.toLowerCase().replace(/\d+/g, "#"))).size === 1;
+  const sortBy = order === "auto" ? (sequence ? "name" : "year") : order;
+  const byName = (a, b) => collator.compare(a.name, b.name);
+  const compare = {
+    name: byName,
+    modified: (a, b) => a.modified - b.modified || byName(a, b),
+    year: (a, b) =>
+      a.orderKey.group - b.orderKey.group ||
+      a.orderKey.year - b.orderKey.year ||
+      collator.compare(a.orderKey.text, b.orderKey.text) ||
+      byName(a, b),
+  }[sortBy];
+  files.sort(compare);
 
   for (const f of files) {
-    f.sha1 = crypto.createHash("sha1").update(fs.readFileSync(f.filePath)).digest("hex");
+    const original = fs.readFileSync(f.filePath);
+    f.sha1 = sha1(original);
     try {
-      const { width, height } = await sharp(f.filePath).metadata();
+      if (HEIC_EXTENSIONS.has(path.extname(f.name).toLowerCase())) {
+        f.converted = Buffer.from(await convertHeic({ buffer: original, format: "JPEG", quality: 0.92 }));
+        f.uploadName = f.name.replace(/\.[^.]+$/, ".jpg");
+      }
+      const { width, height } = await sharp(f.converted ?? original).metadata();
       Object.assign(f, { width, height });
     } catch (err) {
       f.error = err.message;
     }
+    f.uploadSha1 = f.converted ? sha1(f.converted) : f.sha1;
   }
   return { files, skipped, sortBy };
+}
+
+/**
+ * Sort key for --order year. Groups: 0 cover, 1 intro, 2 other undated title
+ * pages ("… Scrapbook", "… Album"; the shortest becomes the cover when no
+ * page is named "Cover"), 3 dated pages by year, 4 other undated
+ * pages, 5 "Missing …" pages. Within a group, pages sort by name with common
+ * abbreviations expanded, so "All Yrs Athletics Pg 3" follows "All Years
+ * Athletics Pg. 2".
+ */
+function orderKey(fileName) {
+  const base = fileName.replace(/\.[^.]+$/, "");
+  const lower = base.toLowerCase();
+  const text = lower
+    .replace(/\b(yrs?|year)\b/g, "years")
+    .replace(/\bpage\b/g, "pg")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const year = yearFromName(base);
+  const key = (group) => ({ group, year: group === 3 ? year : 0, text, label: group === 3 ? String(year) : ["cover", "intro", "title", "", "undated", "last"][group] });
+  if (/\bcover\b/.test(lower)) return key(0);
+  if (/\bintro(duction)?\b/.test(lower)) return key(1);
+  if (/\bmissing\b/.test(lower)) return key(5);
+  if (year) return key(3);
+  if (/\b(scrapbook|album)$/.test(lower)) return key(2);
+  return key(4);
+}
+
+/** First year mentioned in a file name: 1954, "1951 - 52", "87-88", "PC 98", "60_s", "Yearbook 59". */
+function yearFromName(base) {
+  const full = base.match(/(?<!\d)(19[0-9]\d|20[0-4]\d)(?!\d)/);
+  if (full) return Number(full[1]);
+  // Two-digit years: pledge classes, school years, or a lone number that
+  // isn't an ordinal ("30th") or a copy number ("(2)").
+  const short =
+    base.match(/\bPC\s*(\d{2})(?!\d)/i) ??
+    base.match(/(?<!\d)(\d{2})\s*-\s*\d{2}(?!\d)/) ??
+    base.match(/(?<![\d(])(\d{2})(?!\d|\)|st|nd|rd|th)/i);
+  if (!short) return null;
+  const yy = Number(short[1]);
+  return yy >= 40 ? 1900 + yy : 2000 + yy;
 }
 
 // --- Verification -------------------------------------------------------------
@@ -231,8 +311,9 @@ async function verify(client, docId, files) {
   // Sanity stores identical files once, under the name first uploaded, so a
   // page also matches when its content does (or its shrunk copy's name does).
   const firstNameBySha1 = new Map();
-  for (const f of files) if (!firstNameBySha1.has(f.sha1)) firstNameBySha1.set(f.sha1, f.name);
-  const matches = (p, f) => f && (p.sha1 === f.sha1 || p.filename === f.name || p.filename === firstNameBySha1.get(f.sha1));
+  for (const f of files) if (!firstNameBySha1.has(f.sha1)) firstNameBySha1.set(f.sha1, f.uploadName);
+  const matches = (p, f) =>
+    f && (p.sha1 === f.uploadSha1 || p.filename === f.uploadName || p.filename === firstNameBySha1.get(f.sha1));
   const outOfOrder = pages.filter((p, i) => !matches(p, files[i])).length;
   if (outOfOrder) failures.push(`${outOfOrder} page(s) differ from the folder order (expected if pages were reordered in the Studio)`);
   for (const [i, p] of pages.entries()) {

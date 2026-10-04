@@ -1,6 +1,6 @@
 /**
  * ScrapbookCard
- * Book-style cover card for one chapter scrapbook on the History page: cover
+ * Cover card for one chapter scrapbook on the History page: cover
  * image (the Studio cover, or the first page), title, years and page count.
  * Links to the scrapbook viewer page.
  * Used in: components/history/HistoryContent
@@ -10,7 +10,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { BookOpen, ChevronRight } from "lucide-react";
-import { photoObjectPosition, photoSrc, sanityLoader } from "@lib/sanity-image";
+import { photoSrc, sanityLoader } from "@lib/sanity-image";
+
+const COVER_SIZES = "(max-width: 1024px) 50vw, 25vw";
 
 export default function ScrapbookCard({ scrapbook, index }) {
   const src = photoSrc(scrapbook.cover);
@@ -26,37 +28,47 @@ export default function ScrapbookCard({ scrapbook, index }) {
         href={`/history/scrapbooks/${scrapbook.id}`}
         className="block group"
       >
-        {/* Cover */}
-        <div className="relative aspect-[3/4] rounded-r-xl rounded-l-sm overflow-hidden bg-gray-200 shadow-md group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300">
+        {/* Cover: shown whole (album covers are photographed in either
+            orientation), over a blurred copy that fills the card. Both use
+            the same URL, so the image downloads once. */}
+        <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-900 shadow-md group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300">
           {src ? (
-            <Image
-              loader={sanityLoader}
-              src={src}
-              alt={`Cover of ${scrapbook.title}`}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
-              style={{ objectPosition: photoObjectPosition(scrapbook.cover) }}
-              sizes="(max-width: 1024px) 50vw, 25vw"
-            />
+            <>
+              <Image
+                loader={sanityLoader}
+                src={src}
+                alt=""
+                aria-hidden
+                fill
+                className="object-cover scale-110 blur-xl opacity-60"
+                sizes={COVER_SIZES}
+              />
+              <Image
+                loader={sanityLoader}
+                src={src}
+                alt={`Cover of ${scrapbook.title}`}
+                fill
+                className="object-contain group-hover:scale-105 transition-transform duration-500"
+                sizes={COVER_SIZES}
+              />
+            </>
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-nile-green to-nile-green-dark">
               <BookOpen className="w-16 h-16 text-white/70" />
             </div>
           )}
-          {/* Book spine */}
-          <div className="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/40 via-black/10 to-transparent" />
-          <span className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 px-2.5 sm:px-3 py-1 rounded-full bg-black/60 text-white text-xs font-medium backdrop-blur-sm">
-            {scrapbook.page_count} {scrapbook.page_count === 1 ? "page" : "pages"}
-          </span>
         </div>
 
         {/* Details */}
         <div className="pt-4">
-          {scrapbook.years && (
-            <p className="text-sm font-medium text-nile-green mb-1">
-              {scrapbook.years}
-            </p>
-          )}
+          <p className="text-sm font-medium text-nile-green mb-1">
+            {[
+              scrapbook.years,
+              `${scrapbook.page_count} ${scrapbook.page_count === 1 ? "page" : "pages"}`,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+          </p>
           <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-nile-green transition-colors">
             {scrapbook.title}
           </h3>
