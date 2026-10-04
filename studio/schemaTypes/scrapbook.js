@@ -48,9 +48,7 @@ export default defineType({
       title: "Cover",
       type: "image",
       description:
-        "Optional image for the History page card. Leave blank to use the first page. " +
-        "After uploading, click the crop icon and drag the circle onto the most important part.",
-      options: { hotspot: true },
+        "Optional image for the History page card, shown whole. Leave blank to use the first page.",
     }),
     defineField({
       name: "pages",
