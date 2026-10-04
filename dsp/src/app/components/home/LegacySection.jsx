@@ -4,7 +4,7 @@
  * Two-column section on the Home page: narrative text on the left and
  * an animated mini-timeline of key chapter milestones on the right
  * (timeline entries marked "Show on home page" in Sanity, then a fixed
- * "Today" item). Links to the full HistoryTimeline page.
+ * "Today" item). Links to the full History page.
  * Used in: app/page.js
  */
 import React from "react";
@@ -56,7 +56,7 @@ export default function LegacySection({ highlights = [] }) {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/history-timeline"
+                href="/history"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#5B2C6F] text-white rounded-lg font-medium hover:bg-[#7D3C98] transition-all duration-300 shadow-lg shadow-[#5B2C6F]/25"
               >
                 Learn More

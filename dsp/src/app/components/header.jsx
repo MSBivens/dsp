@@ -12,18 +12,20 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "History", path: "/history-timeline" },
+    { name: "History", path: "/history" },
     { name: "Veterans", path: "/veteran-stories" },
     { name: "Newsletters", path: "/newsletter-archive" },
     { name: "Donate", path: "/donate" },
   ];
 
-  // Helper to determine if a link is active. Veterans also covers the
-  // /veterans/[id] detail pages, not just the /veteran-stories listing.
-  const isActive = (path) =>
-    path === "/veteran-stories"
-      ? pathname === path || pathname.startsWith("/veterans/")
-      : pathname === path;
+  // Helper to determine if a link is active. History also covers its
+  // sub-pages (scrapbooks), and Veterans covers the /veterans/[id] detail
+  // pages, not just the /veteran-stories listing.
+  const isActive = (path) => {
+    if (path === "/history") return pathname === path || pathname.startsWith("/history/");
+    if (path === "/veteran-stories") return pathname === path || pathname.startsWith("/veterans/");
+    return pathname === path;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
