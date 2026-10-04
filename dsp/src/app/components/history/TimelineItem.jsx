@@ -3,7 +3,7 @@
  * Single animated card in the chapter history timeline. Displays a year
  * badge with era color indicator, the event title, description, and an
  * optional photo from Sanity. Animates into view on scroll using framer-motion.
- * Used in: components/history/HistoryTimelineContent
+ * Used in: components/history/HistoryContent
  */
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";

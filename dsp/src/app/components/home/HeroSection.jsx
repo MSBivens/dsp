@@ -68,7 +68,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href="/history-timeline"
+            href="/history"
             className="px-8 py-4 bg-nile-green text-white rounded-lg font-medium hover:bg-nile-green-dark transition-all duration-300 shadow-lg"
           >
             Explore Our Legacy
