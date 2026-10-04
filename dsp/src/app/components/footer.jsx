@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer({ contactEmail }) {
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "History", path: "/history-timeline" },
+    { name: "History", path: "/history" },
     { name: "Veterans", path: "/veteran-stories" },
     { name: "Newsletters", path: "/newsletter-archive" },
     { name: "Donate", path: "/donate" },

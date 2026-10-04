@@ -28,6 +28,7 @@ export const CONTENT_TYPES = [
   "event",
   "newsletter",
   "timelineEntry",
+  "scrapbook",
   "siteSettings",
   "donatePage",
 ];
@@ -129,6 +130,48 @@ export function getHomeMilestones() {
       }`,
     {},
     "timelineEntry",
+  );
+}
+
+// Pages still uploading in the Studio have no asset yet; skip them.
+const SCRAPBOOK_FILTER = `_type == "scrapbook" && defined(slug.current) && count(pages[defined(asset)]) > 0`;
+
+const SCRAPBOOK_SUMMARY = `
+  "id": slug.current, title, years, description,
+  "page_count": count(pages[defined(asset)]),
+  "cover": coalesce(select(defined(cover.asset) => cover), pages[defined(asset)][0]){ asset, crop, hotspot,
+    "dimensions": asset->metadata.dimensions{width, height} }
+`;
+
+/** Scrapbooks for the History page, in display order. */
+export function getScrapbooks() {
+  return sanityFetch(
+    `*[${SCRAPBOOK_FILTER}] | order(coalesce(displayOrder, 9999) asc, title asc) {
+      ${SCRAPBOOK_SUMMARY}
+    }`,
+    {},
+    "scrapbook",
+  );
+}
+
+/** One scrapbook with all its pages, in book order. */
+export function getScrapbook(id) {
+  return sanityFetch(
+    `*[${SCRAPBOOK_FILTER} && slug.current == $id][0] {
+      ${SCRAPBOOK_SUMMARY},
+      "pages": pages[defined(asset)]{ "key": _key, asset, crop, caption, alt,
+        "dimensions": asset->metadata.dimensions{width, height} }
+    }`,
+    { id },
+    "scrapbook",
+  );
+}
+
+export function getScrapbookSitemapEntries() {
+  return sanityFetch(
+    `*[${SCRAPBOOK_FILTER}] { "id": slug.current, "updated_at": _updatedAt }`,
+    {},
+    "scrapbook",
   );
 }
 

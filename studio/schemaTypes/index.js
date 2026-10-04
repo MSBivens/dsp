@@ -2,6 +2,7 @@ import veteran from "./veteran";
 import event from "./event";
 import newsletter from "./newsletter";
 import timelineEntry from "./timelineEntry";
+import scrapbook from "./scrapbook";
 import siteSettings from "./siteSettings";
 import donatePage from "./donatePage";
 
@@ -10,6 +11,7 @@ export const schemaTypes = [
   event,
   newsletter,
   timelineEntry,
+  scrapbook,
   siteSettings,
   donatePage,
 ];
