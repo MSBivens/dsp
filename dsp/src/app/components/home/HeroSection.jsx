@@ -1,11 +1,4 @@
 "use client";
-/**
- * HeroSection
- * Full-screen landing hero for the Home page.
- * Displays chapter branding, tagline, and CTA buttons linking to
- * HistoryTimeline and Donate pages. Includes an animated scroll indicator.
- * Used in: pages/Home
- */
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -19,19 +12,6 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-            <span className="w-2 h-2 rounded-full bg-nile-green" />
-            <span className="text-white/90 text-sm font-medium tracking-wide">
-              Est. 1950 • University of Idaho
-            </span>
-          </div>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,14 +32,18 @@ export default function HeroSection() {
           </p>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-xl text-white font-medium mb-12 max-w-2xl mx-auto drop-shadow-lg"
         >
-          Better Men. Better Lives.
-        </motion.p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-12">
+            <span className="w-2 h-2 rounded-full bg-nile-green" />
+            <span className="text-white/90 text-sm font-medium tracking-wide">
+              Est. 1950 • University of Idaho
+            </span>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
