@@ -80,7 +80,6 @@ export default function Footer({ contactEmail }) {
           </p>
           <p className="text-gray-500 text-sm">ACB - 82-0515756</p>
           <p className="text-gray-500 text-sm">Chapter - 82-0201535</p>
-          <p className="text-gray-500 text-sm">Better Men. Better Lives.</p>
         </div>
       </div>
     </footer>
